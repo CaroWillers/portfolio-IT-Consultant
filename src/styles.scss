@@ -8,6 +8,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: $bgrNearlyBlack;
     margin: 0;
+    margin-bottom: 300px;
 }
 
 @mixin flex-center {
@@ -43,9 +44,49 @@ body {
     }
 }
 
+.logo {
+  cursor: pointer;
+  width: 300px; 
+  font-weight: 600;
+  font-size: 48px;
+  color: $white; 
+
+  .accent-o {
+      color: $white;
+      position: relative;
+  }
+
+  .accent-o::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      background-color: $green;
+      border-radius: 50%;
+  }
+}
 
 
 /* poppins-regular - latin */
+/* poppins-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/assets/fonts/poppins-v21-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/poppins-v21-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Poppins';
