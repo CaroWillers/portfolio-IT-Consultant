@@ -1,0 +1,19 @@
+.background-container {
+    background-image: url('../assets/bgr-img/3_purple-shadow-about-me.png');
+    background-position: calc(230% - 30px) calc(95% - 145px);
+    background-size: 70%;
+    background-repeat: no-repeat;   
+    position: relative;   
+    z-index: 1;  
+}
+
+
+.background-skills-portfolio {
+
+background-image: url('/assets/bgr-img/4_green-shadow-skills-portfolio.png');
+background-position: calc(-143% - 30px) calc(-59% - 145px);
+background-size: 70%;
+background-repeat: no-repeat;   
+position: relative;
+z-index: 1;
+}

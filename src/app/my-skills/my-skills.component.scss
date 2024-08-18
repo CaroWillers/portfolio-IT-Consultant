@@ -1,0 +1,150 @@
+@import '../../styles.scss';
+
+.skills-section { 
+    width: 100%;
+    background-color: $bgrNearlyBlack;
+    color: $white;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.skills-icons {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px; 
+    gap: 40px;
+
+    .icon-item {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100px; 
+        position: relative;
+        transition: transform 0.3s ease-in-out;
+        
+        img {
+            max-width: 60px;
+            height: auto;
+        }
+
+        &:hover img {
+            animation: smooth-bounce 0.5s ease-in-out forwards;
+        }
+        .purple-text {
+            color: $purple;  
+        } 
+
+        p {
+            font-size: 16px;
+            font-weight: 600;
+            color: $white;
+        }
+        
+        .popup-content {
+            cursor: pointer;
+            display: none;  
+            position: absolute;
+            bottom: 100%; 
+            left: 50%;
+            transform: translateX(-50%);  
+            width: 200px;
+            padding: 10px;
+            background-color: $white;
+            color: $bgrNearlyBlack;  
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+            font-size: 14px;
+            font-weight: 400;
+            text-align: center;
+            z-index: 1000;
+        }
+    
+        &:hover .popup-content {
+            display: block;  
+        }
+    }
+}
+
+@keyframes smooth-bounce {
+    0% {
+        transform: translateY(0);  
+    }
+    50% {
+        transform: translateY(-10px);   
+    }
+    100% {
+        transform: translateY(0);  
+    }
+}
+
+.skills-text { 
+    max-width: 550px;
+    flex: 1;
+    position: relative;  
+    
+    h1 {
+        margin-bottom: 20px;
+        position: relative;  
+        text-align: end; 
+        margin-top: -20px;
+            
+        &::after {
+            content: '';
+            position: absolute;
+            left: calc(110% + 20px);
+            top: 50%;  
+            width: calc(100vw - 100% - 50px);  
+            height: 4px;
+            background-color: $purple;
+            transform: translateY(-50%);  
+        }
+    }
+
+    p { 
+        font-size: 16px;
+        font-weight: 200; 
+        text-align: right;
+    }
+    .question {
+        font-size: 36px;
+        font-weight: 600;
+        color: white;
+        text-align: right; 
+    }
+    .highlight {
+        color: $purple;
+    }
+
+    .btn-primary-green {
+        width: 200px;
+        display: block; 
+        margin-left: auto;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column; 
+    }
+
+    .skills-icons {
+        justify-content: center;   
+        .icon-item {
+            width: 30%;  
+        }
+    }
+
+    .skills-text {
+        text-align: center;  
+        margin-top: 40px;  
+    }
+}

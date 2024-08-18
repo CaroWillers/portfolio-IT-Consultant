@@ -1,0 +1,14 @@
+@import '../../styles.scss';
+
+.h1 {
+  font-size: calc(4.5vw + 40px);
+  font-weight: 650;
+  color: $white;
+}
+
+.p {
+  font-size: 16px;
+  font-weight: 200;
+  text-align: center;
+  color: $white;
+}

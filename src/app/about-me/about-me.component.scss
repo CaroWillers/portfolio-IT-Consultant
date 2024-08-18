@@ -7,8 +7,8 @@
     margin: 0 auto;
 }
 
-.about-me-title {
-    font-size: calc(2.5vw + 25px);   
+.h1 {
+    font-size: calc(4.5vw + 40px);   
     font-weight: 650;
     color: $white;
     margin-bottom: 20px;
@@ -24,7 +24,8 @@
 
 .about-me-intro { 
     width: 700px;
-    font-weight: 200;
+    font-size: 20px;
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
@@ -33,6 +34,7 @@
     max-width: 550px;
     flex: 1;
     margin-right: 20px;
+    display: inline-block;
 }
 
 .about-me-text p {
