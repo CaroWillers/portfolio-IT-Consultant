@@ -1,5 +1,24 @@
 @import '../../styles.scss';
 
+.h1 {
+    text-align: center; 
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30%;
+    max-width: 600px;  
+    height: 5px;
+    background-color: $purple;
+}
+
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -68,7 +87,7 @@
     color: $white;
     position: relative;
     background-image: url('/assets/bgr-img/7_purple-shadow-contact.png');
-    background-position: calc(-88% + 43px) calc(25% - -12px);    
+    background-position: calc(-98% + 50px) calc(-237% + 12px);    
     background-size: 70%;
     background-repeat: no-repeat;   
     z-index: 1;
@@ -77,15 +96,16 @@
 .contact-container { 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 60px;
+    justify-content: center;
+    gap: 100px;
     align-items: flex-start;
 
 }
 
 .contact-text {
-    max-width: 550px;
+    max-width: 500px;
     flex: 1;
+    margin-top: -45px;
 
     h1 {
         margin-bottom: 20px;
@@ -117,70 +137,173 @@
     }
 
     .form-group {
+        position: relative;
         display: flex;
         flex-direction: column;
-
-        label {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        input, textarea {
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 5px;
-            border: 1px solid $purple;
-            background-color:  $bgrNearlyBlack;
-            color: $white;
-
-            &:focus {
-                outline: none;
-                border-color: $green;
-            }
-            &::placeholder {
-                color: $white;  
-                opacity: 1;  
-            }
-        }
-
-        .error {
-            color: red;
-            font-size: 14px;
-            margin-top: 5px;
-            display: none;
-        }
+        margin-bottom: 20px;
     }
+    
+    input, textarea {
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid $purple;
+        background-color: $bgrNearlyBlack;
+        color: $white;
+        transition: border-color 0.3s ease, background-image 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+        border-color: inherit;  
+        outline: none;   
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        color: $white; 
+        opacity: 1; 
+}
+
+    
+    .valid-input {
+        border-color: $green;
+        background-image: url('/assets/icons/ok.png');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+    }
+    
+    .invalid-input {
+        border-color: red;
+        background-image: url('/assets/icons/error.png');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+    }
+    
+    .error {
+        color: #E61C40;
+        font-size: 14px;
+        margin-top: 5px;
+        display: none;
+    }
+    
+    input.ng-invalid.ng-touched + .error, 
+    textarea.ng-invalid.ng-touched + .error {
+        display: block;
+    }
+    
 
     .checkbox-group {
         display: flex;
+        flex-direction: row;
         align-items: center;
+        gap: 10px;
 
         input[type="checkbox"] {
-            margin-right: 10px;
+            padding: 10px;
+            cursor: pointer;
+            position: relative;
+            width: 18px;
+            height: 18px;
+            border: 2px solid $green;
+            border-radius: 4px; 
+            background-color: transparent;
+            appearance: none; 
+            -webkit-appearance: none; /* Safari */
+            -moz-appearance: none; /*Firefox */
+       
+        }
+        input[type="checkbox"]:checked {
+            background-color: $green;  
+            border-color: $green;
+        }
+    
+        input[type="checkbox"]:checked::after {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 6px;
+            width: 5px;
+            height: 10px;
+            border: solid $white;  
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
         }
 
-        label {
+        label[for="privacy"] {
+            font-size: 14px;
+            font-weight: 400;
+            color: white;
+        }
+        
+        label[for="privacy"] a {
+            color: $purple;
+            text-decoration: none;
+        }
+        
+        label[for="privacy"] a:hover {
+            text-decoration: underline;
+        }
+        
+        .error {
+            color: #E61C40;
             font-size: 14px;
             font-weight: 400;
         }
     }
 
-    button {
-        padding: 10px 20px;
-        background-color: $green;
+    .btn-grey {
+        width: 350px;
+        height: 60px;
+        padding: 15px 25px 15px 25px;
+        background-color: #B6B6B6;
         color: $white;
         border: none;
-        border-radius: 5px;
+        border-radius: 10px;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 23px;
+        font-weight: 400;
+        align-self: center;
+        margin-bottom: 200px;
         transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: darken($green, 10%);
+            background-color: $green;
         }
     }
 }
+
+.arrow-up-container {
+    position: absolute;
+    bottom: 80px;
+    right: 300px;
+    width: 50px;
+    height: 50px; 
+    background-color: transparent;
+    border-color: white;
+    border-radius: 50%;  
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.arrow-up-container:hover  {
+    color: $green;  
+    border-color: $green; 
+}
+.arrow-up {
+    color: white;
+    font-size: 24px;  
+    text-decoration: none;
+}
+
+.arrow-up:hover  {
+    color: $green;   
+}
+
 
 @media (max-width: 768px) {
     .contact-container {

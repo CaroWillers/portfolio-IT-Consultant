@@ -53,6 +53,13 @@ export class ContactComponent {
     }
   }
 
+  validateAllFields(form: NgForm) {
+    Object.keys(form.controls).forEach(field => {
+      const control = form.controls[field];
+      control.markAsTouched({ onlySelf: true });
+    });
+  } 
+
   closeModal() {
     this.showModal = false;  
   }
