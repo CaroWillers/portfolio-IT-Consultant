@@ -1,25 +1,25 @@
 @import '../../styles.scss';
 
+.about-section {
+   width: 100%; 
+}
+
 .about-me {
-    color: $white;
-    padding: 60px;
-    max-width: 1440px;
-    margin: 0 auto;
+    margin: 80px;
+    color: $white; 
 }
 
 .h1 {
     font-size: calc(4.5vw + 40px);   
     font-weight: 650;
-    color: $white;
-    margin-bottom: 20px;
-    margin-left: 40px;
+    color: $white; 
 }
 
 .about-me-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-left: 40px;
+    justify-content: space-between; 
+    color: $white; 
 }
 
 .about-me-intro { 

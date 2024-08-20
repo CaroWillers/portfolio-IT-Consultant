@@ -94,17 +94,22 @@
         margin-bottom: 20px;
         position: relative;  
         text-align: end; 
-        margin-top: -20px;
+        margin-top: -20px; 
+        max-width: 500px;
             
         &::after {
             content: '';
+            display: inline-block;
             position: absolute;
-            left: calc(110% + 20px);
-            top: 50%;  
-            width: calc(100vw - 100% - 50px);  
+            width: 100%; 
+            top: 50%;   
             height: 4px;
-            background-color: $purple;
-            transform: translateY(-50%);  
+            background-color: $purple; 
+            margin-left: 20px;
+            
+        }
+        span {
+            background: #fff;
         }
     }
 
