@@ -3,6 +3,19 @@
       <h1 class="h1">Portfolio</h1>
       <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
     </div>
-</section>
+
+    <div class="portfolio-container">
+      <app-project
+        *ngFor="let project of projects"
+        [title]="project.title"
+        [technologies]="project.technologies"
+        [description]="project.description"
+        [liveTestLink]="project.liveTestLink"
+        [githubLink]="project.githubLink"
+        [imageUrl]="project.imageUrl"
+        [imageOnLeft]="project.imageOnLeft">
+      </app-project>  
+    </div>
+  </section>
   
   

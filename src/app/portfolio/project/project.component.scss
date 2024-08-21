@@ -1,0 +1,112 @@
+@import '../../../styles.scss';
+
+.project {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around;
+    align-items: center; 
+    padding: 0 60px; 
+    color: white;
+     margin: 0 auto;
+
+    &.image-left {
+        flex-direction: row;   
+        align-self: center;
+    }
+    
+    &.image-right {
+        flex-direction: row-reverse;  
+        align-self: center;
+    }
+    .project-text {
+        display: flex;
+        flex-direction: column;
+        width: 550px;  
+     
+        &.text-left {
+          align-items: flex-end;  
+        }
+    
+        &.text-right {
+          align-items: flex-start;  
+        }
+    }
+
+    .project-image {
+        width: 550px;  
+        margin-right: 250px;
+        img {
+          width: 150%;
+          height: auto; 
+         
+        }
+      }
+   
+   
+    h3 {
+    color: $purple;
+    font-size: 32px;
+    font-weight: 650;
+    margin: 0;
+    }
+
+    .technologies {
+    display: flex; 
+    font-size: 24px;
+    font-weight: 300;
+    color: $green;
+    }
+
+    p {
+    font-size: 16px;
+    font-weight: 200; 
+    margin: 10px 0;
+    }
+  
+    .project-buttons {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+      
+      .btn-liveTest, .btn-github {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 60px;
+        border-radius: 10px;
+        font-size: 23px;
+        font-weight: 200;
+        text-decoration: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        
+        &.btn-liveTest {
+            background-color: $purple;
+            color: $white;
+          
+            &:hover {
+                background-color: $green;
+                transform: scale(1.1);
+              }
+  
+          &:active {
+            background-color: #ffffff;
+            color: #000000;
+          }
+        }
+  
+        &.btn-github {
+            background-color: black;
+            color: $white;
+            border: 1px solid $green;
+    
+            &:hover {
+              background-color: $green;
+              transform: scale(1.1);
+            }
+        }
+      }
+    }
+  }
+  

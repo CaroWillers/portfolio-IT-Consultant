@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,5 +8,12 @@ import { CommonModule } from '@angular/common';
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.scss']
 })
-export class ProjectComponent { 
+export class ProjectComponent {
+  @Input() title: string = '';
+  @Input() technologies: string[] = [];  
+  @Input() description: string = '';
+  @Input() liveTestLink: string = '';
+  @Input() githubLink: string = '';
+  @Input() imageUrl: string = '';
+  @Input() imageOnLeft: boolean = true;
 }

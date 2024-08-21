@@ -113,21 +113,24 @@
     margin-top: 40px;
 }
 
-.reference-icons {
-    width: 750px;
+.reference-icons { 
     display: flex;
     align-items: center; 
-    gap: 25px; 
+    gap: 30px; 
     position: absolute;
-    bottom: 40px;
-    margin-left: -25px;
+    bottom: 40px; 
+    z-index: 1;
 
-    .rule { 
-        width: 100px;        
+    &::before, span {
+        content: '';
+        display: inline-block; 
+        width: 20%; 
+        top: 50%;   
         height: 4px;
-        background-color: $purple;   
-        border: none; 
-        margin: 0;
+        background-color: $purple; 
+    }
+    span {
+        background: #fff;
     }
 
     a {
@@ -138,7 +141,7 @@
         align-items: center;
  
         img {
-            width:26px;  
+            width: 30px;  
             height: auto;
             transition: transform 0.3s ease;
         }
@@ -147,7 +150,8 @@
         }
     }
 
-    .contact-link {
+    .contact-link { 
+        width: 500px;
         cursor: pointer;
         text-decoration: none;
         color: $white;

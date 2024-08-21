@@ -1,7 +1,19 @@
-<div class="portfolio-container">
-    <h2>My Portfolio</h2>
-    <app-project></app-project>  
-    <app-project></app-project>  
-    <app-project></app-project>
+<div class="project" [class.image-left]="imageOnLeft" [class.image-right]="!imageOnLeft">
+  <div class="project-text">
+    <h3>{{ title }}</h3>
+    <p class="technologies">
+      <ng-container *ngFor="let tech of technologies; let last = last">
+        {{ tech }}<ng-container *ngIf="!last"> | </ng-container>
+      </ng-container>
+    </p>
+    
+    <p>{{ description }}</p> 
+    <div class="project-buttons">
+      <a class="btn-liveTest" [href]="liveTestLink" target="_blank">Live Test</a>
+      <a class="btn-github" [href]="githubLink" target="_blank">GitHub</a>
+    </div>
   </div>
-  
+  <div class="project-image">
+    <img [src]="imageUrl" alt="{{ title }}" />
+  </div>
+</div>

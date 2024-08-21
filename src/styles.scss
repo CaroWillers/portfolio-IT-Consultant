@@ -4,13 +4,16 @@ $white: #FFFFFF;
 $black: #000000;  
 $bgrNearlyBlack: #141D2F;
 
+html {
+  scroll-padding-top: 120px;   
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: $bgrNearlyBlack;
     margin: 0;
-    padding: 0;
-    width: 100%;
-    max-width: 1440px;
+    padding: 0;  
     box-sizing: border-box;
 }
 

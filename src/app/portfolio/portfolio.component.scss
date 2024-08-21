@@ -1,5 +1,13 @@
 @import '../../styles.scss';
 
+.portfolio-container {
+  display: flex;
+  flex-direction: column; 
+  padding: 0 60px;
+  color: white;
+}
+
+
 .portfolio-text {
   display: flex;
   flex-direction: column;
@@ -9,46 +17,42 @@
   margin-top: 100px;
   color: white;
 }
+
+.portfolio-text p {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+}
+
 .h1 {
   font-size: calc(4.5vw + 40px);
   font-weight: 650;
   color: $white;
   text-align: center;
-}
+  position: relative;    
+  margin: 0;
+  
+  &::before, &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    height: 4px;
+    background-color: $purple;
+    transform: translateY(-50%); 
+  }
 
+  &::before {
+  
+    width: 30%;
+    left: calc(-35%); 
+ 
+  }
 
-.h1 {
-  font-size: calc(4.5vw + 40px);
-  font-weight: 650;
-  color: $white;
-  text-align: center;
-  position: relative;  
-  margin-bottom: 20px;
+  &::after {  
+    left: 105%;   
+    width: calc(100vw - 50% - 20px);  
+  } 
 }
-
-.h1::before, .h1::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 5px;  
-  background-color: $purple;  
-}
-
-.h1::before {
-  left: -150px;
-  width: 120px;
-}
-
-.h1::after {
-  right: -650px;
-  width: 600px; 
-  max-width: 80vw;
-}
-
-.p {
-  font-size: 16px;
-  font-weight: 200;
-  text-align: center;
-  color: white;
-}
+ 

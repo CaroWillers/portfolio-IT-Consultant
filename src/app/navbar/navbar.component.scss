@@ -1,15 +1,16 @@
 @import '../../styles.scss';
 
-.hero-nav { 
+.hero-nav {  
     @include flex-center;
     justify-content: space-between; 
     width: 100%;    
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
     padding: 0 60px;  
     box-sizing: border-box;
+    background-color: $bgrNearlyBlack;
     z-index: 1000;
 }
   
