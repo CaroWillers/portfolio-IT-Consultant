@@ -25,27 +25,27 @@ export class PortfolioComponent {
       title: 'Join',
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS'],   
       description: 'Task manager inspired by the Kanban System, Crete and organize tasks using drag and drop functions, assign users and categories.',
-      imageUrl: 'assets/join.png',
-      liveTestLink: 'https://example.com/project1',
-      githubLink: 'https://github.com/example/project1',
+      imageUrl: 'assets/screens/join.png',
+      liveTestLink: 'https://caro-willers.com/join',
+      githubLink: 'https://github.com/CaroWillers/Join.git',
       imageOnLeft: false,
 
     },
     {
       title: 'Pollo Loco',
       description: 'A simple Jump and Run game based on an object oriented apporach. Help Pepe to collect coins and avoid upcoming obstacles.',
-      imageUrl: 'assets/join.png',
-      liveTestLink: 'https://example.com/project2',
-      githubLink: 'https://github.com/example/project2',
+      imageUrl: 'assets/screens/polloloco.png',
+      liveTestLink: 'https://caro-willers.com/polloloco',
+      githubLink: 'https://github.com/CaroWillers/PolloLoco.git',
       imageOnLeft: true,
       technologies: ['JavaScript', 'HTML', 'CSS']  
     },
     {
       title: 'Pokedex',
-      description: 'Based on teh PokéAPI a simple library that provides and catalogues pokemon information.',
-      imageUrl: 'assets/join.png',
-      liveTestLink: 'https://example.com/project3',
-      githubLink: 'https://github.com/example/project3',
+      description: 'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      imageUrl: 'assets/screens/pokedex.png',
+      liveTestLink: 'https://caro-willers.com/pokedex',
+      githubLink: 'https://github.com/CaroWillers/pokedex.git',
       imageOnLeft: false,
       technologies: ['JavaScript', 'HTML', 'CSS', 'API']  
     }

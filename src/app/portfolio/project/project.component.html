@@ -1,12 +1,11 @@
 <div class="project" [class.image-left]="imageOnLeft" [class.image-right]="!imageOnLeft">
-  <div class="project-text">
+  <div class="project-text" [ngClass]="{ 'text-left': imageOnLeft, 'text-right': !imageOnLeft }">
     <h3>{{ title }}</h3>
     <p class="technologies">
       <ng-container *ngFor="let tech of technologies; let last = last">
         {{ tech }}<ng-container *ngIf="!last"> | </ng-container>
       </ng-container>
-    </p>
-    
+    </p>    
     <p>{{ description }}</p> 
     <div class="project-buttons">
       <a class="btn-liveTest" [href]="liveTestLink" target="_blank">Live Test</a>

@@ -2,22 +2,29 @@
 
 .project {
     display: flex; 
-    flex-direction: column; 
     justify-content: space-around;
     align-items: center; 
-    padding: 0 60px; 
+    padding: 0 60px 0 60px;
     color: white;
-     margin: 0 auto;
+    margin: 0 auto; 
+    gap: 50px;
 
     &.image-left {
         flex-direction: row;   
-        align-self: center;
-    }
+        justify-content: center;
+        .project-image {
+          margin-right: 100px;
+        }
+      }
     
     &.image-right {
-        flex-direction: row-reverse;  
-        align-self: center;
-    }
+      flex-direction: row-reverse;  
+      justify-content: center;
+        .project-image {
+          margin-left: 100px;
+        }
+      }
+
     .project-text {
         display: flex;
         flex-direction: column;
@@ -25,23 +32,29 @@
      
         &.text-left {
           align-items: flex-end;  
+          text-align: right;
         }
     
         &.text-right {
           align-items: flex-start;  
+          text-align: left;
         }
     }
 
     .project-image {
-        width: 550px;  
-        margin-right: 250px;
+        width: 550px;    
+        
         img {
-          width: 150%;
-          height: auto; 
-         
+          width: 550px;
+          object-fit: cover;
         }
       }
-   
+      .project-text, .project-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 550px;
+      }
    
     h3 {
     color: $purple;
@@ -65,7 +78,7 @@
   
     .project-buttons {
       display: flex;
-      gap: 20px;
+      gap: 80px;
       margin-top: 20px;
       
       .btn-liveTest, .btn-github {
@@ -80,6 +93,7 @@
         text-decoration: none;
         cursor: pointer;
         transition: background-color 0.3s ease, transform 0.3s ease;
+     
         
         &.btn-liveTest {
             background-color: $purple;

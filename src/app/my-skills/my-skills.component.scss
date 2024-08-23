@@ -4,6 +4,7 @@
     width: 100%;
     background-color: $bgrNearlyBlack;
     color: $white;
+
 }
 
 .skills-container {
@@ -11,7 +12,8 @@
     flex-wrap: wrap;  
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 80px;   
+    overflow: hidden;
 }
 
 .skills-icons {
@@ -86,29 +88,26 @@
 }
 
 .skills-text { 
-    max-width: 550px; 
-    position: relative;  
+    max-width: 550px;  
     
     h1 {
         margin-bottom: 20px;
         position: relative;  
         text-align: end; 
         margin-top: -20px; 
-        max-width: 500px;
-        margin-left: 20px;
+        max-width: 600px; 
             
         &::after {
             content: '';
-            display: block;
             position: absolute;
-            width: calc(100vw - 50% - 20px);  
+            max-width: 100%;
+            width: calc(100vw);  
             left: 105%;
             top: 50%;   
             transform: translateY(-50%);
             height: 4px;
             background-color: $purple; 
         }
-    
     }
 
     p { 
