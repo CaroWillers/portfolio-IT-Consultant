@@ -1,23 +1,21 @@
 
-.bgr-hero-about-me{
+.bgr-hero-about-me {
     background-image: url('/assets/bgr-img/3_purple-shadow-about-me.png');
-    background-position: calc(230% - 30px) calc(95% - 145px);
-    background-size: 70%;
-    background-repeat: no-repeat;   
-    position: absoulte;
-    left: -50px;
-    top: -50px;
-    z-index: 1;  
+    background-position: right -500px bottom 100px;  
+    background-size: 900px;  
+    background-repeat: no-repeat;    
+    position: relative;
 }
 
 
 .bgr-skills-portfolio { 
     background-image: url('/assets/bgr-img/4_green-shadow-skills-portfolio.png');
-    background-position: left -800px bottom -450px; 
-    background-size: 80%;
+    background-position: left -580px top 290px;
+    background-size:  950px;
     background-repeat: no-repeat;   
     position: relative;
     z-index: 1;
+    padding-top: 100px;
 }
 
 

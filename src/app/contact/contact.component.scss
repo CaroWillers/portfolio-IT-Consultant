@@ -4,6 +4,8 @@
     text-align: center; 
     position: relative;
     margin-bottom: 30px;
+    font-size: 90px;
+    font-weight: 700;
 }
 
 .h1::before {
@@ -104,8 +106,7 @@
 }
 
 .contact-text {
-    max-width: 500px;
-    flex: 1;
+    width: 600px; 
     margin-top: -45px;
 
     h1 {
@@ -126,10 +127,8 @@
     }
 }
 
-.contact-form {
-    flex: 1;
-    max-width: 550px;
-    color: white;
+.contact-form { 
+    width: 650px; 
 
     form {
         display: flex;
@@ -145,9 +144,12 @@
     }
     
     input, textarea {
-        padding: 10px;
+        font-family: Popins, sans-serif;
         font-size: 16px;
-        border-radius: 5px;
+        font-weight: 300;
+        padding: 15px 25px;
+        font-size: 16px;
+        border-radius: 10px;
         border: 1px solid $purple;
         background-color: $bgrNearlyBlack;
         color: $white;
@@ -155,7 +157,7 @@
     }
 
     input:focus, textarea:focus {
-        border-color: inherit;  
+        border-color: $green;
         outline: none;   
     }
 
@@ -174,17 +176,25 @@
     }
     
     .invalid-input {
-        border-color: red;
+        border-color: $red;
         background-image: url('/assets/icons/error.png');
         background-repeat: no-repeat;
         background-position: right 10px center;
     }
     
     .error {
-        color: #E61C40;
+        color: $red;
         font-size: 14px;
         margin-top: 5px;
-        display: none;
+        display: none;    
+        border-color: $red;
+    }
+
+    .privacy-error {
+        width: 450px;
+        color: $red;
+        font-size: 14px;
+        margin-top: -30px; 
     }
     
     input.ng-invalid.ng-touched + .error, 
@@ -200,6 +210,7 @@
         gap: 10px;
 
         input[type="checkbox"] {
+            appearance: none;
             padding: 10px;
             cursor: pointer;
             position: relative;
@@ -207,15 +218,15 @@
             height: 18px;
             border: 2px solid $green;
             border-radius: 4px; 
-            background-color: transparent;
-            appearance: none; 
+            background-color: transparent; 
             -webkit-appearance: none; /* Safari */
             -moz-appearance: none; /*Firefox */
-       
+    
         }
         input[type="checkbox"]:checked {
-            background-color: $green;  
+            background-color: transparent;
             border-color: $green;
+            color: $green;
         }
     
         input[type="checkbox"]:checked::after {
@@ -225,7 +236,7 @@
             left: 6px;
             width: 5px;
             height: 10px;
-            border: solid $white;  
+            border: solid $green;
             border-width: 0 2px 2px 0;
             transform: rotate(45deg);
         }
@@ -246,63 +257,66 @@
         }
         
         .error {
-            color: #E61C40;
+            color: $red;
             font-size: 14px;
             font-weight: 400;
         }
     }
 
     .btn-grey {
-        width: 350px;
+        width: 280px;
         height: 60px;
-        padding: 15px 25px 15px 25px;
+        padding: 15px 25px;
         background-color: #B6B6B6;
         color: $white;
         border: none;
         border-radius: 10px;
-        cursor: pointer;
+        cursor: not allowed;
         font-size: 23px;
         font-weight: 400;
         align-self: center;
-        margin-bottom: 200px;
         transition: background-color 0.3s ease;
+        margin-bottom: 200px;
+}
 
-        &:hover {
-            background-color: $green;
-        }
-    }
+.btn-green {
+    width: 280px;
+    height: 60px;
+    padding: 15px 25px;
+    font-size: 23px;
+    font-weight: 400;
+    align-self: center;
+    background-color: $green;
+    color: white;
+    cursor: pointer;  
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    margin-bottom: 200px;
+}
+.btn-green:hover {
+    background-color: $purple;  
+    transform: scale(1.1); 
+    margin-bottom: 200px;
+
 }
 
 .arrow-up-container {
-    position: absolute;
-    bottom: 80px;
+    position: absolute; 
     right: 300px;
     width: 50px;
     height: 50px; 
     background-color: transparent;
-    border-color: white;
-    border-radius: 50%;  
     border: 2px solid white;
+    border-radius: 50%;   
+    cursor: pointer;    
     display: flex;
     align-items: center;
-    justify-content: center; 
-    cursor: pointer;
-    text-decoration: none;
-    z-index: 1000;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-.arrow-up-container:hover  {
-    color: $green;  
-    border-color: $green; 
-}
-.arrow-up {
-    color: white;
-    font-size: 24px;  
-    text-decoration: none;
+    justify-content: center;
 }
 
-.arrow-up:hover  {
-    color: $green;   
+.arrow-up-container:hover .arrow {
+    content: url('/assets/icons/arrowupHovert.png');
 }
 
 
@@ -311,4 +325,6 @@
         flex-direction: column;
         gap: 40px;
     }
+}
+
 }

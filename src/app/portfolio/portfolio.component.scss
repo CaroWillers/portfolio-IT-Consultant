@@ -1,5 +1,18 @@
 @import '../../styles.scss';
 
+
+.portfolio-section {  
+  color: $white;
+  position: relative;
+  background-image: url('/assets/bgr-img/5_purple-shadow-portfolio.png'), url('/assets/bgr-img/6_green-shadow-portfollio.png');
+  background-position: left 0 bottom 395px, right 0 bottom -40px;
+  background-size: auto;
+  background-repeat: no-repeat;   
+  z-index: 1;
+  overflow: hidden;
+  padding-bottom: 50px;
+}
+
 .portfolio-container {
   display: flex;
   flex-direction: column;  
@@ -28,8 +41,8 @@
 }
 
 .h1 {
-  font-size: calc(4.5vw + 40px);
-  font-weight: 650;
+  font-size: 90px;
+  font-weight: 700;
   color: $white;
   text-align: center;
   position: relative;    

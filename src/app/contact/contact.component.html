@@ -1,90 +1,102 @@
 <section id="contact" class="contact-section">
   <h1 class="h1">Contact</h1> 
-    <div class="contact-container">
-        <div class="contact-text">
-          <div>
-            <p class="question">What's your next project?</p>
-            <p>Reach out through this form. Let’s collaborate and bring your projects to success. I’m ready to contribute my skills.</p>
-        </div>
-        
-        </div>
-        <div class="contact-form">
-          <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
-            <div class="form-group">
-                <label for="name" class="sr-only">Your name</label>
-                <input [(ngModel)]="contactData.name" 
-                       type="text" 
-                       id="name" 
-                       name="name" 
-                       placeholder="Your name" 
-                       required
-                       [ngClass]="{
-                         'valid-input': contactForm.controls['name'].valid && contactForm.controls['name'].touched,
-                         'invalid-input': contactForm.controls['name'].invalid && contactForm.controls['name'].touched
-                       }">
-                <span class="error" *ngIf="contactForm.controls['name'].invalid && contactForm.controls['name'].touched">
-                    Please enter your name
-                </span>
-            </div>
-        
-            <div class="form-group">
-                <label for="email" class="sr-only">Your email</label>
-                <input [(ngModel)]="contactData.email" 
-                       type="email" 
-                       id="email" 
-                       name="email" 
-                       placeholder="Your email" 
-                       required 
-                       pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-                       [ngClass]="{
-                         'valid-input': contactForm.controls['email'].valid && contactForm.controls['email'].touched,
-                         'invalid-input': contactForm.controls['email'].invalid && contactForm.controls['email'].touched
-                       }">
-                <span class="error" *ngIf="contactForm.controls['email'].invalid && contactForm.controls['email'].touched">
-                    Please enter a valid email address
-                </span>
-            </div>
-        
-            <div class="form-group">
-                <label for="message" class="sr-only">Your message</label>
-                <textarea [(ngModel)]="contactData.message" 
-                          id="message" 
-                          name="message" 
-                          rows="10" 
-                          placeholder="Your message" 
-                          required
-                          [ngClass]="{
-                            'valid-input': contactForm.controls['message'].valid && contactForm.controls['message'].touched,
-                            'invalid-input': contactForm.controls['message'].invalid && contactForm.controls['message'].touched
-                          }"></textarea>
-                <span class="error" *ngIf="contactForm.controls['message'].invalid && contactForm.controls['message'].touched">
-                    Please enter your message
-                </span>
-            </div>
-
-            <div class="form-group checkbox-group">
-              <input [(ngModel)]="contactData.privacy" type="checkbox" id="privacy" name="privacy" required>
-              <label for="privacy">
-                  I've read the <a href="privacy-policy" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.
-              </label>
-              <span class="error">You must agree to the privacy policy</span>
-          </div>
-        
-            <button type="submit" value="submit" class="btn-grey" (click)="validateAllFields(contactForm)">Send your message</button>
-        </form>
-       
-          
-<!-- Modales Fenster für die Bestätigung -->
-<div id="confirmationModal" class="modal" [ngClass]="{'show': showModal}">
-  <div class="modal-content">
-    <span class="close" (click)="closeModal()">&times;</span>
-    <p>Thank you for your message!<br>I will get back to you soon.</p>
-  </div>
-</div>
-              
-          </div> 
-          <a href="#hero" class="arrow-up-container">
-            <span class="arrow-up">&uarr;</span>
-        </a>
+  <div class="contact-container">
+    <div class="contact-text">
+      <div>
+        <p class="question">What's your next project?</p>
+        <p>Reach out through this form. Let&rsquo;s collaborate and bring your projects to success. I&rsquo;m ready to contribute my skills.</p>
+      </div>
     </div>
+
+    <div class="contact-form">
+      <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
+        <div class="form-group">
+          <label for="name" class="sr-only">Your name</label>
+          <input [(ngModel)]="contactData.name" 
+          type="text" 
+          id="name" 
+          name="name" 
+          placeholder="Your name" 
+          required
+          (focus)="resetError('name', contactForm)"
+          [ngClass]="{
+            'valid-input': contactForm?.controls?.['name']?.valid && contactForm?.controls?.['name']?.touched,
+            'invalid-input': contactForm?.controls?.['name']?.invalid && contactForm?.controls?.['name']?.touched
+          }">
+   
+          <span class="error" *ngIf="contactForm.controls['name']?.invalid && contactForm.controls['name']?.touched">
+            Please enter your name
+          </span>
+        </div>
+      
+        <div class="form-group">
+          <label for="email" class="sr-only">Your email</label>
+          <input [(ngModel)]="contactData.email" 
+                 type="email" 
+                 id="email" 
+                 name="email" 
+                 placeholder="Your email" 
+                 required 
+                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                 (focus)="resetError('email', contactForm)"
+                 [ngClass]="{
+                   'valid-input': contactForm?.controls?.['email']?.valid && contactForm.controls['email']?.touched,
+                   'invalid-input': contactForm?.controls?.['email']?.invalid && contactForm.controls['email']?.touched
+                 }">
+          <span class="error" *ngIf="contactForm.controls['email']?.invalid && contactForm.controls['email']?.touched">
+            Please enter a valid email address
+          </span>
+        </div>
+      
+        <div class="form-group">
+          <label for="message" class="sr-only">Your message</label>
+          <textarea [(ngModel)]="contactData.message" 
+                    id="message" 
+                    name="message" 
+                    rows="10" 
+                    placeholder="Your message" 
+                    required
+                    (focus)="resetError('message', contactForm)"
+                    [ngClass]="{
+                      'valid-input': contactForm?.controls?.['message']?.valid && contactForm.controls['message']?.touched,
+                      'invalid-input': contactForm?.controls?.['message']?.invalid && contactForm.controls['message']?.touched
+                    }"></textarea>
+          <span class="error" *ngIf="contactForm.controls['message']?.invalid && contactForm.controls['message']?.touched">
+            Please enter your message
+          </span>
+        </div>
+      
+        <div class="form-group checkbox-group">
+          <input [(ngModel)]="contactData.privacy" 
+                 type="checkbox" 
+                 id="privacy" 
+                 name="privacy" 
+                 (change)="toggleButtonState()">
+          <label for="privacy">
+            I've read the <a href="privacy-policy" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.
+          </label>
+        </div>
+        <span class="privacy-error" *ngIf="showPrivacyError(contactForm)">Please accept the privacy policy</span>
+      
+        <button type="submit" 
+                [disabled]="!isPrivacyChecked"
+                [ngClass]="{'btn-grey': !isPrivacyChecked, 'btn-green': isPrivacyChecked}">
+          Send your message
+        </button>
+      </form>
+    </div>
+    <div class="arrow-container"> 
+      <a href="#hero" class="arrow-container">
+        <img class="arrow" src="/assets/icons/arrowupDefault.png" alt="Arrow up">
+      </a>
+    </div>
+
+    <!-- Modales Fenster für die Bestätigung -->
+    <div id="confirmationModal" class="modal" [ngClass]="{'show': showModal}">
+      <div class="modal-content">
+        <span class="close" (click)="closeModal()">&times;</span>
+        <p>Thank you for your message!<br>I will get back to you soon.</p>
+      </div>
+    </div>    
+  </div>
 </section>

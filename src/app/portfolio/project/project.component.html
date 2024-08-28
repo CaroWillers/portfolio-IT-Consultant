@@ -8,9 +8,19 @@
     </p>    
     <p>{{ description }}</p> 
     <div class="project-buttons">
-      <a class="btn-liveTest" [href]="liveTestLink" target="_blank">Live Test</a>
-      <a class="btn-github" [href]="githubLink" target="_blank">GitHub</a>
-    </div>
+      <a class="btn-liveTest" [href]="liveTestLink" target="_blank"
+         (mouseover)="isDaBubbleProject() ? showPopup($event) : null" 
+         (mouseout)="isDaBubbleProject() ? hidePopup($event) : null">Live Test</a>
+      <div *ngIf="isDaBubbleProject()" class="popup-content">
+        This project is still in progress. Stay tuned for updates!
+      </div>
+      <a class="btn-github" [href]="githubLink" target="_blank"
+         (mouseover)="isDaBubbleProject() ? showPopup($event) : null" 
+         (mouseout)="isDaBubbleProject() ? hidePopup($event) : null">GitHub</a>
+      <div *ngIf="isDaBubbleProject()" class="popup-content">
+        This project is still in progress. Stay tuned for updates!
+      </div>
+    </div>    
   </div>
   <div class="project-image">
     <img [src]="imageUrl" alt="{{ title }}" />

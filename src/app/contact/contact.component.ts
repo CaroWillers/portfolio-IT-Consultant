@@ -9,16 +9,17 @@ import { CommonModule } from '@angular/common';
   imports: [FormsModule, CommonModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
-}) 
-export class ContactComponent { 
+})
+export class ContactComponent {  
+  isPrivacyChecked: boolean = false;
 
   http = inject(HttpClient);
 
   contactData = {
-      name: [''],
-      email: [''],
-      message: [''],
-      privacy: [false]
+    name: '',
+    email: '',
+    message: '',
+    privacy: false
   };
 
   showModal = false;
@@ -33,15 +34,22 @@ export class ContactComponent {
       responseType: 'text' as const,
     },
   };
-  
+
+  toggleButtonState() {
+    this.isPrivacyChecked = this.contactData.privacy;
+  }
+
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid) {
+    this.validateAllFields(ngForm);
+
+    if (ngForm.valid && this.isPrivacyChecked) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
         .subscribe({
           next: (response) => {
             console.info('Form submitted successfully:', response);
             ngForm.resetForm();
             this.showModal = true;  
+            this.isPrivacyChecked = false; // Reset the privacy checkbox state
           },
           error: (error) => {
             console.error('Error occurred while submitting the form:', error);
@@ -49,10 +57,10 @@ export class ContactComponent {
           complete: () => console.info('Form submission process completed'),
         });
     } else {
-      console.warn('Form submission failed: form is either not submitted or invalid');
+      console.warn('Form submission failed: form is either not valid');
+      this.validateAllFields(ngForm);
     }
   }
-
   validateAllFields(form: NgForm) {
     Object.keys(form.controls).forEach(field => {
       const control = form.controls[field];
@@ -63,4 +71,18 @@ export class ContactComponent {
   closeModal() {
     this.showModal = false;  
   }
+
+  resetError(fieldName: string, form: NgForm) {
+    const control = form.controls[fieldName];
+    if (control) {
+      control.markAsUntouched();
+    }
+}
+
+showPrivacyError(form: NgForm): boolean {
+  return !this.isPrivacyChecked &&
+         form.controls['name']?.valid &&
+         form.controls['email']?.valid &&
+         form.controls['message']?.valid;
+}
 }

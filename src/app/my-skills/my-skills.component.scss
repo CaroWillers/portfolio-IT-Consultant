@@ -3,24 +3,32 @@
 .skills-section { 
     width: 100%;
     background-color: $bgrNearlyBlack;
-    color: $white;
+    color: $white; 
 
+}
+
+.h1 {
+    font-size: 90px;
+    font-weight: 700;
+    color: $white;
 }
 
 .skills-container {
     display: flex;
     flex-wrap: wrap;  
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     gap: 80px;   
     overflow: hidden;
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
 .skills-icons {
     display: flex;
-    flex-wrap: wrap;
-    max-width: 600px; 
-    gap: 40px;
+    flex-wrap: wrap; 
+    width: 700px; 
+    gap: 80px;  
 
     .icon-item {
         cursor: pointer;
@@ -88,7 +96,7 @@
 }
 
 .skills-text { 
-    max-width: 550px;  
+    width: 550px;  
     
     h1 {
         margin-bottom: 20px;
@@ -112,13 +120,14 @@
 
     p { 
         font-size: 16px;
-        font-weight: 200; 
+        font-weight: 300; 
         text-align: right;
         color: white;
+        line-height: 1.5;
     }
     .question {
         font-size: 36px;
-        font-weight: 600;
+        font-weight: 700;
         color: white;
         text-align: right; 
     }

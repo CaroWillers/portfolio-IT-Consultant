@@ -1,58 +1,56 @@
 @import '../../styles.scss';
 
 .hero {  
-    color: #fff; 
+    color: white;
     position: relative;
-    height: 100vh;  
+    height: 1024px;
     width: 100%; 
-    margin: 0 auto; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;  
+    margin: 0 auto;  
 }
 
 .hero-container {
-    position: absolute;
-    top: 20px;
+    position: relative; 
     display: flex;
-    align-items: space-around;
-    gap: 40px;
+    justify-content: space-between;
+    align-items: cemter;
     width: 100%;
+    height: 100%;
 }
 
 .profile-picture {
     position: relative;  
-    width: 500px;   
     height: 600px;
     object-fit: cover;
+    .profile-photo {
+        width: 1120px;
+        height: auto;  
+        position: absolute;
+        top: -36px;
+        left: -125px;
+        object-fit: cover;
+        z-index: 2;  
+    }
+    .profile-shadow{
+        top: 65px;
+        left: -65px;
+        position: absolute; 
+        width: 850px;
+        height: auto;
+        object-fit: cover;
+        z-index: -1;  
+    }
 }
-
-.background-picture {
-    position: absolute;
-    object-fit: contain;
-    z-index: 1;  
-}
-
-.background-swosh {
-    position: absolute;
-    width: 100%;
-    top: 150px;
-    z-index: -1;
-}
-
-.profile-img {
-    position: absolute; 
-    width:850px;
-    height: auto;
-    object-fit: cover;
-    z-index: 2;  
-}
- 
 
 .hero-text { 
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 80px 80px 80px;  
+    width: 50%;
+    position: relative;
+    top: 180px;
+    right: 60px;
+    display: grid; 
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 55px 620px;
+    grid-template-rows: 95px 70px 150px;  
     grid-template-areas: 
         "eins zwei"
         "eins drei"
@@ -65,65 +63,57 @@
     grid-area: eins; 
     writing-mode: vertical-rl; 
     transform: rotate(180deg); 
-    font-size: calc(3vw + 20px);
-    color: $white;     
-    display: flex; 
+    font-size: 63px;
+    font-weight: 400;
+    color: $white;    
+    margin-right: 45px;  
 }
 
 .item-2, .item-3 {
-    grid-column: 2 / 3;  
-    width: 100%;   
-    text-align: center;   
+    grid-column: 2 / 3;   
 }
 
-.item-2 h1 {
-    font-size: calc(2vw + 30px);   
-    font-weight: 600;
-    color: $white;
-    margin: 0;
+.item-2 {
+    grid-area: zwei;  
+    font-size: 82px; 
+    font-weight: 700;
+    color: $white; 
     
 }
 
-.item-3 h2 {   
-    font-size: calc(1vw + 20px);   
-    font-weight: 600;
+.item-3 {   
+    grid-area: drei; 
+    transform: scaleY(1.2);  
+    font-size: 52px;
+    font-weight: 400;
     color: $purple;
     margin: 0;
     letter-spacing: 2px; 
 }
 
-.item-2 {
-    grid-area: zwei; 
-    align-items: center;
-    display: block;
-}
-
-
-.item-3 {
-    grid-area: drei; 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end; /* Positioniert den Inhalt unten */
-    align-items: center; /* Zentriert den Inhalt horizontal */
-    height: 100%; /* Füllt den gesamten Container vertikal aus */
-    width: 100%; /* Stellt sicher, dass das Element die gesamte Breite des Containers einnimmt */
-    transform: scaleY(1.2); 
-    padding: 0;
-}
-
 .item-5 {
-    grid-area: fünf; 
-    justify-self: center;
-    margin-top: 40px;
+    grid-area: fünf;   
 }
 
+.hero-swosh {
+    position: absolute;
+    width: 100%;
+    height: 650px;
+    top: 270px;
+    z-index: -1;
+    img {
+        object-fit: cover;
+        width: 100%; 
+        z-index: -1;
+    }
+} 
 .reference-icons { 
     display: flex;
     align-items: center; 
     gap: 30px; 
     position: absolute;
-    bottom: 80px;
-    z-index: 1;
+    bottom: 150px;
+    z-index: 2;
 
     &::before, span {
         content: '';
@@ -171,12 +161,13 @@
 
 .scroll-down {
     position: absolute;
-    right: 60px;
-    bottom: 100px;
+    right: 100px;
+    bottom: 150px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;   
+    z-index: 2;
     
     .arrow-down {
         writing-mode: vertical-rl;  

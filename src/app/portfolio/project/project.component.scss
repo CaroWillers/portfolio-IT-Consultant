@@ -7,7 +7,7 @@
     padding: 0 60px 0 60px;
     color: white;
     margin: 0 auto; 
-    gap: 50px;
+    gap: 100px;
 
     &.image-left {
         flex-direction: row;   
@@ -42,10 +42,10 @@
     }
 
     .project-image {
-        width: 550px;    
+        width: 750px;    
         
         img {
-          width: 550px;
+          width: 750px;
           object-fit: cover;
         }
       }
@@ -122,5 +122,47 @@
         }
       }
     }
+  }
+  
+
+  .project-buttons {
+    position: relative; 
+  }
+  
+  .popup-content {
+    display: none;
+    position: absolute;
+    bottom: 150%;  
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    text-align: center;
+    z-index: 1000;
+    pointer-events: none;  
+    opacity: 0;  
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .project-buttons .btn-liveTest, 
+  .project-buttons .btn-github {
+    margin-bottom: 10px; /* Platz zwischen den Buttons und Popup */
+  }
+
+  .project-buttons .btn-liveTest:hover + .popup-content {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .project-buttons .btn-github:hover + .popup-content {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
   }
   

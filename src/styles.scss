@@ -2,7 +2,8 @@ $green:#70E61C;
 $purple: #9747FF;
 $white: #FFFFFF;
 $black: #000000;  
-$bgrNearlyBlack: #141D2F;
+$bgrNearlyBlack: #151D2F;
+$red: #FF4747;
 
 html {
   scroll-padding-top: 120px;   
@@ -15,6 +16,38 @@ body {
     margin: 0;
     padding: 0;  
     box-sizing: border-box;
+}
+
+.logo {
+  cursor: pointer;
+  width: 150px; 
+  font-weight: 600;
+  font-size: 48px;
+  color: $white;  
+  margin: 15px;
+
+  .accent-o {
+      color: $white;
+      position: relative;
+  }
+
+  .accent-o::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      background-color: $green;
+      border-radius: 50%;
+  }
+}
+
+.h1 {
+  font-size: calc(4.5vw + 40px);   
+  font-weight: 650;
+  color: $white; 
 }
 
 @mixin flex-center {
@@ -50,36 +83,6 @@ body {
     }
 }
 
-.logo {
-  cursor: pointer;
-  width: 300px; 
-  font-weight: 600;
-  font-size: 48px;
-  color: $white; 
-
-  .accent-o {
-      color: $white;
-      position: relative;
-  }
-
-  .accent-o::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 8px;
-      height: 8px;
-      background-color: $green;
-      border-radius: 50%;
-  }
-}
-
-.h1 {
-  font-size: calc(4.5vw + 40px);   
-  font-weight: 650;
-  color: $white; 
-}
 
 
 

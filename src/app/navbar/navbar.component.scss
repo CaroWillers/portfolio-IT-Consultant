@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     right: 0;
-    padding: 0 60px;  
+    padding: 0 100px;  
     box-sizing: border-box;
     background-color: $bgrNearlyBlack;
     z-index: 1000;
@@ -19,7 +19,8 @@
     list-style: none;
     display: flex;
     gap: 40px;
-    font-size: 24px;
+    font-size: 23px;
+    font-weight: 300;
 }
   
 .hero-nav-list a {
@@ -43,9 +44,43 @@
     }
 }
 
+.logo {
+    cursor: pointer;
+    width: 150px; 
+    font-weight: 600;
+    font-size: 48px;
+    color: $white;  
+    margin: 15px;
+  
+    .accent-o {
+        color: $white;
+        position: relative;
+    }
+  
+    .accent-o::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 8px;
+        height: 8px;
+        background-color: $green;
+        border-radius: 50%;
+    }
+  }
+  
+  .h1 {
+    font-size: calc(4.5vw + 40px);   
+    font-weight: 650;
+    color: $white; 
+  }
+  
 .language-switcher {
+    cursor: pointer;
     margin-left: auto;
-    font-size: 16px;
+    font-size: 23px;
+    color: white;
 }
 
 .language-switcher a {

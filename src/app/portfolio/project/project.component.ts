@@ -16,4 +16,25 @@ export class ProjectComponent {
   @Input() githubLink: string = '';
   @Input() imageUrl: string = '';
   @Input() imageOnLeft: boolean = true;
+
+  // Diese Methode überprüft, ob das Projekt "DA Bubble" ist
+  isDaBubbleProject(): boolean {
+    return this.title === 'DA Bubble';
+  }
+
+  // Diese Methode zeigt das Popup an
+  showPopup(event: MouseEvent): void {
+    const popup = (event.target as HTMLElement).nextElementSibling;
+    if (popup) {
+      (popup as HTMLElement).style.display = 'block';
+    }
+  }
+
+  // Diese Methode versteckt das Popup
+  hidePopup(event: MouseEvent): void {
+    const popup = (event.target as HTMLElement).nextElementSibling;
+    if (popup) {
+      (popup as HTMLElement).style.display = 'none';
+    }
+  }
 }

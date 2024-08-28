@@ -48,6 +48,15 @@ export class PortfolioComponent {
       githubLink: 'https://github.com/CaroWillers/pokedex.git',
       imageOnLeft: false,
       technologies: ['JavaScript', 'HTML', 'CSS', 'API']  
+    },
+    {
+      title: 'DA Bubble',
+      description: 'This App is a Slack Colone App. It revolutionizes team comunication and collaboration with its intuitive interface, real-time messaging and robust channel organizsation.',
+      imageUrl: 'assets/screens/dabubble.png',
+      liveTestLink: 'https://caro-willers.com/dabubble',
+      githubLink: 'https://github.com/CaroWillers/dabubble.git',
+      imageOnLeft: true,
+      technologies: ['Angular', 'TypeScript', 'Firebase' ]  
     }
   ];
 }
