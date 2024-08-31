@@ -6,8 +6,16 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-
+  isMenuOpen: boolean = false;
+ 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+ 
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
 }

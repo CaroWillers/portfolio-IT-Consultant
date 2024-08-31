@@ -12,6 +12,7 @@ import { CommonModule } from '@angular/common';
 })
 export class ContactComponent {  
   isPrivacyChecked: boolean = false;
+  showModal: boolean = false;
 
   http = inject(HttpClient);
 
@@ -21,8 +22,6 @@ export class ContactComponent {
     message: '',
     privacy: false
   };
-
-  showModal = false;
 
   post = {
     endPoint: 'https://caro-willers.com/sendMail.php',

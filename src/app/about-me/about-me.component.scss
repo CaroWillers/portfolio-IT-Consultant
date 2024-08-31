@@ -6,20 +6,18 @@
    position: relative;
    z-index: 2;
    margin-bottom: 100px;
+   margin-top: 300px;
 }
 
 .about-me { 
     color: $white; 
 }
 
-.h1 {
-    font-size: 90px;
-    font-weight: 700;
-    color: $white; 
+.h1 { 
     margin: 0px 0px 0px 120px;
 }
 
-.about-me-container {
+.about-me-container { 
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -29,8 +27,7 @@
     padding-right: 140px;
 }
 
-.about-me-intro { 
-    width: 500px;
+.about-me-intro {  
     font-size: 16px;
     font-weight: 300;
     margin-bottom: 20px;
@@ -92,4 +89,62 @@
     border: 5px solid $green;
     object-fit: cover;
     position: relative;
+}
+
+
+@media (max-width: 950px) {
+.about-section {
+    margin-top: 200px;
+}
+
+.about-me-container {
+    flex-direction: column;
+    padding-left: 100px;
+    padding-right: 100px;
+    gap: 100px;
+}
+}
+
+
+@media (max-width: 950px) {
+    .h1 {
+        margin: 0px 0px 0px 60px;
+    }
+    .about-me-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .profile-picture-container {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-me-container {
+        margin-left: 50px;
+        margin-right: 50px; 
+    }
+    .profile-picture-container {
+        display: none;
+    }
+}
+
+@media (max-width: 414px) {
+    .about-section {
+        margin-top: 150px;
+    }
+    .h1 {
+        margin: 0px 0px 0px 30px;
+    }
+    .about-me-container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .h1 {
+        margin: 0px 0px 0px 30px;
+    }
+ 
 }

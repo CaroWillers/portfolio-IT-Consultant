@@ -40,10 +40,10 @@
                  pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
                  (focus)="resetError('email', contactForm)"
                  [ngClass]="{
-                   'valid-input': contactForm?.controls?.['email']?.valid && contactForm.controls['email']?.touched,
-                   'invalid-input': contactForm?.controls?.['email']?.invalid && contactForm.controls['email']?.touched
+                   'valid-input': contactForm?.controls?.['email']?.valid && contactForm?.controls?.['email']?.touched,
+                   'invalid-input': contactForm?.controls?.['email']?.invalid && contactForm?.controls?.['email']?.touched
                  }">
-          <span class="error" *ngIf="contactForm.controls['email']?.invalid && contactForm.controls['email']?.touched">
+          <span class="error" *ngIf="contactForm.controls['email']?.invalid && contactForm?.controls?.['email']?.touched">
             Please enter a valid email address
           </span>
         </div>
@@ -58,10 +58,10 @@
                     required
                     (focus)="resetError('message', contactForm)"
                     [ngClass]="{
-                      'valid-input': contactForm?.controls?.['message']?.valid && contactForm.controls['message']?.touched,
-                      'invalid-input': contactForm?.controls?.['message']?.invalid && contactForm.controls['message']?.touched
+                      'valid-input': contactForm?.controls?.['message']?.valid && contactForm?.controls?.['message']?.touched,
+                      'invalid-input': contactForm?.controls?.['message']?.invalid && contactForm?.controls?.['message']?.touched
                     }"></textarea>
-          <span class="error" *ngIf="contactForm.controls['message']?.invalid && contactForm.controls['message']?.touched">
+          <span class="error" *ngIf="contactForm.controls['message']?.invalid && contactForm?.controls?.['message']?.touched">
             Please enter your message
           </span>
         </div>
@@ -84,11 +84,11 @@
           Send your message
         </button>
       </form>
-    </div>
-    <div class="arrow-container"> 
-      <a href="#hero" class="arrow-container">
-        <img class="arrow" src="/assets/icons/arrowupDefault.png" alt="Arrow up">
-      </a>
+      <div class="back-to-hero"> 
+        <a href="#hero">
+            <img class="arrow" src="/assets/icons/arrowupDefault.png" alt="Arrow up">
+        </a>
+      </div>
     </div>
 
     <!-- Modales Fenster für die Bestätigung -->
@@ -99,4 +99,7 @@
       </div>
     </div>    
   </div>
+
+
+
 </section>

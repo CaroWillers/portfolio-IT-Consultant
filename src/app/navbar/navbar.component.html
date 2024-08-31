@@ -1,14 +1,42 @@
 <nav class="hero-nav">
     <h1 class="logo">
-        <span>C</span><span>A</span><span>R</span><span class="accent-o">O</span>
-    </h1>        
+      <span>C</span><span>A</span><span>R</span><span class="accent-o">O</span>
+    </h1>
+  
+    <!-- Burger Menu -->
+    <div class="burger-menu" (click)="toggleMenu()">
+      <img src="/assets/icons/burger.png" alt="Menu">
+    </div>
+  
+    <!-- desktop -->
     <ul class="hero-nav-list">
-        <li><a href="#about-me">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Portfolio</a></li> 
-        <li class="language-switcher">
-            <a href="#" id="lang-en">EN</a> | 
-            <a href="#" id="lang-de">DE</a>
-        </li>
+      <li><a href="#about-me" (click)="closeMenu()">About Me</a></li>
+      <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
+      <li><a href="#portfolio" (click)="closeMenu()">Portfolio</a></li>
+      <li class="language-switcher">
+        <a href="#" id="lang-en">EN</a> |
+        <a href="#" id="lang-de">DE</a>
+      </li>
     </ul>
-</nav>
+  </nav>
+  
+  <!-- Overlay mobile-->
+  <div class="overlay" *ngIf="isMenuOpen">
+    <div class="overlay-content">
+      <h1 class="logo">
+        <span>C</span><span>A</span><span>R</span><span class="accent-o">O</span>
+      </h1>
+      <img src="/assets/icons/close.png" alt="Close" class="close-icon" (click)="closeMenu()">
+      <ul class="overlay-nav-list">
+        <li><a href="#about-me" (click)="closeMenu()">About Me</a></li>
+        <li><a href="#skills" (click)="closeMenu()">My skills</a></li>
+        <li><a href="#portfolio" (click)="closeMenu()">Portfolio</a></li>
+        <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+        <li class="language-switcher">
+          <a href="#" id="lang-en">EN</a> |
+          <a href="#" id="lang-de">DE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
