@@ -1,30 +1,20 @@
 <section id="about-me" class="about-section">
-<div class="about-me">
-    <h1 class="h1">About me</h1>
-    <div class="about-me-container">
+    <div class="about-me">
+      <h1 class="h1">{{ 'about_me.title' | translate }}</h1>
+      <div class="about-me-container">
         <div class="about-me-text">
-            <p class="about-me-intro">I'm a passionate developer driven to shape the future of digitalization. My goal is to create high-quality, functional applications that delight users with their ease of use.</p>
-            <div class="about-me-paragraph">
-                <img src="assets/icons/lamp.png" alt="Icon 2" class="icon">
-                <p>Before diving into web development, I spent many years as the head of an advertising agency. This experience taught me what it takes to conceptualize and market successful websites and apps. Now, I'm not only able to create these concepts but also bring them to life technically.</p>
-            </div>
-            <div class="about-me-paragraph">
-                <img src="assets/icons/puzzle.png" alt="Icon 3" class="icon">
-                <p>
-                    I excel at driving projects forward and thriving in collaborative Scrum teams. I'm communicative, persistent, and always think ahead – qualities that served me well during my part-time training as a web developer at Developer Akademie.<br>
-                    <span style="display: inline-block; margin-top: 10px;">Valuing harmony and efficiency, I appreciate environments where everyone is committed to achieving the best results.</span> Always open to learning, adapting, and growing, I embrace flexibility and a positive approach as central to how I work.
-                </p>
-                
-            </div>
-            <div class="about-me-paragraph">
-                <img src="assets/icons/location.png" alt="location" class="icon">
-                <p>Though I work remotely, I'm open to business travel when needed. I'm particularly drawn to international settings where diverse perspectives come together to create something extraordinary.</p>
-            </div>
+          <p class="about-me-intro">{{ 'about_me.intro' | translate }}</p>
+          
+          <div class="about-me-paragraph" *ngFor="let paragraph of ('about_me.paragraphs' | translate)">
+            <img [src]="paragraph.icon" alt="Icon" class="icon">
+            <p [innerHTML]="getSafeHtml(paragraph.text)"></p>
+          </div>
+          
         </div>
         <div class="profile-picture-container">
-            <img src="assets/caro.png" alt="My Profile Picture" class="profile-picture">
+          <img src="assets/caro.png" alt="My Profile Picture" class="profile-picture">
         </div>
+      </div>
     </div>
-</div>
-</section>
-
+  </section>
+  

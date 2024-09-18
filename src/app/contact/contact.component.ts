@@ -1,19 +1,38 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core'; 
 import { FormsModule, NgForm } from '@angular/forms'; 
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'; 
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { Router } from '@angular/router'; 
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {  
   isPrivacyChecked: boolean = false;
-  showModal: boolean = false;
+  showModal: boolean = false; 
+  privacyPolicyText: SafeHtml = '';  
 
+  private router = inject(Router);
+
+  constructor(private sanitizer: DomSanitizer, private translate: TranslateService) { 
+      this.translate.get('contact.privacy_policy').subscribe((res: string) => {
+        this.privacyPolicyText = this.sanitizer.bypassSecurityTrustHtml(
+          res.replace('{{ link }}', '/privacy-policy')
+        );
+      });
+    }
+
+
+    showPrivacyPolicy() {
+      this.router.navigateByUrl('/privacy-policy');  
+    }
+  
   http = inject(HttpClient);
 
   contactData = {

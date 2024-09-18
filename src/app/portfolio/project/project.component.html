@@ -8,20 +8,35 @@
     </p>    
     <p>{{ description }}</p> 
     <div class="project-buttons">
-      <a class="btn-liveTest" [href]="liveTestLink" target="_blank"
-         (mouseover)="isDaBubbleProject() ? showPopup($event) : null" 
-         (mouseout)="isDaBubbleProject() ? hidePopup($event) : null">Live Test</a>
+      <!-- Live Test Button -->
+      <a class="btn-liveTest" [href]="isDaBubbleProject() ? null : liveTestLink" 
+      [class.disabled]="isDaBubbleProject()" 
+      (click)="isDaBubbleProject() ? $event.preventDefault() : null"
+      (mouseover)="isDaBubbleProject() ? showPopup($event) : null" 
+      (mouseout)="isDaBubbleProject() ? hidePopup($event) : null">
+      {{ 'project.live_test' | translate }}
+   </a>
+
+      <!-- Popup für Live Test -->
       <div *ngIf="isDaBubbleProject()" class="popup-content">
-        This project is still in progress. Stay tuned for updates!
+        {{ 'project.popup_message' | translate }}
       </div>
-      <a class="btn-github" [href]="githubLink" target="_blank"
+
+      <!-- GitHub Button -->
+      <a class="btn-github" [href]="isDaBubbleProject() ? null : githubLink" 
+         [class.disabled]="isDaBubbleProject()" 
+         (click)="isDaBubbleProject() ? $event.preventDefault() : null"
          (mouseover)="isDaBubbleProject() ? showPopup($event) : null" 
-         (mouseout)="isDaBubbleProject() ? hidePopup($event) : null">GitHub</a>
-      <div *ngIf="isDaBubbleProject()" class="popup-content">
-        This project is still in progress. Stay tuned for updates!
-      </div>
+         (mouseout)="isDaBubbleProject() ? hidePopup($event) : null">
+         {{ 'project.github' | translate }}
+      </a>
+      
+        <!-- Popup für GitHub -->
+        <div *ngIf="isDaBubbleProject()" class="popup-content">
+          {{ 'project.popup_message' | translate }}
+        </div>
+      </div>    
     </div>    
-  </div>
   <div class="project-image">
     <img [src]="imageUrl" alt="{{ title }}" />
   </div>

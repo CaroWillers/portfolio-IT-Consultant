@@ -1,43 +1,42 @@
 <section id="contact" class="contact-section">
-  <h1 class="h1">Contact</h1> 
+  <h1 class="h1">{{ 'contact.title' | translate }}</h1> 
   <div class="contact-container">
     <div class="contact-text">
       <div>
-        <p class="question">What's your next project?</p>
-        <p>Reach out through this form. Let&rsquo;s collaborate and bring your projects to success. I&rsquo;m ready to contribute my skills.</p>
+        <p class="question">{{ 'contact.question' | translate }}</p>
+        <p>{{ 'contact.intro' | translate }}</p>
       </div>
     </div>
 
     <div class="contact-form">
       <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
         <div class="form-group">
-          <label for="name" class="sr-only">Your name</label>
+          <label for="name" class="sr-only">{{ 'contact.name_placeholder' | translate }}</label>
           <input [(ngModel)]="contactData.name" 
-          type="text" 
-          id="name" 
-          name="name" 
-          placeholder="Your name" 
-          required
-          (focus)="resetError('name', contactForm)"
-          [ngClass]="{
-            'valid-input': contactForm?.controls?.['name']?.valid && contactForm?.controls?.['name']?.touched,
-            'invalid-input': contactForm?.controls?.['name']?.invalid && contactForm?.controls?.['name']?.touched
-          }">
-   
+                 type="text" 
+                 id="name" 
+                 name="name" 
+                 [placeholder]="'contact.name_placeholder' | translate" 
+                 required
+                 (focus)="resetError('name', contactForm)"
+                 [ngClass]="{
+                   'valid-input': contactForm?.controls?.['name']?.valid && contactForm?.controls?.['name']?.touched,
+                   'invalid-input': contactForm?.controls?.['name']?.invalid && contactForm?.controls?.['name']?.touched
+                 }">
           <span class="error" *ngIf="contactForm.controls['name']?.invalid && contactForm.controls['name']?.touched">
             Please enter your name
           </span>
         </div>
       
         <div class="form-group">
-          <label for="email" class="sr-only">Your email</label>
+          <label for="email" class="sr-only">{{ 'contact.email_placeholder' | translate }}</label>
           <input [(ngModel)]="contactData.email" 
                  type="email" 
                  id="email" 
                  name="email" 
-                 placeholder="Your email" 
+                 [placeholder]="'contact.email_placeholder' | translate" 
                  required 
-                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                  (focus)="resetError('email', contactForm)"
                  [ngClass]="{
                    'valid-input': contactForm?.controls?.['email']?.valid && contactForm?.controls?.['email']?.touched,
@@ -49,12 +48,12 @@
         </div>
       
         <div class="form-group">
-          <label for="message" class="sr-only">Your message</label>
+          <label for="message" class="sr-only">{{ 'contact.message_placeholder' | translate }}</label>
           <textarea [(ngModel)]="contactData.message" 
                     id="message" 
                     name="message" 
                     rows="10" 
-                    placeholder="Your message" 
+                    [placeholder]="'contact.message_placeholder' | translate" 
                     required
                     (focus)="resetError('message', contactForm)"
                     [ngClass]="{
@@ -73,15 +72,25 @@
                  name="privacy" 
                  (change)="toggleButtonState()">
           <label for="privacy">
-            I've read the <a href="privacy-policy" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.
+            <p>
+              {{ 'contact.privacy_policy_text' | translate }}
+              <span (click)="showPrivacyPolicy()" class="privacy-link">
+                {{ 'contact.privacy_policy_link' | translate }}
+              </span>
+              {{ 'contact.privacy_policy_text_end' | translate }}
+            </p>
           </label>
         </div>
-        <span class="privacy-error" *ngIf="showPrivacyError(contactForm)">Please accept the privacy policy</span>
-      
+        
+        <span class="privacy-error" *ngIf="showPrivacyError(contactForm)">
+          Du musst der Datenschutzerklärung zustimmen, um fortzufahren.
+        </span>
+        
+        
         <button type="submit" 
                 [disabled]="!isPrivacyChecked"
                 [ngClass]="{'btn-grey': !isPrivacyChecked, 'btn-green': isPrivacyChecked}">
-          Send your message
+          {{ 'contact.send_button' | translate }}
         </button>
       </form>
       <div class="back-to-hero"> 
@@ -95,11 +104,8 @@
     <div id="confirmationModal" class="modal" [ngClass]="{'show': showModal}">
       <div class="modal-content">
         <span class="close" (click)="closeModal()">&times;</span>
-        <p>Thank you for your message!<br>I will get back to you soon.</p>
+        <p>{{ 'contact.thank_you' | translate }}</p>
       </div>
     </div>    
   </div>
-
-
-
 </section>

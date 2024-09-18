@@ -1,21 +1,26 @@
 <section id="portfolio" class="portfolio-section">
-    <div class="portfolio-text">
-      <h1 class="h1">Portfolio</h1>
-      <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
-    </div>
+  <div class="portfolio-purple-background">
+    <img src="/assets/bgr-img/5_purple_shadow_portfolio.png" alt="Portfolio Background">
+  </div>  
+  <div class="portfolio-green-background">
+    <img src="/assets/bgr-img/6_green-shadow-portfollio.png" alt="Portfolio Background">
+  </div>  
 
-    <div class="portfolio-container">
-      <app-project
-        *ngFor="let project of projects"
-        [title]="project.title"
-        [technologies]="project.technologies"
-        [description]="project.description"
-        [liveTestLink]="project.liveTestLink"
-        [githubLink]="project.githubLink"
-        [imageUrl]="project.imageUrl"
-        [imageOnLeft]="project.imageOnLeft">
-      </app-project>  
-    </div>
-  </section>
-  
-  
+  <div class="portfolio-text">
+    <h1 class="h1">{{ 'portfolio.title' | translate }}</h1>
+    <p>{{ 'portfolio.description' | translate }}</p>
+  </div>
+
+  <div class="portfolio-container">
+    <app-project
+      *ngFor="let project of projects"
+      [title]="project.title | translate"
+      [technologies]="project.technologies"
+      [description]="project.description | translate"
+      [liveTestLink]="project.liveTestLink"
+      [githubLink]="project.githubLink"
+      [imageUrl]="project.imageUrl"
+      [imageOnLeft]="project.imageOnLeft">
+    </app-project>  
+  </div>
+</section>

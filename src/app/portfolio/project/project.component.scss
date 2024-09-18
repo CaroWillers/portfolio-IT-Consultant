@@ -8,6 +8,7 @@
     color: white;
     margin: 0 auto; 
     gap: 100px;
+    z-index: 1000;
 
     &.image-left {
         flex-direction: row;   
@@ -42,13 +43,38 @@
     }
 
     .project-image {
-        width: 750px;    
+      width: 750px;   
+      
+      img {
+        width: 750px;   
+        object-fit: cover;   
+      }
+     
+      @media (max-width: 600px) {
+        width: 100%;   
         
-        img {
-          width: 750px;
-          object-fit: cover;
+        img { 
+          max-width: 650px;   
         }
       }
+
+      @media (max-width: 470px) {
+        width: 100%;   
+        
+        img {  
+          max-width: 550px;   
+        }
+      }
+
+      @media (max-width: 385px) {
+        width: 100%;   
+        
+        img {  
+          max-width: 440px;   
+        }
+      }
+    }
+    
       .project-text, .project-image {
         display: flex;
         flex-direction: column;
@@ -60,7 +86,7 @@
     color: $purple;
     font-size: 32px;
     font-weight: 650;
-    margin: 0;
+    margin: 0; 
     }
 
     .technologies {
@@ -80,8 +106,10 @@
       display: flex;
       gap: 80px;
       margin-top: 20px;
+      position: relative;
+      z-index: 1000;
       
-      .btn-liveTest, .btn-github {
+      .btn-liveTest, .btn-github {  
         display: flex;
         align-items: center;
         justify-content: center;
@@ -128,6 +156,13 @@
   .project-buttons {
     position: relative; 
   }
+
+  a[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
   
   .popup-content {
     display: none;
@@ -166,3 +201,97 @@
     pointer-events: auto;
   }
   
+  @media (max-width: 1200px) {
+    .project {
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse !important;; 
+      gap: 30px;
+      padding: 0 !important;; 
+    }
+
+    .project.image-left,
+    .project.image-right {
+        width: 100%;
+        flex-direction: column;  
+        align-items: center; 
+        margin: 0;
+    }
+
+    .project-text {
+        width: 500px;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+    }
+
+    .project-text.text-left,
+    .project-text.text-right {
+        width: 100%;
+        flex-direction: column;
+        align-items: center !important;;
+        text-align: center !important;;
+        margin-top: -48px;
+    }
+   
+    .project-image { 
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  
+    .project-buttons {
+      width: 100%;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      z-index: 10000;
+    }
+
+    .h3 { 
+      justify-content: center;
+      text-align: center; 
+      width: 100%;
+      margin: 0;
+    }
+    .technologies {
+      justify-content: center;
+      text-align: center; 
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+   .project-text {
+    width: 400px !important;
+    }
+
+    .project-text.text-left,
+    .project-text.text-right { 
+      width: 400px; 
+    .technologies {
+      font-size: 26px;
+    }
+  }
+  .project-buttons {
+    gap: 30px !important;
+  }
+}
+
+@media (max-width: 414px) {
+  .project-text {
+   width: 400px !important;
+   }
+
+   .project-text.text-left,
+   .project-text.text-right { 
+       p {
+         padding-left: 20px;
+         padding-right: 20px;
+       }
+   .technologies {
+     font-size: 18px;
+   }
+ }
+}

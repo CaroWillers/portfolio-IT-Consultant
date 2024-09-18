@@ -17,3 +17,16 @@ background-repeat: no-repeat;
 position: relative;
 z-index: 1;
 }
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto; 
+    box-sizing: border-box;
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1440px;
+    }
+}

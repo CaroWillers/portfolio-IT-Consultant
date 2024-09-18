@@ -1,28 +1,26 @@
 <!-- impressum.component.html -->
 <div class="go-back-container">
-  <a class="go-back-btn" routerLink="/" aria-label="Zurück">
-    <span class="arrow-up">&larr;</span>
+  <a routerLink="/" class="go-back-link">
+    <img class="go-back-btn" src="/assets/icons/arrowupDefault.png" alt="back to startpage">
+    <span class="go-back-text">{{ 'impressum.back' | translate }}</span>
   </a>
-  <p>Back to startpage</p> 
 </div>
 
+
 <div class="impressum">
-    <h1>Site Notice</h1> 
+    <h1>{{ 'impressum.title' | translate }}</h1> 
       
-    <p>Caroline Willers<br />
-      Rorupweg 8<br />
-      48161 Munster</p>
+    <p>{{ 'impressum.name' | translate }}<br />
+      {{ 'impressum.address' | translate }}</p>
       
-      <h2>Contact</h2>
-      <p>Phone: 015232025356<br />
-      E-Mail: carowillers&#64;gmail.com
+    <h2>{{ 'impressum.contact' | translate }}</h2>
+    <p>{{ 'impressum.phone' | translate }}<br />
+      {{ 'impressum.email' | translate }}
     </p>
       
-      <h2>Person responsible for editorial</h2>
-      <p>Caroline Willers</p>
-  </div>
-
-
+    <h2>{{ 'impressum.responsible' | translate }}</h2>
+    <p>{{ 'impressum.name' | translate }}</p>
+</div>
 
 
  

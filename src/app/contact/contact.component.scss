@@ -242,18 +242,20 @@
 
         label[for="privacy"] {
             font-size: 14px;
-            font-weight: 400;
+            font-weight: 300;
             color: white;
         }
         
-        label[for="privacy"] a {
-            color: $purple;
-            text-decoration: none;
-        }
-        
-        label[for="privacy"] a:hover {
-            text-decoration: underline;
-        }
+ 
+  .privacy-link {
+    color: $purple;  
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
         
         .error {
             color: $red;

@@ -1,0 +1,120 @@
+{
+  "navbar": {
+    "about_me": "About Me",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "intro": "I am",
+    "name": "CARO WILLERS",
+    "position": "FRONTEND DEVELOPER",
+    "button": "Let's talk!",
+    "scroll_down": "Scroll down",
+    "contact_email": "contact@caro-willers.com"
+  },
+  "about_me": {
+    "title": "About me",
+    "intro": "I'm a passionate developer driven to shape the future of digitalization. My goal is to create high-quality, functional applications that delight users with their ease of use.",
+    "paragraphs": [
+      {
+        "icon": "assets/icons/lamp.png",
+        "text": "Before diving into web development, I spent many years as the head of an advertising agency. This experience taught me what it takes to conceptualize and market successful websites and apps. Now, I'm not only able to create these concepts but also bring them to life technically."
+      },
+      {
+        "icon": "assets/icons/puzzle.png",
+        "text": "I excel at driving projects forward and thriving in collaborative Scrum teams. I'm communicative, persistent, and always think ahead – qualities that served me well during my part-time training as a web developer at Developer Akademie. Valuing harmony and efficiency, I appreciate environments where everyone is committed to achieving the best results. Always open to learning, adapting, and growing, I embrace flexibility and a positive approach as central to how I work."
+      },
+      {
+        "icon": "assets/icons/location.png",
+        "text": "Though I work remotely, I'm open to business travel when needed. I'm particularly drawn to international settings where diverse perspectives come together to create something extraordinary."
+      }
+    ]
+  },
+  "skills": {
+    "title": "My skills",
+    "description": "I have gained experience in building projects with various frontend technologies and concepts.",
+    "cta_question": "Which skills do you need?",
+    "cta_message": "Feel free to contact me. I look forward to hearing about your projects. Let's see if we're a great fit to work together.",
+    "cta_button": "Get in touch",
+    "continual_learning": "Continually Learning",
+    "continual_learning_popup": "I am currently continuing my education to become a backend developer."
+  }, 
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Explore a selection of my work here - Interact with projects to see my skills in action."
+  },
+  "project": {
+    "live_test": "Live Test",
+    "github": "GitHub",
+    "popup_message": "This project is still in progress. Stay tuned for updates!"
+  },
+  "projects": {
+    "join": "Join",
+    "join_description": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+    "pollo_loco": "Pollo Loco",
+    "pollo_loco_description": "A simple Jump and Run game based on an object-oriented approach. Help Pepe to collect coins and avoid upcoming obstacles.",
+    "pokedex": "Pokedex",
+    "pokedex_description": "Based on the PokéAPI, a simple library that provides and catalogs Pokémon information.",
+    "da_bubble": "DA Bubble",
+    "da_bubble_description": "This App is a Slack clone app. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
+  },
+  "contact": {
+    "title": "Contact",
+    "question": "What's your next project?",
+    "intro": "Reach out through this form. Let’s collaborate and bring your projects to success. I’m ready to contribute my skills.",
+    "name_placeholder": "Your name",
+    "email_placeholder": "Your email",
+    "message_placeholder": "Your message",
+    "privacy_policy_text": "I've read the",
+    "privacy_policy_link": "privacy policy",
+    "privacy_policy_text_end": "and agree to the processing of my data.",    
+    "send_button": "Send your message",
+    "thank_you": "Thank you for your message! I will get back to you soon."
+  },
+  "footer": {
+    "imprint": "Imprint"
+  },
+  "impressum": {
+    "back": "Back to startpage",
+    "title": "Site Notice",
+    "contact": "Contact",
+    "phone": "Phone: +49 152 32025356",
+    "email": "E-Mail: carowillers@gmail.com",
+    "responsible": "Person responsible for editorial",
+    "name": "Caroline Willers",
+    "address": "Rorupweg 8, 48161 Munster"
+  },
+  "privacy_policy": {
+    "title": "Privacy Policy",
+    "overview_title": "1. An overview of data protection",
+    "general_info_title": "General information",
+    "general_info_text": "The following information will provide you with an easy-to-navigate overview of what will happen with your personal data when you visit this website. The term 'personal data' comprises all data that can be used to personally identify you. For detailed information about the subject matter of data protection, please consult our Data Protection Declaration, which we have included beneath this copy.",
+    "data_recording_title": "Data recording on this website",
+    "controller_title": "Who is the responsible party for the recording of data on this website?",
+    "controller_text": "The data on this website is processed by the operator of the website, whose contact information is available under section 'Information about the responsible party' in this Privacy Policy.",
+    "data_collection_how_title": "How do we record your data?",
+    "data_collection_how_text": "We collect your data as a result of your sharing of your data with us. This may, for instance, be information you enter into our contact form. Other data shall be recorded by our IT systems automatically or after you consent to its recording during your website visit. This data comprises primarily technical information (e.g., web browser, operating system, or time the site was accessed). This information is recorded automatically when you access this website.",
+    "data_usage_title": "What are the purposes we use your data for?",
+    "data_usage_text": "A portion of the information is generated to guarantee the error-free provision of the website. Other data may be used to analyze your user patterns.",
+    "user_rights_title": "What rights do you have as far as your information is concerned?",
+    "user_rights_text": "You have the right to receive information about the source, recipients, and purposes of your archived personal data at any time without having to pay a fee for such disclosures. You also have the right to demand that your data be rectified or eradicated. If you have consented to data processing, you have the option to revoke this consent at any time, which shall affect all future data processing. Moreover, you have the right to demand that the processing of your data be restricted under certain circumstances. Furthermore, you have the right to log a complaint with the competent supervising agency.",
+    "hosting_title": "2. Hosting",
+    "hosting_text": "We are hosting the content of our website at the following provider:",
+    "provider_title": "Strato",
+    "provider_text": "The provider is Strato AG, Otto-Ostrowski-Straße 7, 10249 Berlin. When you visit our website, Strato records various logfiles, including your IP addresses. For more information, please consult the Strato Data Privacy Policy: https://www.strato.de/datenschutz/",
+    "general_info_title_mandatory": "3. General information and mandatory information",
+    "storage_duration_title": "Storage duration",
+    "storage_duration_text": "Unless a more specific storage period has been specified in this privacy policy, your personal data will remain with us until the purpose for which it was collected no longer applies. If you assert a justified request for deletion or revoke your consent to data processing, your data will be deleted unless we have other legally permissible reasons for storing your personal data (e.g., tax or commercial law retention periods); in the latter case, the deletion will take place after these reasons cease to apply.",
+    "right_data_portability_title": "Right to data portability",
+    "right_data_portability_text": "You have the right to have data that we process automatically on the basis of your consent or in fulfillment of a contract handed over to you or to a third party in a common, machine-readable format. If you should demand the direct transfer of the data to another controller, this will be done only if it is technically feasible.",
+    "ssl_tls_title": "SSL and/or TLS encryption",
+    "ssl_tls_text": "For security reasons and to protect the transmission of confidential content, such as purchase orders or inquiries you submit to us as the website operator, this website uses either an SSL or a TLS encryption program. You can recognize an encrypted connection by checking whether the address line of the browser switches from 'http://' to 'https://' and by the appearance of the lock icon in the browser line.",
+    "social_media_title": "4. Social media",
+    "linkedin_title": "LinkedIn",
+    "linkedin_text": "This website uses elements of the LinkedIn network. The provider is LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Ireland. Any time you access a page of this website that contains elements of LinkedIn, a connection to LinkedIn's servers is established. LinkedIn is notified that you have visited this website with your IP address. If you click on LinkedIn’s 'Recommend' button and are logged into your LinkedIn account at the time, LinkedIn will be in a position to allocate your visit to this website to your LinkedIn user account.",
+    "analytics_title": "5. Analytics and advertising",
+    "linkedin_insight_title": "LinkedIn Insight Tag",
+    "linkedin_insight_text": "This website uses the Insight Tag from LinkedIn. This service is provided by LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Ireland. We use the LinkedIn Insight Tag to obtain information about visitors to our website. Once a website visitor is registered with LinkedIn, we can analyze the key occupational data (e.g., career level, company size, country, location, industry, job title) of our website visitors to help us better target our site to the relevant audience."
+  }
+}

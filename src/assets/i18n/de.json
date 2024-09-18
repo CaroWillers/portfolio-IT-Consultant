@@ -1,0 +1,120 @@
+{
+  "navbar": {
+    "about_me": "Mein Profil",
+    "skills": "Kompetenz",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "intro": "I am",
+    "name": "CARO WILLERS",
+    "position": "FRONTEND DEVELOPER",
+    "button": "Kontakt hier!",
+    "scroll_down": "weiter scrollen",
+    "contact_email": "contact@caro-willers.com"
+  },
+  "about_me": {
+    "title": "Mein Profil",
+    "intro": "Ich bin eine engagierte Entwicklerin und möchte die Zukunft der Digitalisierung mitgestalten. Mein Ziel ist es, qualitativ hochwertige und funktionale Anwendungen zu entwickeln, die die Nutzer durch ihre Benutzerfreundlichkeit überzeugen.",
+    "paragraphs": [
+      {
+        "icon": "assets/icons/lamp.png",
+        "text": "Bevor ich in die Webentwicklung eingestiegen bin, war ich viele Jahre als kaufmännische Leitung unserer Werbeagentur tätig. Durch diese Erfahrung habe ich umfangreiche Kenntnisse darin erworben, erfolgreiche Webseiten und Apps zu konzipieren und zu vermarkten. Heute kann ich diese Konzepte nicht nur entwickeln, sondern auch technisch umsetzen."
+      },
+      {
+        "icon": "assets/icons/puzzle.png",
+        "text": "Ich bin sehr gut darin, Projekte voranzutreiben und in kollaborativen Scrum-Teams erfolgreich zu arbeiten. Ich bin kommunikativ, ausdauernd und denke vorausschauend – Eigenschaften, die mir während meiner Teilzeitausbildung zum Webentwickler an der Developer Akademie sehr zugutekamen. Harmonie und Effizienz sind mir wichtig, und ich schätze Arbeitsumgebungen, in denen alle bestrebt sind, gemeinsam die besten Ergebnisse zu erzielen. Offen für Neues, lernbereit und anpassungsfähig, gehe ich jede Herausforderung flexibel und mit einer positiven Einstellung an."
+      },
+      {
+        "icon": "assets/icons/location.png",
+        "text": "Auch wenn ich remote arbeite, bin ich bei Bedarf für Geschäftsreisen offen. Besonders reizvoll finde ich internationale Umgebungen, in denen unterschiedliche Perspektiven zusammenkommen, um etwas Außergewöhnliches zu schaffen."
+      }
+    ]
+  },
+  "skills": {
+    "title": "Meine Skills",
+    "description": "Ich habe Erfahrung in der Entwicklung von Projekten mit verschiedenen Frontend-Technologien und -Konzepten gesammelt.",
+    "cta_question": "Welche Skills brauchst du?",
+    "cta_message": "Nimm einfach Kontakt auf. Ich freue mich darauf, von Deinen Projekten zu hören. Lass uns besprechen, wie wir diese gemeinsam voranbringen können.",
+    "cta_button": "hier kontaktieren",
+    "continual_learning": "Lebenslanges Lernen",
+    "continual_learning_popup": "Ich erweitere aktuell meine Kenntnisse, um Backend-Entwickler zu werden."
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "description": "Hier findest Du eine Auswahl meiner Arbeiten – interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
+  },
+  "project": {
+    "live_test": "Live Test",
+    "github": "GitHub",
+    "popup_message": "Dieses Projekt ist noch in Arbeit. Bleib dran für Updates!"
+  },
+  "projects": {
+    "join": "Join",
+    "join_description": "Taskmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
+    "pollo_loco": "Pollo Loco",
+    "pollo_loco_description": "Ein einfaches Jump-and-Run-Spiel, basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen zu sammeln und Hindernissen auszuweichen.",
+    "pokedex": "Pokedex",
+    "pokedex_description": "Basierend auf der PokéAPI – eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
+    "da_bubble": "DA Bubble",
+    "da_bubble_description": "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und -zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeit-Nachrichten und robuster Kanalorganisation."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "question": "Was ist Dein nächstes Projekt?",
+    "intro": "Kontaktiere mich über dieses Formular. Lass uns zusammenarbeiten und Deine Projekte zum Erfolg bringen. Ich bin motiviert, meine Fähigkeiten einzubringen.",
+    "name_placeholder": "Dein Name",
+    "email_placeholder": "Deine E-Mail",
+    "message_placeholder": "Deine Nachricht",
+    "privacy_policy_text": "Ich habe die ",
+    "privacy_policy_link": "Datenschutzerklärung",
+    "privacy_policy_text_end": " gelesen und stimme der Verarbeitung meiner Daten zu.",    
+    "send_button": "Nachricht senden",
+    "thank_you": "Danke für Deine Nachricht! Ich werde mich bald bei Dir melden."
+  },
+  "footer": {
+    "imprint": "Impressum"
+  },
+  "impressum": {
+    "back": "Zurück zur Startseite",
+    "title": "Impressum",
+    "contact": "Kontakt",
+    "phone": "Telefon: +49 152 32025356",
+    "email": "E-Mail: carowillers@gmail.com",
+    "responsible": "Verantwortlich für den Inhalt",
+    "name": "Caroline Willers",
+    "address": "Rorupweg 8, 48161 Münster"
+  }, 
+  "privacy_policy": {
+    "title": "Datenschutzerklärung",
+    "overview_title": "1. Überblick über den Datenschutz",
+    "general_info_title": "Allgemeine Informationen",
+    "general_info_text": "Die folgenden Informationen geben Ihnen einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche Informationen zum Thema Datenschutz entnehmen Sie unserer unter diesem Text aufgeführten Datenschutzerklärung.",
+    "data_recording_title": "Datenaufzeichnung auf dieser Website",
+    "controller_title": "Wer ist verantwortlich für die Datenerfassung auf dieser Website?",
+    "controller_text": "Die Datenverarbeitung auf dieser Website erfolgt durch den Betreiber der Website, dessen Kontaktdaten Sie im Abschnitt „Informationen zum Verantwortlichen“ in dieser Datenschutzerklärung finden.",
+    "data_collection_how_title": "Wie erfassen wir Ihre Daten?",
+    "data_collection_how_text": "Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen. Hierbei kann es sich z. B. um Daten handeln, die Sie in ein Kontaktformular eingeben. Andere Daten werden automatisch oder nach Ihrer Einwilligung beim Besuch der Website durch unsere IT-Systeme erfasst. Dabei handelt es sich vor allem um technische Daten (z. B. Internetbrowser, Betriebssystem oder Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt automatisch, sobald Sie diese Website betreten.",
+    "data_usage_title": "Wofür nutzen wir Ihre Daten?",
+    "data_usage_text": "Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der Website zu gewährleisten. Andere Daten können zur Analyse Ihres Nutzerverhaltens verwendet werden.",
+    "user_rights_title": "Welche Rechte haben Sie bezüglich Ihrer Daten?",
+    "user_rights_text": "Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten. Sie haben außerdem ein Recht, die Berichtigung oder Löschung dieser Daten zu verlangen. Wenn Sie eine Einwilligung zur Datenverarbeitung erteilt haben, können Sie diese jederzeit für die Zukunft widerrufen. Darüber hinaus haben Sie das Recht, unter bestimmten Umständen die Einschränkung der Verarbeitung Ihrer personenbezogenen Daten zu verlangen. Außerdem steht Ihnen ein Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.",
+    "hosting_title": "2. Hosting",
+    "hosting_text": "Wir hosten die Inhalte unserer Website beim folgenden Anbieter:",
+    "provider_title": "Strato",
+    "provider_text": "Der Anbieter ist die Strato AG, Otto-Ostrowski-Straße 7, 10249 Berlin. Beim Besuch unserer Website erfasst Strato verschiedene Logfiles, darunter auch Ihre IP-Adressen. Weitere Informationen entnehmen Sie der Datenschutzerklärung von Strato: https://www.strato.de/datenschutz/",
+    "general_info_title_mandatory": "3. Allgemeine Informationen und Pflichtangaben",
+    "storage_duration_title": "Speicherdauer",
+    "storage_duration_text": "Sofern innerhalb dieser Datenschutzerklärung keine speziellere Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie ein berechtigtes Löschersuchen geltend machen oder eine Einwilligung zur Datenverarbeitung widerrufen, werden Ihre Daten gelöscht, sofern wir keine anderen rechtlich zulässigen Gründe für die Speicherung Ihrer personenbezogenen Daten haben (z. B. steuer- oder handelsrechtliche Aufbewahrungsfristen); im letztgenannten Fall erfolgt die Löschung nach Fortfall dieser Gründe.",
+    "right_data_portability_title": "Recht auf Datenübertragbarkeit",
+    "right_data_portability_text": "Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung oder in Erfüllung eines Vertrags automatisiert verarbeiten, an sich oder an einen Dritten in einem gängigen, maschinenlesbaren Format aushändigen zu lassen. Sofern Sie die direkte Übertragung der Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur, soweit es technisch machbar ist.",
+    "ssl_tls_title": "SSL- bzw. TLS-Verschlüsselung",
+    "ssl_tls_text": "Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von \"http://\" auf \"https://\" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.",
+    "social_media_title": "4. Soziale Medien",
+    "linkedin_title": "LinkedIn",
+    "linkedin_text": "Diese Website nutzt Funktionen des Netzwerks LinkedIn. Anbieter ist die LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Irland. Bei jedem Abruf einer unserer Seiten, die Funktionen von LinkedIn enthält, wird eine Verbindung zu den Servern von LinkedIn hergestellt. LinkedIn wird darüber informiert, dass Sie unsere Internetseiten mit Ihrer IP-Adresse besucht haben. Wenn Sie den „Recommend“-Button von LinkedIn anklicken und in Ihrem LinkedIn-Account eingeloggt sind, kann LinkedIn Ihren Besuch auf unserer Website Ihnen und Ihrem Benutzerkonto zuordnen.",
+    "analytics_title": "5. Analyse-Tools und Werbung",
+    "linkedin_insight_title": "LinkedIn Insight Tag",
+    "linkedin_insight_text": "Diese Website nutzt den Insight Tag von LinkedIn. Anbieter ist die LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin 2, Irland. Wir nutzen den Insight Tag, um Informationen über die Besucher unserer Website zu erhalten. So können wir zum Beispiel erkennen, welche LinkedIn-Nutzer unser Angebot aufrufen, welche Berufe und Positionen sie haben, oder welche Aktionen sie auf unserer Website ausführen."
+  }
+}

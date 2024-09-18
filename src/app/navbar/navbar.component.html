@@ -1,42 +1,41 @@
 <nav class="hero-nav">
+  <h1 class="logo">
+    <span>C</span><span>A</span><span>R</span><span class="accent-o">O</span>
+  </h1>
+
+  <!-- Burger Menu -->
+  <div class="burger-menu" (click)="toggleMenu()">
+    <img src="assets/icons/burger.png" alt="Menu">
+  </div>
+
+  <!-- desktop -->
+  <ul class="hero-nav-list">
+    <li><a href="#about-me" (click)="closeMenu()">{{ 'navbar.about_me' | translate }}</a></li>
+    <li><a href="#skills" (click)="closeMenu()">{{ 'navbar.skills' | translate }}</a></li>
+    <li><a href="#portfolio" (click)="closeMenu()">{{ 'navbar.portfolio' | translate }}</a></li>
+    <li class="language-switcher">
+      <a href="#" (click)="switchLanguage('en'); $event.preventDefault();" [ngClass]="{'active': currentLanguage === 'en'}">EN</a> |
+      <a href="#" (click)="switchLanguage('de'); $event.preventDefault();" [ngClass]="{'active': currentLanguage === 'de'}">DE</a>
+    </li>    
+  </ul>
+</nav>
+
+<!-- Overlay mobile-->
+<div class="overlay" *ngIf="isMenuOpen">
+  <div class="overlay-content">
     <h1 class="logo">
       <span>C</span><span>A</span><span>R</span><span class="accent-o">O</span>
     </h1>
-  
-    <!-- Burger Menu -->
-    <div class="burger-menu" (click)="toggleMenu()">
-      <img src="/assets/icons/burger.png" alt="Menu">
-    </div>
-  
-    <!-- desktop -->
-    <ul class="hero-nav-list">
-      <li><a href="#about-me" (click)="closeMenu()">About Me</a></li>
-      <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
-      <li><a href="#portfolio" (click)="closeMenu()">Portfolio</a></li>
+    <img src="assets/icons/close.png" alt="Close" class="close-icon" (click)="closeMenu()">
+    <ul class="overlay-nav-list">
+      <li><a href="#about-me" (click)="closeMenu()">{{ 'navbar.about_me' | translate }}</a></li>
+      <li><a href="#skills" (click)="closeMenu()">{{ 'navbar.skills' | translate }}</a></li>
+      <li><a href="#portfolio" (click)="closeMenu()">{{ 'navbar.portfolio' | translate }}</a></li>
+      <li><a href="#contact" (click)="closeMenu()">{{ 'navbar.contact' | translate }}</a></li>
       <li class="language-switcher">
-        <a href="#" id="lang-en">EN</a> |
-        <a href="#" id="lang-de">DE</a>
+        <a href="#" (click)="switchLanguage('en')">EN</a> |
+        <a href="#" (click)="switchLanguage('de')">DE</a>
       </li>
     </ul>
-  </nav>
-  
-  <!-- Overlay mobile-->
-  <div class="overlay" *ngIf="isMenuOpen">
-    <div class="overlay-content">
-      <h1 class="logo">
-        <span>C</span><span>A</span><span>R</span><span class="accent-o">O</span>
-      </h1>
-      <img src="/assets/icons/close.png" alt="Close" class="close-icon" (click)="closeMenu()">
-      <ul class="overlay-nav-list">
-        <li><a href="#about-me" (click)="closeMenu()">About Me</a></li>
-        <li><a href="#skills" (click)="closeMenu()">My skills</a></li>
-        <li><a href="#portfolio" (click)="closeMenu()">Portfolio</a></li>
-        <li><a href="#contact" (click)="closeMenu()">Contact</a></li>
-        <li class="language-switcher">
-          <a href="#" id="lang-en">EN</a> |
-          <a href="#" id="lang-de">DE</a>
-        </li>
-      </ul>
-    </div>
   </div>
-  
+</div>
