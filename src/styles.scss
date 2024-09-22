@@ -47,8 +47,17 @@ body {
 .h1 {
   font-size: 90px;
   font-weight: 700;
-  color: $white; 
-} 
+  color: $white;
+  opacity: 0;  
+  transform: translate(-100px, 100px);  
+  transition: all 1s ease-out;  
+  
+  &.p-in {
+    opacity: 1;  
+    transform: translate(0, 0);  
+  }
+}
+
 
 @mixin flex-center {
     display: flex;
@@ -135,7 +144,6 @@ height: $height;
         color: $black; 
     }
 }
- 
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
@@ -161,8 +169,6 @@ height: $height;
   scrollbar-width: thin; /* Dünner Balken */
   scrollbar-color: $purple $bgrNearlyBlack; /* Farbe für Balken und Hintergrund */
 }
-
-
 
 /* poppins-regular - latin */
 /* poppins-200 - latin */

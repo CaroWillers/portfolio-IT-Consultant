@@ -19,7 +19,7 @@
           "options": {
             "outputPath": "dist/portfolio",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+             "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
@@ -30,9 +30,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeng/resources/themes/saga-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeicons/primeicons.css"           
             ],
-            "scripts": []
+            "scripts": []  
           },
           "configurations": {
             "production": {
@@ -90,7 +93,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss"  
             ],
             "scripts": []
           }

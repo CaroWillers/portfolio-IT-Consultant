@@ -47,31 +47,108 @@
   @include image-transform(-16%, -70%);
 }
 
-/* Hero Text Container */
+/* Standard Hero Text Container */
 .hero-text-container {
   @include size(50%);
-  @include flexbox (column, center, center);
+  @include flexbox(column, center, center);
   position: absolute;
   top: 150px;
-  right: 60px;
+  right: 60px; 
+  transform: translateX(100px); // Startposition der Animation (außerhalb des Bildschirms)
+
+  &.animate {
+    animation: slideIn 1.5s ease-out forwards;
+
+    @media screen and (max-width: 768px) {
+      animation: slideInMobile 1.5s ease-out forwards; // Mobile Version
+    }
+  }
+}
+/* Startposition für alle Text-Items */
+.item-1, .item-2, .item-3, .item-5 {
+  opacity: 0;
+}
+
+/* Spezifische Anpassung für .item-1 (vertikale Animation statt horizontale) */
+.item-1 {
+  grid-area: eins;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg) translateY(-100px); // Startposition von oben nach unten
+  font-weight: 400;
+  color: $white; 
+}
+
+/* Standard Startposition für die anderen Items */
+.item-2, .item-3, .item-5 {
+  transform: translateX(100px); // Startposition der Animation (außerhalb des Bildschirms)
+}
+
+/* Animationen für .animate-Klasse */
+.hero-text-container.animate .item-1 {
+  animation: slideInVertical 1.5s ease-out 0.2s forwards; // Nutze eine vertikale Animation
+}
+
+.hero-text-container.animate .item-2 {
+  animation: slideIn 1.5s ease-out 0.3s forwards;
+}
+
+.hero-text-container.animate .item-3 {
+  animation: slideIn 1.5s ease-out 0.4s forwards;
+}
+
+.hero-text-container.animate .item-5 {
+  animation: slideIn 1.5s ease-out 0.5s forwards;
+}
+ /* Keyframes für Slide-In Animationen */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInVertical {
+  from {
+    opacity: 0;
+    transform: rotate(180deg) translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(180deg) translateY(0);
+  }
+}
+
+
+/* Spezifische Anpassung für .item-1 (vertikale Animation statt horizontale) */
+.item-1 {
+  grid-area: eins;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg) translateY(-100px); 
+  font-weight: 400;
+  color: $white; 
 }
 
 /* Hero Text */
 .hero-text {
-    position: relative; 
-    display: grid;
-    @include hero-text-grid(55px 620px, 95px 80px 150px);  
-    @include text-size(64px, 82px, 52px);
-    justify-items: center;
-    align-items: center;
-    z-index: 3;
-    gap: 0;
-  }
+  position: relative;
+  display: grid;
+  @include hero-text-grid(55px 620px, 95px 80px 150px);  
+  @include text-size(64px, 82px, 52px);
+  justify-items: center;
+  align-items: center;
+  z-index: 3;
+  gap: 0;
+}
 
+/* Einzelne Items Styling */
 .item-1 {
   grid-area: eins;
   writing-mode: vertical-rl;
-  transform: rotate(180deg); 
+  transform: rotate(180deg);
   font-weight: 400;
   color: $white; 
 }
@@ -79,7 +156,7 @@
 .item-2 {
   grid-area: zwei;
   font-weight: 700;
-  color: $white; 
+  color: $white;
 }
 
 .item-3 {
@@ -93,6 +170,7 @@
 .item-5 {
   grid-area: fünf;
 }
+
 
 /* Swosh Section */
 .swosh {
