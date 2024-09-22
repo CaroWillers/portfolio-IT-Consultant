@@ -2,8 +2,9 @@ import { Component, AfterViewInit, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectComponent } from './project/project.component';
 import { TranslateModule } from '@ngx-translate/core';
-import { trigger, transition, style, animate } from '@angular/animations';
 import { ScrollService } from '../services/scroll.service';
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+
 
 interface Project {
   title: string;
@@ -18,18 +19,11 @@ interface Project {
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule, ProjectComponent, TranslateModule],
+  imports: [CommonModule, ProjectComponent, TranslateModule, AnimateOnScrollModule],
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
-  animations: [
-    trigger('slideIn', [
-      transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(100px)' }),  // Start position
-        animate('1000ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))  // End position
-      ])
-    ])
-  ]
 })
+
 export class PortfolioComponent implements AfterViewInit {
   
   projects: Project[] = [
