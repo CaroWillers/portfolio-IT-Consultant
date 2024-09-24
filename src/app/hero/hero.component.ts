@@ -1,8 +1,12 @@
-import { Component, ElementRef, AfterViewInit, HostListener } from '@angular/core'; // HostListener hinzufügen
+import {
+  Component,
+  ElementRef,
+  AfterViewInit,
+  HostListener,
+} from '@angular/core'; // Add HostListener
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { AnimateOnScrollModule } from 'primeng/animateonscroll'; 
-
+import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
 @Component({
   selector: 'app-hero',
@@ -12,36 +16,37 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
   styleUrls: ['./hero.component.scss'],
 })
 export class HeroComponent implements AfterViewInit {
-
   private heroTextContainer: HTMLElement | null = null;
 
   constructor(private elementRef: ElementRef) {}
 
   ngAfterViewInit(): void {
-    this.heroTextContainer = this.elementRef.nativeElement.querySelector('.hero-text-container');
-    
+    this.heroTextContainer = this.elementRef.nativeElement.querySelector(
+      '.hero-text-container'
+    );
+
     if (this.heroTextContainer) {
-      this.checkVisibilityAndAnimate(); // Initiale Überprüfung bei Laden der Seite
+      this.checkVisibilityAndAnimate(); // Initial check when the page loads
     }
   }
 
-  // Scroll-Event Listener, um bei jedem Scrollen die Sichtbarkeit zu prüfen
+  // Scroll event listener to check visibility on every scroll
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(): void {
-    this.checkVisibilityAndAnimate(); // Überprüfung der Sichtbarkeit beim Scrollen
+    this.checkVisibilityAndAnimate(); // Check visibility on scrolling
   }
 
-  // Funktion zur Überprüfung der Sichtbarkeit
+  // Function to check visibility
   private checkVisibilityAndAnimate(): void {
-    if (!this.heroTextContainer) return; // Sicherheitsüberprüfung, ob das Element existiert
+    if (!this.heroTextContainer) return; // Safety check if the element exists
     const rect = this.heroTextContainer.getBoundingClientRect();
     const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
 
     if (isVisible) {
-      // Füge die Klasse hinzu, wenn das Element sichtbar ist
+      // Add the class if the element is visible
       this.heroTextContainer.classList.add('animate');
     } else {
-      // Entferne die Klasse, wenn das Element nicht sichtbar ist
+      // Remove the class if the element is not visible
       this.heroTextContainer.classList.remove('animate');
     }
   }

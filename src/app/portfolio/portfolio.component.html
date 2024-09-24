@@ -1,16 +1,21 @@
 <section id="portfolio" class="portfolio-section">
   <div class="portfolio-purple-background">
-    <img src="/assets/bgr-img/5_purple_shadow_portfolio.png" alt="Portfolio Background">
-  </div>  
+    <img
+      src="/assets/bgr-img/5_purple_shadow_portfolio.png"
+      alt="Portfolio Background"
+    />
+  </div>
   <div class="portfolio-green-background">
-    <img src="/assets/bgr-img/6_green-shadow-portfollio.png" alt="Portfolio Background">
-  </div>  
+    <img
+      src="/assets/bgr-img/6_green-shadow-portfollio.png"
+      alt="Portfolio Background"
+    />
+  </div>
 
   <div class="portfolio-text">
-    <h1 class="h1" pAnimateOnScroll>My Portfolio</h1> 
-    <p>{{ 'portfolio.description' | translate }}</p>
+    <h1 class="h1" pAnimateOnScroll>My Portfolio</h1>
+    <p>{{ "portfolio.description" | translate }}</p>
   </div>
-  
 
   <div class="portfolio-container">
     <app-project
@@ -21,7 +26,8 @@
       [liveTestLink]="project.liveTestLink"
       [githubLink]="project.githubLink"
       [imageUrl]="project.imageUrl"
-      [imageOnLeft]="project.imageOnLeft">
-    </app-project>  
+      [imageOnLeft]="project.imageOnLeft"
+    >
+    </app-project>
   </div>
 </section>

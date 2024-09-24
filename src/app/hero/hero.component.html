@@ -1,49 +1,65 @@
 <section id="hero" class="hero">
-    <div class="hero-container"> 
-        <div class="profile-picture">
-            <div class="profile-shadow">
-                <img src="assets/bgr-img/1_photo-shadows.png" alt="Background Picture">
-            </div>
-            <div class="profile-photo">
-                <img src="assets/profilbild_freigestellt.png" alt="My Profile Picture">
-            </div>   
-        </div>
-       
-        <div class="hero-text-container" pAnimateOnScroll>
-            <div class="hero-text"> 
-              <div class="item-1">{{ 'hero.intro' | translate }}</div>
-              <div class="item-2">{{ 'hero.name' | translate }}</div>
-              <div class="item-3">{{ 'hero.position' | translate }}</div>
-              <div class="item-5">
-                <button class="btn-primary-green">{{ 'hero.button' | translate }}</button>
-              </div> 
-            </div> 
-        </div>
-          
-          
-    </div>
-    <div class="swosh">
-        <img src="assets/bgr-img/2_hero-background.png" alt="Background Picture">
-    </div>   
-    <div class="reference-icons">
-        <a href="https://github.com/CaroWillers/portfolio" target="_blank">
-            <img src="assets/icons/github.png" alt="github Icon">
-        </a> 
-        <a href="mailto:{{ 'hero.contact_email' | translate }}?subject=Hi%20Caro&body=I%20would%20like%20to%20discuss%20a%20project%20with%20you.">
-            <img src="assets/icons/email.png" alt="Email Icon">
-        </a>        
-        <a href="https://www.linkedin.com/in/caro-willers-marketing-specialist/" target="_blank">
-            <img src="assets/icons/linkedin.png" alt="LinkedIn Icon">
-        </a>
-        <a href="mailto:{{ 'hero.contact_email' | translate }}" class="contact-link">
-            {{ 'hero.contact_email' | translate }}
-        </a>
+  <div class="hero-container">
+    <div class="profile-picture">
+      <div class="profile-shadow">
+        <img
+          src="assets/bgr-img/1_photo-shadows.png"
+          alt="Background Picture"
+        />
+      </div>
+      <div class="profile-photo">
+        <img
+          src="assets/profilbild_freigestellt.png"
+          alt="My Profile Picture"
+        />
+      </div>
     </div>
 
-    <div class="scroll-down">
-        <div class="text-and-arrow">
-            <div class="arrow-down">{{ 'hero.scroll_down' | translate }}</div>
-            <div class="arrow">&#x2193;</div>
+    <div class="hero-text-container" pAnimateOnScroll>
+      <div class="hero-text">
+        <div class="item-1">{{ "hero.intro" | translate }}</div>
+        <div class="item-2">{{ "hero.name" | translate }}</div>
+        <div class="item-3">{{ "hero.position" | translate }}</div>
+        <div class="item-5">
+          <button class="btn-primary-green">
+            {{ "hero.button" | translate }}
+          </button>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="swosh">
+    <img src="assets/bgr-img/2_hero-background.png" alt="Background Picture" />
+  </div>
+  <div class="reference-icons">
+    <a href="https://github.com/CaroWillers/portfolio" target="_blank">
+      <img src="assets/icons/github.png" alt="github Icon" />
+    </a>
+    <a
+      href="mailto:{{
+        'hero.contact_email' | translate
+      }}?subject=Hi%20Caro&body=I%20would%20like%20to%20discuss%20a%20project%20with%20you."
+    >
+      <img src="assets/icons/email.png" alt="Email Icon" />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/caro-willers-marketing-specialist/"
+      target="_blank"
+    >
+      <img src="assets/icons/linkedin.png" alt="LinkedIn Icon" />
+    </a>
+    <a
+      href="mailto:{{ 'hero.contact_email' | translate }}"
+      class="contact-link"
+    >
+      {{ "hero.contact_email" | translate }}
+    </a>
+  </div>
+
+  <div class="scroll-down">
+    <div class="text-and-arrow">
+      <div class="arrow-down">{{ "hero.scroll_down" | translate }}</div>
+      <div class="arrow">&#x2193;</div>
+    </div>
+  </div>
 </section>

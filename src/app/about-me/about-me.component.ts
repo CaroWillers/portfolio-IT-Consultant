@@ -14,26 +14,28 @@ import { ScrollService } from '../services/scroll.service';
   animations: [
     trigger('slideIn', [
       transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(100px)' }),  // Start position
-        animate('2000ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))  // End position
-      ])
-    ])
-  ]
-}) 
+        style({ opacity: 0, transform: 'translateY(100px)' }),
+        animate(
+          '2000ms ease-out',
+          style({ opacity: 1, transform: 'translateY(0)' })
+        ),
+      ]),
+    ]),
+  ],
+})
 export class AboutMeComponent implements AfterViewInit {
-
   constructor(
-    private sanitizer: DomSanitizer, 
+    private sanitizer: DomSanitizer,
     private translate: TranslateService,
     private scrollService: ScrollService
-  ) {} 
+  ) {}
 
-  // Methode, um sicheren HTML-Inhalt zu erhalten
+  /*get safe html*/
   getSafeHtml(html: string): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(html);
   }
 
   ngAfterViewInit() {
-    this.scrollService.initScrollAnimation(); // Scroll-Animation für alle h1 Elemente starten
+    this.scrollService.initScrollAnimation();
   }
 }

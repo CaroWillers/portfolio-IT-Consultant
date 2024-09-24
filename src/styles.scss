@@ -1,3 +1,4 @@
+/*Color Variables*/
 $green:#70E61C;
 $purple: #9747FF;
 $white: #FFFFFF;
@@ -5,6 +6,65 @@ $black: #000000;
 $bgrNearlyBlack: #151D2F;
 $red: #FF4747;
 
+/* -------------------------------- */
+/*            Mixins                */
+/* -------------------------------- */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Grid Mixin*/
+@mixin hero-text-grid($columns, $rows) {
+display: grid;
+grid-template-columns: $columns;
+grid-template-rows: $rows;
+grid-template-areas: 
+  "eins zwei"
+  "eins drei"
+  ". fünf";
+}
+
+/* Text-Size Mixin */
+@mixin text-size($item1-size, $item2-size, $item3-size, $item5-size: null) {
+.item-1 {
+  font-size: $item1-size;
+}
+.item-2 {
+  font-size: $item2-size;
+}
+.item-3 {
+  font-size: $item3-size;
+}
+
+@if $item5-size {
+  .item-5 {
+    font-size: $item5-size;
+  }
+}
+}
+
+/* Image Transform Mixin */
+@mixin image-transform($translateX, $translateY) {
+transform: translateX($translateX) translateY($translateY);
+}
+
+/* Flexbox Mixin */
+@mixin flexbox($flex-direction: column, $justify-content: center, $align-items: center) {
+display: flex;
+flex-direction: $flex-direction;
+justify-content: $justify-content;
+align-items: $align-items;
+}
+
+/* width and height Mixin */
+@mixin size($width, $height: auto) {
+width: $width;
+height: $height;
+}
+
+/*Global Styles*/
 html {
   scroll-padding-top: 120px;   
   scroll-behavior: smooth;
@@ -18,6 +78,7 @@ body {
     box-sizing: border-box; 
 }
 
+/*Logo Styles*/
 .logo {
   cursor: pointer;
   width: 150px; 
@@ -44,6 +105,7 @@ body {
   }
 }
 
+/*Heading Styles*/
 .h1 {
   font-size: 90px;
   font-weight: 700;
@@ -58,91 +120,31 @@ body {
   }
 }
 
-
-@mixin flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/*Grid Mixin*/
-@mixin hero-text-grid($columns, $rows) {
-  display: grid;
-  grid-template-columns: $columns;
-  grid-template-rows: $rows;
-  grid-template-areas: 
-    "eins zwei"
-    "eins drei"
-    ". fünf";
-}
- 
-/* Text-Size Mixin */
-@mixin text-size($item1-size, $item2-size, $item3-size, $item5-size: null) {
-  .item-1 {
-    font-size: $item1-size;
-  }
-  .item-2 {
-    font-size: $item2-size;
-  }
-  .item-3 {
-    font-size: $item3-size;
-  }
-
-  @if $item5-size {
-    .item-5 {
-      font-size: $item5-size;
-    }
-  }
-}
-
-
-/* Image Transform Mixin */
-@mixin image-transform($translateX, $translateY) {
-transform: translateX($translateX) translateY($translateY);
-}
-
-/* Flexbox Mixin */
-@mixin flexbox($flex-direction: column, $justify-content: center, $align-items: center) {
-display: flex;
-flex-direction: $flex-direction;
-justify-content: $justify-content;
-align-items: $align-items;
-}
-
-
-/* width and height Mixin */
-@mixin size($width, $height: auto) {
-width: $width;
-height: $height;
-}
-
-
-/* Global Style */
+/* Button Style */
 .btn-primary-green {
-    @include flex-center;
-    width: 150px;
-    height: 60px;
-    background-color: $green;
-    color: $white;
-    border: none;
-    border-radius: 10px;
-    font-size: 23px;
-    font-weight: 200;
-    cursor: pointer;
-    transition: 
-        background-color 0.3s ease,
-        transform 0.3s ease,
-        color 0.3s ease; 
+  @include flex-center;
+  width: 150px;
+  height: 60px;
+  background-color: $green;
+  color: $white;
+  border: none;
+  border-radius: 10px;
+  font-size: 23px;
+  font-weight: 200;
+  cursor: pointer;
+  transition: 
+      background-color 0.3s ease,
+      transform 0.3s ease,
+      color 0.3s ease; 
 
-    &:hover {
-        background-color: $purple; 
-        transform: scale(1.1); 
-    }
-    &:active {
-        background-color: $white; 
-        color: $black; 
-    }
+  &:hover {
+      background-color: $purple; 
+      transform: scale(1.1); 
+  }
+  &:active {
+      background-color: $white; 
+      color: $black; 
+  }
 }
 
 /* Custom Scrollbar */
@@ -170,7 +172,7 @@ height: $height;
   scrollbar-color: $purple $bgrNearlyBlack; /* Farbe für Balken und Hintergrund */
 }
 
-/* poppins-regular - latin */
+/*Font Import*/
 /* poppins-200 - latin */
 @font-face {
   font-display: swap;

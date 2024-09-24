@@ -7,7 +7,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   standalone: true,
   imports: [CommonModule, TranslateModule],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
   isMenuOpen: boolean = false;
@@ -16,9 +16,8 @@ export class NavbarComponent {
   constructor(private translate: TranslateService) {
     // Set default language
     this.translate.setDefaultLang('en');
-    this.translate.addLangs(['de', 'en']);  
+    this.translate.addLangs(['de', 'en']);
   }
-  
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
@@ -27,9 +26,9 @@ export class NavbarComponent {
   closeMenu() {
     this.isMenuOpen = false;
   }
- 
+
   switchLanguage(language: string) {
-    this.currentLanguage = language;  
+    this.currentLanguage = language;
     this.translate.use(language);
   }
 }

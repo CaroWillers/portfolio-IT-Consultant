@@ -1,48 +1,46 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
+/*Background Hero Section*/
 .bgr-hero-about-me {
-    background-image: url('/assets/bgr-img/3_purple-shadow-about-me.png');
-    background-position: calc(100% + 530px) calc(100% - 400px);
-    background-size: 900px;  
-    background-repeat: no-repeat;    
-    position: relative;
+  background-image: url("/assets/bgr-img/3_purple-shadow-about-me.png");
+  background-position: calc(100% + 530px) calc(100% - 400px);
+  background-size: 900px;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
-
-.bgr-skills-portfolio { 
-    background-image: url('/assets/bgr-img/4_green-shadow-skills-portfolio.png');
-    background-position: left -580px top 290px;
-    background-size:  950px;
-    background-repeat: no-repeat;   
-    position: relative;
-    z-index: 1;
-    padding-top: 100px;
+/*Skills & Portfolio Background*/
+.bgr-skills-portfolio {
+  background-image: url("/assets/bgr-img/4_green-shadow-skills-portfolio.png");
+  background-position: left -580px top 290px;
+  background-size: 950px;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
 }
- 
- 
 
+/*Media Queries*/
 @media (max-width: 1340px) {
-    .bgr-hero-about-me {
-        background-position: calc(100% + 530px) calc(100% - 550px);
-    } 
+  .bgr-hero-about-me {
+    background-position: calc(100% + 530px) calc(100% - 550px);
+  }
 }
 
 @media (max-width: 1200px) {
-    .bgr-hero-about-me {
-        background-position: calc(100% + 530px) calc(100% + 50px);
-    } 
-    
+  .bgr-hero-about-me {
+    background-position: calc(100% + 530px) calc(100% + 50px);
+  }
 }
 
 @media (max-width: 950px) {
-    .bgr-skills-portfolio {
-        padding-top: 50px;
-        }
-    }
-
+  .bgr-skills-portfolio {
+    padding-top: 50px;
+  }
+}
 
 @media (max-width: 768px) {
-    .bgr-skills-portfolio {
-        padding-top: 0;
-        }
-    }
+  .bgr-skills-portfolio {
+    padding-top: 0;
+  }
+}

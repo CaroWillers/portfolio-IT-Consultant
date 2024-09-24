@@ -1,51 +1,52 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 .privacy-policy {
-    padding: 60px;
-    color: white;
-    background-color: $bgrNearlyBlack;
-    font-weight: 300;
-    
-    h1, h2 {
-        color: $green;
-    }
-    h3 {
-        color: $green; 
-    }
+  padding: 60px;
+  color: white;
+  background-color: $bgrNearlyBlack;
+  font-weight: 300;
+
+  h1,
+  h2 {
+    color: $green;
+  }
+  h3 {
+    color: $green;
+  }
 }
 
-.go-back-container { 
-    cursor: pointer;
-    padding-left: 60px;  
-    margin-top: 100px;
+/* Go Back Button */
+.go-back-container {
+  cursor: pointer;
+  padding-left: 60px;
+  margin-top: 100px;
 
-    .go-back-link {
-        display: flex; 
-        align-items: center;  
-    }
-        
-        &:hover {
-            .go-back-text {
-                color: $green;  
-            }
-            
-            .go-back-btn {
-                content: url('/assets/icons/arrowupHover.png'); // Bild bei Hover
-                transform: rotate(-90deg);
-            }
-        }
+  .go-back-link {
+    display: flex;
+    align-items: center;
+  }
 
-    .go-back-text {   
-        color: white;
-        margin-left: 30px;
-        text-decoration: none; 
-        text-align: center;
-         
+  &:hover {
+    .go-back-text {
+      color: $green;
     }
 
-    .go-back-btn { 
-        width: 40px;
-        transform: rotate(-90deg);
-        transition: transform 0.3s;
-    }  
+    .go-back-btn {
+      content: url("/assets/icons/arrowupHover.png");
+      transform: rotate(-90deg);
+    }
+  }
+
+  .go-back-text {
+    color: white;
+    margin-left: 30px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .go-back-btn {
+    width: 40px;
+    transform: rotate(-90deg);
+    transition: transform 0.3s;
+  }
 }

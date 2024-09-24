@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 /* Base Styles */
 .hero {
@@ -11,8 +11,8 @@
 
 /* Hero Container */
 .hero-container {
-  @include flexbox ( null, space-between, center);
-  width: 100%; 
+  @include flexbox(null, space-between, center);
+  width: 100%;
   height: 100%;
   max-height: 1100px;
   gap: 120px;
@@ -24,7 +24,7 @@
 /* Profile Picture and Shadow */
 .profile-picture {
   @include size(50%, null);
-  @include flexbox (null, center, center);
+  @include flexbox(null, center, center);
   position: relative;
 }
 
@@ -53,19 +53,22 @@
   @include flexbox(column, center, center);
   position: absolute;
   top: 150px;
-  right: 60px; 
-  transform: translateX(100px); // Startposition der Animation (außerhalb des Bildschirms)
+  right: 60px;
+  transform: translateX(100px);
 
   &.animate {
     animation: slideIn 1.5s ease-out forwards;
 
     @media screen and (max-width: 768px) {
-      animation: slideInMobile 1.5s ease-out forwards; // Mobile Version
+      animation: slideInMobile 1.5s ease-out forwards;
     }
   }
 }
 /* Startposition für alle Text-Items */
-.item-1, .item-2, .item-3, .item-5 {
+.item-1,
+.item-2,
+.item-3,
+.item-5 {
   opacity: 0;
 }
 
@@ -75,17 +78,19 @@
   writing-mode: vertical-rl;
   transform: rotate(180deg) translateY(-100px); // Startposition von oben nach unten
   font-weight: 400;
-  color: $white; 
+  color: $white;
 }
 
 /* Standard Startposition für die anderen Items */
-.item-2, .item-3, .item-5 {
-  transform: translateX(100px); // Startposition der Animation (außerhalb des Bildschirms)
+.item-2,
+.item-3,
+.item-5 {
+  transform: translateX(100px);
 }
 
 /* Animationen für .animate-Klasse */
 .hero-text-container.animate .item-1 {
-  animation: slideInVertical 1.5s ease-out 0.2s forwards; // Nutze eine vertikale Animation
+  animation: slideInVertical 1.5s ease-out 0.2s forwards;
 }
 
 .hero-text-container.animate .item-2 {
@@ -99,7 +104,7 @@
 .hero-text-container.animate .item-5 {
   animation: slideIn 1.5s ease-out 0.5s forwards;
 }
- /* Keyframes für Slide-In Animationen */
+/* Keyframes Slide-In Animations */
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -122,21 +127,19 @@
   }
 }
 
-
-/* Spezifische Anpassung für .item-1 (vertikale Animation statt horizontale) */
+/* Hero Text Items */
 .item-1 {
   grid-area: eins;
   writing-mode: vertical-rl;
-  transform: rotate(180deg) translateY(-100px); 
+  transform: rotate(180deg) translateY(-100px);
   font-weight: 400;
-  color: $white; 
+  color: $white;
 }
 
-/* Hero Text */
 .hero-text {
   position: relative;
   display: grid;
-  @include hero-text-grid(55px 620px, 95px 80px 150px);  
+  @include hero-text-grid(55px 620px, 95px 80px 150px);
   @include text-size(64px, 82px, 52px);
   justify-items: center;
   align-items: center;
@@ -144,13 +147,12 @@
   gap: 0;
 }
 
-/* Einzelne Items Styling */
 .item-1 {
   grid-area: eins;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
   font-weight: 400;
-  color: $white; 
+  color: $white;
 }
 
 .item-2 {
@@ -164,13 +166,12 @@
   transform: scaleY(1.2);
   font-weight: 400;
   color: $purple;
-  letter-spacing: 2px; 
+  letter-spacing: 2px;
 }
 
 .item-5 {
   grid-area: fünf;
 }
-
 
 /* Swosh Section */
 .swosh {
@@ -188,7 +189,7 @@
 
 /* Reference Icons */
 .reference-icons {
-  @include flexbox (row, center, center);
+  @include flexbox(row, center, center);
   position: absolute;
   width: 100%;
   bottom: 150px;
@@ -196,7 +197,7 @@
   z-index: 2;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     height: 4px;
@@ -211,7 +212,7 @@
     text-decoration: none;
     font-size: 20px;
     color: $white;
-    @include flexbox (row, flex-start, center);
+    @include flexbox(row, flex-start, center);
 
     img {
       width: 40px;
@@ -243,13 +244,13 @@
 .scroll-down {
   position: absolute;
   bottom: 150px;
-  right: 100px; 
-  @include flexbox (column, flex-end, center);
+  right: 100px;
+  @include flexbox(column, flex-end, center);
   z-index: 2;
 }
 
 .text-and-arrow {
-  @include flexbox (column, center, center);
+  @include flexbox(column, center, center);
 }
 
 .arrow-down {
@@ -262,27 +263,27 @@
 .arrow {
   font-size: 32px;
   color: white;
-} 
+}
 
 /* Media Queries */
 @media (min-width: 1025px) and (max-width: 1268px) {
   .hero-text {
-    top: 100px; 
+    top: 100px;
     @include hero-text-grid(60px 500px, 75px 60px 140px);
     @include text-size(55px, 67px, 42px, null);
-}
-   
-  .reference-icons { 
-    &::before { 
-      width: calc(20% - 50px);  
+  }
+
+  .reference-icons {
+    &::before {
+      width: calc(20% - 50px);
     }
   }
 }
- 
+
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero-container {
     @include flexbox(column, center, center);
-    gap: 0; 
+    gap: 0;
     width: 100%;
   }
 
@@ -313,10 +314,10 @@
   .hero-text-container {
     @include flexbox(column, center, center);
     @include size(100%);
-    position: static !important; 
+    position: static !important;
   }
 
-  .hero-text {   
+  .hero-text {
     @include hero-text-grid(50px 600px, 85px 60px 160px);
     @include text-size(60px, 80px, 50px, null);
   }
@@ -333,7 +334,7 @@
   }
 
   .swosh {
-    top: 380px; 
+    top: 380px;
     overflow: hidden;
   }
 
@@ -346,7 +347,7 @@
   .contact-link {
     display: none !important;
   }
-  .reference-icons { 
+  .reference-icons {
     &::before {
       width: calc(40% - 120px) !important;
     }
@@ -356,12 +357,12 @@
 @media (min-width: 577px) and (max-width: 768px) {
   .hero-container {
     @include flexbox(column, center, center);
-    gap: 150px; 
+    gap: 150px;
   }
 
-  .profile-picture { 
+  .profile-picture {
     @include size(100%, 100%);
-    max-height: 450px !important;  
+    max-height: 450px !important;
     margin-top: -100px;
     overflow: hidden;
   }
@@ -387,10 +388,10 @@
   .hero-text-container {
     @include flexbox(column, center, center);
     @include size(100%);
-    position: static !important; 
+    position: static !important;
   }
 
-  .hero-text {   
+  .hero-text {
     @include hero-text-grid(40px 500px, 75px 60px 140px);
     @include text-size(55px, 67px, 42px, null);
   }
@@ -400,7 +401,7 @@
       width: 40px;
     }
   }
-.swosh {
+  .swosh {
     top: 300px;
   }
   .scroll-down {
@@ -410,48 +411,48 @@
 
 @media (min-width: 420px) and (max-width: 576px) {
   .hero-container {
-  @include flexbox(column, center, center);
-  gap: 0;
-}
+    @include flexbox(column, center, center);
+    gap: 0;
+  }
 
-.profile-picture { 
-  @include size(100%, 100%); 
-  max-height: 550px;  
-  margin-top: -100px;
-}
+  .profile-picture {
+    @include size(100%, 100%);
+    max-height: 550px;
+    margin-top: -100px;
+  }
 
-.profile-photo,
-.profile-shadow {
-  position: absolute;
-  @include size(100%, 100%);
-  z-index: -1;
-}
+  .profile-photo,
+  .profile-shadow {
+    position: absolute;
+    @include size(100%, 100%);
+    z-index: -1;
+  }
 
-.profile-shadow img {
-  width: 120%;
-  object-fit: cover;
-  @include image-transform(-6%, 2%);
-}
+  .profile-shadow img {
+    width: 120%;
+    object-fit: cover;
+    @include image-transform(-6%, 2%);
+  }
 
-.profile-photo img {
-  width: 120%;
-  object-fit: cover;
-  @include image-transform(-10%, 0%);
-}
-.hero-text-container {
-  @include flexbox(column, center, center);
-  @include size(100%);
-  position: static !important; 
-}
+  .profile-photo img {
+    width: 120%;
+    object-fit: cover;
+    @include image-transform(-10%, 0%);
+  }
+  .hero-text-container {
+    @include flexbox(column, center, center);
+    @include size(100%);
+    position: static !important;
+  }
 
-.hero-text {   
-  @include hero-text-grid(30px 330px, 50px 53px 115px);
-  @include text-size(36px, 40px, 24px, null);
-}
- 
-.swosh {
-  top: 250px;
-}
+  .hero-text {
+    @include hero-text-grid(30px 330px, 50px 53px 115px);
+    @include text-size(36px, 40px, 24px, null);
+  }
+
+  .swosh {
+    top: 250px;
+  }
   .scroll-down,
   .contact-link {
     display: none !important;
@@ -470,27 +471,25 @@
     @include flexbox(column, center, center);
     gap: 0;
     max-height: 700px;
-   
   }
   .hero-text-container {
     @include flexbox(column, center, center);
     @include size(100%);
-    position: static !important; 
+    position: static !important;
   }
 
   .hero-text {
     @include hero-text-grid(40px 250px, 40px 40px 115px);
     @include text-size(30px, 34px, 19px, null);
-  
   }
-  .profile-picture { 
-    @include size(100%, 100%);  
+  .profile-picture {
+    @include size(100%, 100%);
     max-height: 450px;
   }
 
   .profile-photo,
-  .profile-shadow { 
-    @include size(80%); 
+  .profile-shadow {
+    @include size(80%);
   }
 
   .profile-shadow img,
@@ -531,34 +530,33 @@
 /*iphone 14Pro */
 @media (width: 430px) and (height: 932px) {
   .profile-picture {
-    max-height: 500px;  
+    max-height: 500px;
     margin-top: -200px;
   }
   .profile-photo,
-  .profile-shadow { 
-    @include size(100%); 
+  .profile-shadow {
+    @include size(100%);
   }
-.swosh {
+  .swosh {
     top: 300px;
   }
   .reference-icons {
     bottom: 80px !important ;
-}
+  }
 }
 
 /*iphoe XR */
 @media (width: 414px) and (height: 896px) {
   .profile-picture {
-    max-height: 500px; 
+    max-height: 500px;
   }
   .swosh {
     top: 300px;
   }
-.reference-icons {
+  .reference-icons {
     bottom: 80px !important;
-        }
-      }         
-
+  }
+}
 
 /*iphone 6/7/8 */
 @media (width: 375px) and (height: 667px) {
@@ -569,13 +567,13 @@
   .swosh {
     top: 230px;
   }
-.reference-icons {
+  .reference-icons {
     bottom: 10px !important;
-        }
-      }
- 
+  }
+}
+
 /*Galaxy S9*/
-@media (width: 320px) and (height: 658px) { 
+@media (width: 320px) and (height: 658px) {
   .profile-picture {
     max-height: 380px;
     margin-top: -50px;
@@ -583,18 +581,14 @@
   .swosh {
     top: 230px;
   }
-  .reference-icons
-  {
+  .reference-icons {
     bottom: 10px !important;
   }
-}  
+}
 
 /*pixel 7 */
- @media (width: 412px) and (height: 915px) {
-  .reference-icons {    
+@media (width: 412px) and (height: 915px) {
+  .reference-icons {
     bottom: 80px !important;
   }
-            }
-        
-
- 
+}

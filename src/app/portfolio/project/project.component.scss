@@ -1,25 +1,26 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
+/*Project Section Styles*/
 .project {
-  display: flex; 
+  display: flex;
   justify-content: space-around;
-  align-items: center; 
+  align-items: center;
   padding: 0 60px;
   color: white;
-  margin: 0 auto; 
+  margin: 0 auto;
   gap: 100px;
-  z-index: 1000; 
+  z-index: 1000;
 
   &.image-left {
-    flex-direction: row;   
+    flex-direction: row;
     justify-content: center;
     .project-image {
       margin-right: 100px;
     }
   }
-  
+
   &.image-right {
-    flex-direction: row-reverse;  
+    flex-direction: row-reverse;
     justify-content: center;
     .project-image {
       margin-left: 100px;
@@ -33,258 +34,258 @@
 
   @keyframes zoomIn {
     from {
-      transform: scale(0.9);   // Start in normaler Größe
+      transform: scale(0.9);
     }
     to {
-      transform: scale(1);  // Endet in vergrößerter Größe
+      transform: scale(1);
     }
   }
 
+  .project-text {
+    display: flex;
+    flex-direction: column;
+    width: 550px;
 
-    .project-text {
-        display: flex;
-        flex-direction: column;
-        width: 550px;  
-     
-        &.text-left {
-          align-items: flex-end;  
-          text-align: right;
-        }
-    
-        &.text-right {
-          align-items: flex-start;  
-          text-align: left;
-        }
+    &.text-left {
+      align-items: flex-end;
+      text-align: right;
     }
 
-    .project-image {
-      width: 750px;   
-      
+    &.text-right {
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+
+  .project-image {
+    width: 750px;
+
+    img {
+      width: 750px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+
       img {
-        width: 750px;   
-        object-fit: cover;   
-      }
-     
-      @media (max-width: 600px) {
-        width: 100%;   
-        
-        img { 
-          max-width: 650px;   
-        }
-      }
-
-      @media (max-width: 470px) {
-        width: 100%;   
-        
-        img {  
-          max-width: 550px;   
-        }
-      }
-
-      @media (max-width: 385px) {
-        width: 100%;   
-        
-        img {  
-          max-width: 440px;   
-        }
+        max-width: 650px;
       }
     }
-    
-      .project-text, .project-image {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 550px;
+
+    @media (max-width: 470px) {
+      width: 100%;
+
+      img {
+        max-width: 550px;
       }
-   
-    h3 {
+    }
+
+    @media (max-width: 385px) {
+      width: 100%;
+
+      img {
+        max-width: 440px;
+      }
+    }
+  }
+
+  .project-text,
+  .project-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 550px;
+  }
+
+  h3 {
     color: $purple;
     font-size: 32px;
     font-weight: 650;
-    margin: 0; 
-    }
+    margin: 0;
+  }
 
-    .technologies {
-    display: flex; 
+  .technologies {
+    display: flex;
     font-size: 24px;
     font-weight: 300;
     color: $green;
-    }
+  }
 
-    p {
+  p {
     font-size: 16px;
-    font-weight: 200; 
+    font-weight: 200;
     margin: 10px 0;
-    }
-  
-    .project-buttons {
+  }
+
+  .project-buttons {
+    display: flex;
+    gap: 80px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 1000;
+
+    .btn-liveTest,
+    .btn-github {
       display: flex;
-      gap: 80px;
-      margin-top: 20px;
-      position: relative;
-      z-index: 1000;
-      
-      .btn-liveTest, .btn-github {  
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 150px;
-        height: 60px;
-        border-radius: 10px;
-        font-size: 23px;
-        font-weight: 200;
-        text-decoration: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-     
-        
-        &.btn-liveTest {
-            background-color: $purple;
-            color: $white;
-          
-            &:hover {
-                background-color: $green;
-                transform: scale(1.1);
-              }
-  
-          &:active {
-            background-color: #ffffff;
-            color: #000000;
-          }
+      align-items: center;
+      justify-content: center;
+      width: 150px;
+      height: 60px;
+      border-radius: 10px;
+      font-size: 23px;
+      font-weight: 200;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+
+      &.btn-liveTest {
+        background-color: $purple;
+        color: $white;
+
+        &:hover {
+          background-color: $green;
+          transform: scale(1.1);
         }
-  
-        &.btn-github {
-            background-color: black;
-            color: $white;
-            border: 1px solid $green;
-    
-            &:hover {
-              background-color: $green;
-              transform: scale(1.1);
-            }
+
+        &:active {
+          background-color: #ffffff;
+          color: #000000;
+        }
+      }
+
+      &.btn-github {
+        background-color: black;
+        color: $white;
+        border: 1px solid $green;
+
+        &:hover {
+          background-color: $green;
+          transform: scale(1.1);
         }
       }
     }
   }
-  
+}
+
+.project-buttons {
+  position: relative;
+}
+
+a[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/*Popup-Content*/
+.popup-content {
+  display: none;
+  position: absolute;
+  bottom: 150%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  text-align: center;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.project-buttons .btn-liveTest,
+.project-buttons .btn-github {
+  margin-bottom: 10px; /* Platz zwischen den Buttons und Popup */
+}
+
+.project-buttons .btn-liveTest:hover + .popup-content {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.project-buttons .btn-github:hover + .popup-content {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/*Media Queries*/
+@media (max-width: 1200px) {
+  .project {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse !important;
+    gap: 30px;
+    padding: 0 !important;
+  }
+
+  .project.image-left,
+  .project.image-right {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+
+  .project-text {
+    width: 500px;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .project-text.text-left,
+  .project-text.text-right {
+    width: 100%;
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center !important;
+    margin-top: -48px;
+  }
+
+  .project-image {
+    width: 100% !important;
+    margin: 0 !important;
+  }
 
   .project-buttons {
-    position: relative; 
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    z-index: 10000;
   }
 
-  a[disabled] {
-    pointer-events: none;
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  
-  
-  .popup-content {
-    display: none;
-    position: absolute;
-    bottom: 150%;  
-    left: 50%;
-    transform: translateX(-50%);
-    width: 200px;
-    padding: 10px;
-    background-color: #fff;
-    color: #333;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 14px;
+  .h3 {
+    justify-content: center;
     text-align: center;
-    z-index: 1000;
-    pointer-events: none;  
-    opacity: 0;  
-    transition: opacity 0.2s ease-in-out;
+    width: 100%;
+    margin: 0;
   }
-  
-  .project-buttons .btn-liveTest, 
-  .project-buttons .btn-github {
-    margin-bottom: 10px; /* Platz zwischen den Buttons und Popup */
+  .technologies {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    margin: 0;
   }
+}
 
-  .project-buttons .btn-liveTest:hover + .popup-content {
-    display: block;
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  .project-buttons .btn-github:hover + .popup-content {
-    display: block;
-    opacity: 1;
-    pointer-events: auto;
-  }
-  
-  @media (max-width: 1200px) {
-    .project {
-      width: 100%;
-      display: flex;
-      flex-direction: column-reverse !important;; 
-      gap: 30px;
-      padding: 0 !important;; 
-    }
-
-    .project.image-left,
-    .project.image-right {
-        width: 100%;
-        flex-direction: column;  
-        align-items: center; 
-        margin: 0;
-    }
-
-    .project-text {
-        width: 500px;
-        align-items: center;
-        text-align: center;
-        margin: 0;
-    }
-
-    .project-text.text-left,
-    .project-text.text-right {
-        width: 100%;
-        flex-direction: column;
-        align-items: center !important;;
-        text-align: center !important;;
-        margin-top: -48px;
-    }
-   
-    .project-image { 
-      width: 100% !important;
-      margin: 0 !important;
-    }
-  
-    .project-buttons {
-      width: 100%;
-      justify-content: center;
-      flex-direction: row;
-      align-items: center;
-      gap: 20px;
-      z-index: 10000;
-    }
-
-    .h3 { 
-      justify-content: center;
-      text-align: center; 
-      width: 100%;
-      margin: 0;
-    }
-    .technologies {
-      justify-content: center;
-      text-align: center; 
-      width: 100%;
-      margin: 0;
-    }
-  }
-
-  @media (max-width: 600px) {
-   .project-text {
+@media (max-width: 600px) {
+  .project-text {
     width: 400px !important;
-    }
+  }
 
-    .project-text.text-left,
-    .project-text.text-right { 
-      width: 400px; 
+  .project-text.text-left,
+  .project-text.text-right {
+    width: 400px;
     .technologies {
       font-size: 26px;
     }
@@ -296,17 +297,17 @@
 
 @media (max-width: 414px) {
   .project-text {
-   width: 400px !important;
-   }
+    width: 400px !important;
+  }
 
-   .project-text.text-left,
-   .project-text.text-right { 
-       p {
-         padding-left: 20px;
-         padding-right: 20px;
-       }
-   .technologies {
-     font-size: 18px;
-   }
- }
+  .project-text.text-left,
+  .project-text.text-right {
+    p {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .technologies {
+      font-size: 18px;
+    }
+  }
 }

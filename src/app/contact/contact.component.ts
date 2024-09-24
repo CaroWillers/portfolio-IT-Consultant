@@ -1,14 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, AfterViewInit, ElementRef } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms'; 
+import { FormsModule, NgForm } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { ScrollService } from '../services/scroll.service';
-
-
 
 @Component({
   selector: 'app-contact',
@@ -20,13 +18,13 @@ import { ScrollService } from '../services/scroll.service';
 export class ContactComponent implements AfterViewInit {
   isPrivacyChecked: boolean = false;
   showModal: boolean = false;
-  privacyPolicyText: SafeHtml = ''; 
+  privacyPolicyText: SafeHtml = '';
 
   contactData = {
     name: '',
     email: '',
     message: '',
-    privacy: false
+    privacy: false,
   };
 
   post = {
@@ -54,10 +52,9 @@ export class ContactComponent implements AfterViewInit {
     });
   }
   ngAfterViewInit() {
-    this.scrollService.initScrollAnimation(); 
+    this.scrollService.initScrollAnimation();
   }
 
- 
   // Show the privacy policy page
   showPrivacyPolicy(): void {
     this.router.navigateByUrl('/privacy-policy');
@@ -73,12 +70,17 @@ export class ContactComponent implements AfterViewInit {
     this.validateAllFields(ngForm);
 
     if (ngForm.valid && this.isPrivacyChecked) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+      this.http
+        .post(
+          this.post.endPoint,
+          this.post.body(this.contactData),
+          this.post.options
+        )
         .subscribe({
           next: (response) => {
             console.info('Form submitted successfully:', response);
             ngForm.resetForm();
-            this.showModal = true;  // Show the modal after form submission
+            this.showModal = true; // Show the modal after form submission
             this.isPrivacyChecked = false; // Reset the privacy checkbox state
           },
           error: (error) => {
@@ -87,14 +89,16 @@ export class ContactComponent implements AfterViewInit {
           complete: () => console.info('Form submission process completed'),
         });
     } else {
-      console.warn('Form submission failed: form is either not valid or privacy not checked');
+      console.warn(
+        'Form submission failed: form is either not valid or privacy not checked'
+      );
       this.validateAllFields(ngForm);
     }
   }
 
   // Validate all form fields
   validateAllFields(form: NgForm): void {
-    Object.keys(form.controls).forEach(field => {
+    Object.keys(form.controls).forEach((field) => {
       const control = form.controls[field];
       if (control) {
         control.markAsTouched({ onlySelf: true });
@@ -112,10 +116,12 @@ export class ContactComponent implements AfterViewInit {
 
   // Show privacy error if privacy is not checked but form fields are valid
   showPrivacyError(form: NgForm): boolean {
-    return !this.isPrivacyChecked &&
-           form.controls['name']?.valid &&
-           form.controls['email']?.valid &&
-           form.controls['message']?.valid;
+    return (
+      !this.isPrivacyChecked &&
+      form.controls['name']?.valid &&
+      form.controls['email']?.valid &&
+      form.controls['message']?.valid
+    );
   }
 
   // Close the modal

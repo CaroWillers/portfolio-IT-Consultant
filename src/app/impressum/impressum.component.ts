@@ -6,10 +6,8 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-impressum',
   standalone: true,
-  imports: [CommonModule, RouterModule, TranslateModule],  
+  imports: [CommonModule, RouterModule, TranslateModule],
   templateUrl: './impressum.component.html',
-  styleUrls: ['./impressum.component.scss']
+  styleUrls: ['./impressum.component.scss'],
 })
-export class ImpressumComponent {
-
-}
+export class ImpressumComponent {}

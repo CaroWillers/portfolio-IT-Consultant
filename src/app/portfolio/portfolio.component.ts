@@ -5,7 +5,6 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ScrollService } from '../services/scroll.service';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 
-
 interface Project {
   title: string;
   technologies: string[];
@@ -19,13 +18,16 @@ interface Project {
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule, ProjectComponent, TranslateModule, AnimateOnScrollModule],
+  imports: [
+    CommonModule,
+    ProjectComponent,
+    TranslateModule,
+    AnimateOnScrollModule,
+  ],
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
 })
-
 export class PortfolioComponent implements AfterViewInit {
-  
   projects: Project[] = [
     {
       title: 'projects.join',
@@ -43,7 +45,7 @@ export class PortfolioComponent implements AfterViewInit {
       liveTestLink: 'https://caro-willers.com/polloloco',
       githubLink: 'https://github.com/CaroWillers/PolloLoco.git',
       imageOnLeft: true,
-      technologies: ['JavaScript', 'HTML', 'CSS']
+      technologies: ['JavaScript', 'HTML', 'CSS'],
     },
     {
       title: 'projects.pokedex',
@@ -52,7 +54,7 @@ export class PortfolioComponent implements AfterViewInit {
       liveTestLink: 'https://caro-willers.com/pokedex',
       githubLink: 'https://github.com/CaroWillers/pokedex.git',
       imageOnLeft: false,
-      technologies: ['JavaScript', 'HTML', 'CSS', 'API']
+      technologies: ['JavaScript', 'HTML', 'CSS', 'API'],
     },
     {
       title: 'projects.da_bubble',
@@ -61,16 +63,13 @@ export class PortfolioComponent implements AfterViewInit {
       liveTestLink: 'https://caro-willers.com/dabubble',
       githubLink: 'https://github.com/CaroWillers/dabubble.git',
       imageOnLeft: true,
-      technologies: ['Angular', 'TypeScript', 'Firebase']
-    }
+      technologies: ['Angular', 'TypeScript', 'Firebase'],
+    },
   ];
 
- 
   constructor(private scrollService: ScrollService) {}
 
   ngAfterViewInit() {
-    this.scrollService.initScrollAnimation();  
+    this.scrollService.initScrollAnimation();
   }
 }
-
- 
