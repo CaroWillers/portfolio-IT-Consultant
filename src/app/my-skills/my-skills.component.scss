@@ -176,10 +176,33 @@
   }
 
   .btn-primary-green {
-    width: 200px;
-    display: block;
+    position: relative;
+    z-index: 10;
     margin-top: 50px;
     margin-left: auto;
+    @include flex-center;
+    width: 200px;
+    height: 60px;
+    background-color: $green;
+    color: $white;
+    border: none;
+    border-radius: 10px;
+    font-size: 23px;
+    font-weight: 200;
+    cursor: pointer;
+    transition: 
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        color 0.3s ease; 
+  
+    &:hover {
+        background-color: $purple; 
+        transform: scale(1.1); 
+    }
+    &:active {
+        background-color: $white; 
+        color: $black; 
+    }
 
     @media (max-width: 950px) {
       margin-left: auto;

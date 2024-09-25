@@ -21,9 +21,9 @@
         <div class="item-2">{{ "hero.name" | translate }}</div>
         <div class="item-3">{{ "hero.position" | translate }}</div>
         <div class="item-5">
-          <button class="btn-primary-green">
+          <button class="btn-primary-green" (click)="scrollToContact()">
             {{ "hero.button" | translate }}
-          </button>
+          </button>          
         </div>
       </div>
     </div>
@@ -35,11 +35,7 @@
     <a href="https://github.com/CaroWillers/portfolio" target="_blank">
       <img src="assets/icons/github.png" alt="github Icon" />
     </a>
-    <a
-      href="mailto:{{
-        'hero.contact_email' | translate
-      }}?subject=Hi%20Caro&body=I%20would%20like%20to%20discuss%20a%20project%20with%20you."
-    >
+    <a href="#contact">
       <img src="assets/icons/email.png" alt="Email Icon" />
     </a>
     <a
@@ -48,10 +44,7 @@
     >
       <img src="assets/icons/linkedin.png" alt="LinkedIn Icon" />
     </a>
-    <a
-      href="mailto:{{ 'hero.contact_email' | translate }}"
-      class="contact-link"
-    >
+    <a href="#contact" class="contact-link">
       {{ "hero.contact_email" | translate }}
     </a>
   </div>

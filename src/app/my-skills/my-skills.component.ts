@@ -13,17 +13,26 @@ import { ScrollService } from '../services/scroll.service';
   animations: [
     trigger('slideIn', [
       transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(100px)' }),  // Start position
-        animate('1000ms ease-out', style({ opacity: 1, transform: 'translateY(0)' }))  // End position
-      ])
-    ])
-  ]
+        style({ opacity: 0, transform: 'translateY(100px)' }), // Start position
+        animate(
+          '1000ms ease-out',
+          style({ opacity: 1, transform: 'translateY(0)' })
+        ), // End position
+      ]),
+    ]),
+  ],
 })
-
 export class MySkillsComponent implements AfterViewInit {
   constructor(private scrollService: ScrollService) {}
 
   ngAfterViewInit() {
-    this.scrollService.initScrollAnimation();  
+    this.scrollService.initScrollAnimation();
+  }
+
+  scrollToContact() {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }

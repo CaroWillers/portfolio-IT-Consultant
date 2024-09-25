@@ -50,4 +50,11 @@ export class HeroComponent implements AfterViewInit {
       this.heroTextContainer.classList.remove('animate');
     }
   }
+
+  scrollToContact() {
+    const element = document.getElementById("contact");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }  
 }

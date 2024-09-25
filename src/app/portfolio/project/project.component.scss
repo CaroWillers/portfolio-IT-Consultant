@@ -29,14 +29,17 @@
 
   // Zoom-In-Animation bei Mouseover
   &.zoomin {
-    animation: zoomIn 1s ease-out forwards;
+    animation: zoomIn 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
   }
 
   @keyframes zoomIn {
-    from {
-      transform: scale(0.9);
+    0% {
+      transform: scale(1);
     }
-    to {
+    60% {
+      transform: scale(1.05);
+    }
+    100% {
       transform: scale(1);
     }
   }
@@ -308,6 +311,26 @@ a[disabled] {
     }
     .technologies {
       font-size: 18px;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .project-text {
+      width: 300px !important;
+    }
+
+    .project-text.text-left,
+    .project-text.text-right {
+      p {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .technologies {
+        font-size: 18px;
+      }
+    }
+    .project-buttons {
+      gap: 15px !important;
     }
   }
 }

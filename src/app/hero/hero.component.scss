@@ -59,9 +59,6 @@
   &.animate {
     animation: slideIn 1.5s ease-out forwards;
 
-    @media screen and (max-width: 768px) {
-      animation: slideInMobile 1.5s ease-out forwards;
-    }
   }
 }
 /* Startposition für alle Text-Items */
@@ -323,7 +320,7 @@
   }
 
   .reference-icons {
-    bottom: 60px !important;
+    bottom: 40px !important;
     &::before {
       width: calc(20% - 120px) !important;
     }
@@ -362,7 +359,7 @@
 
   .profile-picture {
     @include size(100%, 100%);
-    max-height: 450px !important;
+    max-height: 500px !important;
     margin-top: -100px;
     overflow: hidden;
   }
@@ -392,7 +389,7 @@
   }
 
   .hero-text {
-    @include hero-text-grid(40px 500px, 75px 60px 140px);
+    @include hero-text-grid(50px 500px, 75px 60px 140px);
     @include text-size(55px, 67px, 42px, null);
   }
   .reference-icons {
@@ -402,7 +399,7 @@
     }
   }
   .swosh {
-    top: 300px;
+    top: 270px;
   }
   .scroll-down {
     display: none;
@@ -417,8 +414,8 @@
 
   .profile-picture {
     @include size(100%, 100%);
-    max-height: 550px;
-    margin-top: -100px;
+    max-height: 500px;
+    margin-top: -250px;
   }
 
   .profile-photo,
@@ -451,7 +448,7 @@
   }
 
   .swosh {
-    top: 250px;
+    top: 280px;
   }
   .scroll-down,
   .contact-link {
@@ -479,9 +476,10 @@
   }
 
   .hero-text {
-    @include hero-text-grid(40px 250px, 40px 40px 115px);
-    @include text-size(30px, 34px, 19px, null);
+    @include hero-text-grid(40px 300px, 40px 40px 115px);
+    @include text-size(32px, 40px, 24px, null);
   }
+
   .profile-picture {
     @include size(100%, 100%);
     max-height: 450px;
@@ -590,5 +588,11 @@
 @media (width: 412px) and (height: 915px) {
   .reference-icons {
     bottom: 80px !important;
+  }
+}
+@media (max-width: 320px)   {
+  .hero-text {
+    @include hero-text-grid(40px 250px, 40px 40px 115px);
+    @include text-size(30px, 34px, 19px, null);
   }
 }

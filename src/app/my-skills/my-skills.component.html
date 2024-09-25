@@ -1,62 +1,70 @@
 <section class="my-skills" id="skills">
-    <div class="skills-container">
-        <div class="skills-icons">
-            <div class="icon-item">
-                <img src="assets/icons/html.png" alt="HTML Icon">
-                <p>HTML</p>
-            </div>
-            <div class="icon-item">
-                <img src="assets/icons/css.png" alt="CSS Icon">
-                <p>CSS</p>
-            </div>
-            <div class="icon-item">
-                <img src="assets/icons/javascript.png" alt="JavaScript Icon">
-                <p>JavaScript</p>
-            </div>
-            <div class="icon-item">
-                <img src="assets/icons/ts.png" alt="TypeScript Icon">
-                <p>TypeScript</p>
-            </div>
-            <div class="icon-item">
-                <img src="assets/icons/angular.png" alt="Angular Icon">
-                <p>Angular</p>
-            </div>
-            <div class="icon-item">
-                <img src="assets/icons/firebase.png" alt="Firebase Icon">
-                <p>Firebase</p>
-            </div>
-            <div class="icon-item">
-                <img src="assets/icons/git.png" alt="GIT Icon">
-                <p>GIT</p>
-            </div>
-            <div class="icon-item">
-                <img src="assets/icons/api.png" alt="Rest-Api Icon">
-                <p>Rest-Api</p>
-            </div>
-            <div class="icon-item">
-                <img src="assets/icons/scrum.png" alt="Scrum Icon">
-                <p>Scrum</p>
-            </div>
-            <div class="icon-item">
-                <img src="assets/icons/materialdesign.png" alt="Material Design Icon">
-                <p>Material Design</p>
-            </div>
-            <div class="icon-item">
-                <img src="assets/icons/continouslearning.png" alt="Continually Learning Icon">
-                <p class="purple-text">{{ 'skills.continual_learning' | translate }}</p>
-                <div class="popup-content">{{ 'skills.continual_learning_popup' | translate }}</div>
-            </div>
+  <div class="skills-container">
+    <div class="skills-icons">
+      <div class="icon-item">
+        <img src="assets/icons/html.png" alt="HTML Icon" />
+        <p>HTML</p>
+      </div>
+      <div class="icon-item">
+        <img src="assets/icons/css.png" alt="CSS Icon" />
+        <p>CSS</p>
+      </div>
+      <div class="icon-item">
+        <img src="assets/icons/javascript.png" alt="JavaScript Icon" />
+        <p>JavaScript</p>
+      </div>
+      <div class="icon-item">
+        <img src="assets/icons/ts.png" alt="TypeScript Icon" />
+        <p>TypeScript</p>
+      </div>
+      <div class="icon-item">
+        <img src="assets/icons/angular.png" alt="Angular Icon" />
+        <p>Angular</p>
+      </div>
+      <div class="icon-item">
+        <img src="assets/icons/firebase.png" alt="Firebase Icon" />
+        <p>Firebase</p>
+      </div>
+      <div class="icon-item">
+        <img src="assets/icons/git.png" alt="GIT Icon" />
+        <p>GIT</p>
+      </div>
+      <div class="icon-item">
+        <img src="assets/icons/api.png" alt="Rest-Api Icon" />
+        <p>Rest-Api</p>
+      </div>
+      <div class="icon-item">
+        <img src="assets/icons/scrum.png" alt="Scrum Icon" />
+        <p>Scrum</p>
+      </div>
+      <div class="icon-item">
+        <img src="assets/icons/materialdesign.png" alt="Material Design Icon" />
+        <p>Material Design</p>
+      </div>
+      <div class="icon-item">
+        <img
+          src="assets/icons/continouslearning.png"
+          alt="Continually Learning Icon"
+        />
+        <p class="purple-text">{{ "skills.continual_learning" | translate }}</p>
+        <div class="popup-content">
+          {{ "skills.continual_learning_popup" | translate }}
         </div>
-        <div class="skills-text">
-            <h1 class="h1" pAnimateOnScroll>{{ 'skills.title' | translate }}</h1>
-            <p>{{ 'skills.description' | translate }}</p>
-          </div>          
-        <div class="skills-cta">
-            <p class="question">
-                {{ 'skills.cta_question' | translate }}
-            </p>
-            <p>{{ 'skills.cta_message' | translate }}</p>
-            <button class="btn-primary-green">{{ 'skills.cta_button' | translate }}</button>
-        </div>
+      </div>
     </div>
+    <div class="skills-text">
+      <h1 class="h1" pAnimateOnScroll>{{ "skills.title" | translate }}</h1>
+      <p>{{ "skills.description" | translate }}</p>
+    </div>
+    <div class="skills-cta">
+      <p class="question">
+        {{ "skills.cta_question" | translate }}
+      </p>
+      <p>{{ "skills.cta_message" | translate }}</p>
+
+      <button class="btn-primary-green" (click)="scrollToContact()">
+        {{ "skills.cta_button" | translate }}
+      </button>
+    </div>
+  </div>
 </section>
