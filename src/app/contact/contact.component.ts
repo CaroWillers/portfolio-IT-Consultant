@@ -65,36 +65,36 @@ export class ContactComponent implements AfterViewInit {
     this.isPrivacyChecked = this.contactData.privacy;
   }
 
-  // Handle form submission
-  onSubmit(ngForm: NgForm): void {
-    this.validateAllFields(ngForm);
+ // Handle form submission
+onSubmit(ngForm: NgForm): void {
+  this.validateAllFields(ngForm);
 
-    if (ngForm.valid && this.isPrivacyChecked) {
-      this.http
-        .post(
-          this.post.endPoint,
-          this.post.body(this.contactData),
-          this.post.options
-        )
-        .subscribe({
-          next: (response) => {
-            console.info('Form submitted successfully:', response);
-            ngForm.resetForm();
-            this.showModal = true; // Show the modal after form submission
-            this.isPrivacyChecked = false; // Reset the privacy checkbox state
-          },
-          error: (error) => {
-            console.error('Error occurred while submitting the form:', error);
-          },
-          complete: () => console.info('Form submission process completed'),
-        });
-    } else {
-      console.warn(
-        'Form submission failed: form is either not valid or privacy not checked'
-      );
-      this.validateAllFields(ngForm);
-    }
+  if (ngForm.valid && this.isPrivacyChecked) {
+    this.http
+      .post(
+        this.post.endPoint,
+        this.post.body(this.contactData),
+        this.post.options
+      )
+      .subscribe({
+        next: (response) => { 
+          ngForm.resetForm(); // Reset the form after successful submission
+          this.showModal = true; // Show the modal after form submission
+          this.isPrivacyChecked = false; // Reset the privacy checkbox state
+        },
+        error: (error) => {
+          // Handle error, you could display an error message to the user
+        },
+        complete: () => {
+          // Optional: You can handle any finalization logic here if needed
+        },
+      });
+  } else {
+    this.validateAllFields(ngForm);
+    // Optional: Show feedback to the user that the form is not valid or privacy not checked
   }
+}
+
 
   // Validate all form fields
   validateAllFields(form: NgForm): void {

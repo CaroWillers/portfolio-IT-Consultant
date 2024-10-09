@@ -109,8 +109,9 @@
         </div>
 
         <span class="privacy-error" *ngIf="showPrivacyError(contactForm)">
-          Du musst der Datenschutzerklärung zustimmen, um fortzufahren.
+          {{ "contact.privacy-error" | translate }}
         </span>
+        
 
         <button
           type="submit"

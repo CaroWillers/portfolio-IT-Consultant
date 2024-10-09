@@ -8,13 +8,12 @@
   position: relative;
   overflow: hidden;
   padding-bottom: 50px;
-  margin-top: -600px;
 }
 
 .portfolio-purple-background {
   position: absolute;
-  top: 1005px;
-  left: -345px;
+ bottom: 100px;
+  left: -450px;
   width: 70%;
   display: flex;
   align-items: center;
@@ -155,6 +154,10 @@
 }
 
 @media (max-width: 500px) {
+  .portfolio-section {
+    margin-top: 490px !important
+  }
+  
   .portfolio-text p {
     padding-right: 50px;
     padding-left: 50px;
@@ -162,8 +165,18 @@
 }
 
 @media (max-width: 414px) {
+  .portfolio-section {
+    margin-top: 490px !important
+  }
+
   .portfolio-text p {
     padding-right: 30px;
     padding-left: 30px;
+  }
+}
+
+@media (width: 375px) and (height: 667px) {
+  .portfolio-section {
+    margin-top: 490px !important
   }
 }

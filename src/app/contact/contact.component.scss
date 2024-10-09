@@ -1,5 +1,4 @@
 @import "../../styles.scss";
-
 /*Heading styles*/
 h1 {
   text-align: center;
@@ -103,10 +102,11 @@ h1 {
 
 .contact-container {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: flex; 
+  justify-content: center; 
   align-items: flex-start;
+  margin: 0 auto;
+  gap: 52px;
 }
 
 .contact-text {
@@ -321,12 +321,35 @@ h1 {
 }
 
 /*media queries*/
-@media (max-width: 1280px) {
-  .contact-text {
-    width: 400px;
+@media (max-width: 1500px) {
+  .contact-container {
+    gap: 10px;
+  }
+  .contact-form {
+    width: 600px;
+  }
+}
+
+@media (max-width: 1380px) {
+  .contact-container {
+    gap: 10px;
   }
   .contact-form {
     width: 500px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .contact-text {
+    width: 650px;
+  }
+  .contact-form {
+    width: 650px;
   }
 }
 
@@ -537,7 +560,13 @@ h1 {
   .h1::before {
     width: 15%;
   }
-  .contact-form  .form-group  {
+  .contact-form .form-group {
     margin-bottom: -10px;
+  }
 }
+
+@media (width: 360px) and (height: 740px) {
+  .h1::before {
+    width: 15%;
+  }
 }

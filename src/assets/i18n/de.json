@@ -6,7 +6,7 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "intro": "I am",
+    "intro": "Ich bin",
     "name": "CARO WILLERS",
     "position": "FRONTEND DEVELOPER",
     "button": "Kontakt hier!",
@@ -69,6 +69,7 @@
     "privacy_policy_text": "Ich habe die ",
     "privacy_policy_link": "Datenschutzerklärung",
     "privacy_policy_text_end": " gelesen und stimme der Verarbeitung meiner Daten zu.",    
+    "privacy-error": "Du musst der Datenschutzerklärung zustimmen, um fortzufahren.",
     "send_button": "Nachricht senden",
     "thank_you": "Danke für Deine Nachricht! Ich werde mich bald bei Dir melden."
   },

@@ -15,6 +15,13 @@ $red: #FF4747;
   align-items: center;
 }
 
+@mixin container-flex-center() {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
 /*Grid Mixin*/
 @mixin hero-text-grid($columns, $rows) {
 display: grid;
@@ -25,25 +32,77 @@ grid-template-areas:
   "eins drei"
   ". fünf";
 }
-
+ 
 /* Text-Size Mixin */
-@mixin text-size($item1-size, $item2-size, $item3-size, $item5-size: null) {
-.item-1 {
-  font-size: $item1-size;
-}
-.item-2 {
-  font-size: $item2-size;
-}
-.item-3 {
-  font-size: $item3-size;
-}
+@mixin text-size($item1-size, $item2-size, $item3-size, $item5-size: null, $lang-de-item1-size: null) {
+  
+  .item-1 {
+    font-size: $item1-size;
 
-@if $item5-size {
-  .item-5 {
-    font-size: $item5-size;
+    &.lang-de {
+      @if $lang-de-item1-size {
+        font-size: $lang-de-item1-size;  
+      }
+    }
+  }
+
+  .item-2 {
+    font-size: $item2-size;
+  }
+
+  .item-3 {
+    font-size: $item3-size;
+  }
+
+  @if $item5-size {
+    .item-5 {
+      font-size: $item5-size;
+    }
   }
 }
+
+.hero-text {
+  position: relative;
+  display: grid;
+  @include hero-text-grid(65px 590px, 75px 60px 150px);
+  @include text-size(54px, 80px, 50px, null, 36px);  
+  justify-items: center;
+  align-items: center;
+  z-index: 3;
+  gap: 0;
 }
+
+/* Startposition für alle Text-Items */
+.item-1 {
+  grid-area: eins;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-weight: 400;
+  color: $white;
+
+  &.lang-de {
+    font-size: 36px;  
+  }
+}
+
+.item-2 {
+  grid-area: zwei;
+  font-weight: 700;
+  color: $white;
+}
+
+.item-3 {
+  grid-area: drei;
+  transform: scaleY(1.2);
+  font-weight: 400;
+  color: $purple;
+  letter-spacing: 2px;
+}
+
+.item-5 {
+  grid-area: fünf;
+}
+
 
 /* Image Transform Mixin */
 @mixin image-transform($translateX, $translateY) {
@@ -70,12 +129,12 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+body { 
     font-family: 'Poppins', sans-serif;
     background-color: $bgrNearlyBlack;
     margin: 0;
     padding: 0;  
-    box-sizing: border-box; 
+    box-sizing: border-box;  
 }
 
 /*Logo Styles*/

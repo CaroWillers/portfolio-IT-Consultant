@@ -1,7 +1,10 @@
 <nav class="hero-nav">
-  <h1 class="logo">
-    <span>C</span><span>A</span><span>R</span><span class="accent-o">O</span>
-  </h1>
+  <div class="navbar-container">
+  <a href="" class="logo">
+    <h1>
+      <span>C</span><span>A</span><span>R</span><span class="accent-o">O</span>
+    </h1>
+  </a>
 
   <!-- Burger Menu -->
   <div class="burger-menu" (click)="toggleMenu()">
@@ -11,19 +14,31 @@
   <!-- desktop -->
   <ul class="hero-nav-list">
     <li>
-      <a href="#about-me" (click)="closeMenu()">{{
-        "navbar.about_me" | translate
-      }}</a>
+      <a
+        href="#about-me"
+        (click)="navigateTo('about-me'); closeMenu()"
+        [ngClass]="{ active: activeSection === 'about-me' }"
+      >
+        {{ "navbar.about_me" | translate }}
+      </a>
     </li>
     <li>
-      <a href="#skills" (click)="closeMenu()">{{
-        "navbar.skills" | translate
-      }}</a>
+      <a
+        href="#skills"
+        (click)="navigateTo('skills'); closeMenu()"
+        [ngClass]="{ active: activeSection === 'skills' }"
+      >
+        {{ "navbar.skills" | translate }}
+      </a>
     </li>
     <li>
-      <a href="#portfolio" (click)="closeMenu()">{{
-        "navbar.portfolio" | translate
-      }}</a>
+      <a
+        href="#portfolio"
+        (click)="navigateTo('portfolio'); closeMenu()"
+        [ngClass]="{ active: activeSection === 'portfolio' }"
+      >
+        {{ "navbar.portfolio" | translate }}
+      </a>
     </li>
     <li class="language-switcher">
       <a
@@ -41,6 +56,7 @@
       >
     </li>
   </ul>
+  </div>
 </nav>
 
 <!-- Overlay mobile-->
@@ -77,8 +93,19 @@
         }}</a>
       </li>
       <li class="language-switcher">
-        <a href="#" (click)="switchLanguage('en')">EN</a> |
-        <a href="#" (click)="switchLanguage('de')">DE</a>
+        <a
+          href="#"
+          (click)="switchLanguage('en'); $event.preventDefault()"
+          [ngClass]="{ active: currentLanguage === 'en' }"
+          >EN</a
+        >
+        |
+        <a
+          href="#"
+          (click)="switchLanguage('de'); $event.preventDefault()"
+          [ngClass]="{ active: currentLanguage === 'de' }"
+          >DE</a
+        >
       </li>
     </ul>
   </div>

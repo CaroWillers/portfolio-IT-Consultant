@@ -16,8 +16,8 @@
     </div>
 
     <div class="hero-text-container" pAnimateOnScroll>
-      <div class="hero-text">
-        <div class="item-1">{{ "hero.intro" | translate }}</div>
+      <div class="hero-text"> 
+        <div class="item-1" [ngClass]="{'lang-de': currentLang === 'de'}" >{{ "hero.intro" | translate }}</div>
         <div class="item-2">{{ "hero.name" | translate }}</div>
         <div class="item-3">{{ "hero.position" | translate }}</div>
         <div class="item-5">
@@ -32,7 +32,7 @@
     <img src="assets/bgr-img/2_hero-background.png" alt="Background Picture" />
   </div>
   <div class="reference-icons">
-    <a href="https://github.com/CaroWillers/portfolio" target="_blank">
+    <a href="https://github.com/CaroWillers" target="_blank">
       <img src="assets/icons/github.png" alt="github Icon" />
     </a>
     <a href="#contact">

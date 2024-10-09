@@ -12,6 +12,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 export class NavbarComponent {
   isMenuOpen: boolean = false;
   currentLanguage: string = 'en';
+  activeSection: string = 'about-me';
 
   constructor(private translate: TranslateService) {
     // Set default language
@@ -25,6 +26,10 @@ export class NavbarComponent {
 
   closeMenu() {
     this.isMenuOpen = false;
+  }
+
+  navigateTo(section: string) {
+    this.activeSection = section;  
   }
 
   switchLanguage(language: string) {

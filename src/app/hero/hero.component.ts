@@ -7,6 +7,7 @@ import {
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero',
@@ -17,8 +18,18 @@ import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 })
 export class HeroComponent implements AfterViewInit {
   private heroTextContainer: HTMLElement | null = null;
+  currentLang: string;
 
-  constructor(private elementRef: ElementRef) {}
+
+  constructor(private elementRef: ElementRef, private translate: TranslateService) {
+
+    this.currentLang = this.translate.currentLang || 'en'; // Fallback to 'en' if currentLang is not set
+
+
+  this.translate.onLangChange.subscribe((event) => {
+  this.currentLang = event.lang; // Update currentLang when the language changes
+  });
+}
 
   ngAfterViewInit(): void {
     this.heroTextContainer = this.elementRef.nativeElement.querySelector(

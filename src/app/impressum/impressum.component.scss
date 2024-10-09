@@ -1,7 +1,7 @@
 @import "../../styles.scss";
 
 .impressum {
-  padding: 60px;
+  padding: 120px;
   height: 100vh;
   color: white;
   background-color: $bgrNearlyBlack;
@@ -15,7 +15,7 @@
 /*Go back container*/
 .go-back-container {
   cursor: pointer;
-  padding-left: 60px;
+  padding-left: 120px;
   margin-top: 100px;
 
   .go-back-link {
@@ -45,5 +45,24 @@
     width: 40px;
     transform: rotate(-90deg);
     transition: transform 0.3s;
+  }
+}
+
+@media (max-width: 768px) { 
+  .go-back-container {
+    padding-left: 50px;
+    margin-top: 20px;
+  }
+  .impressum {
+      padding: 50px;
+    }
+}
+
+@media (max-width: 430px) {
+  .go-back-container {
+    padding-left: 30px;
+  }
+  .impressum {
+    padding: 30px;
   }
 }

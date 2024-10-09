@@ -29,7 +29,7 @@
 
   // Zoom-In-Animation bei Mouseover
   &.zoomin {
-    animation: zoomIn 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+    animation: zoomIn 1.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
   }
 
   @keyframes zoomIn {
@@ -157,8 +157,7 @@
         }
       }
 
-      &.btn-github {
-        background-color: black;
+      &.btn-github { 
         color: $white;
         border: 1px solid $green;
 
@@ -315,6 +314,10 @@ a[disabled] {
   }
 
   @media (max-width: 350px) {
+    .portfolio-section {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
     .project-text {
       width: 300px !important;
     }
@@ -330,7 +333,7 @@ a[disabled] {
       }
     }
     .project-buttons {
-      gap: 15px !important;
+      gap: 10px !important;
     }
   }
 }
