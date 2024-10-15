@@ -4,7 +4,6 @@
 .hero {
   color: white;
   position: relative;
-  max-width: 1440px;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
@@ -15,12 +14,13 @@
 /* Hero Container */
 .hero-container {
   @include flexbox(null, space-between, center);
+  max-width: 1440px;
   width: 100%;
   height: 100%;
   max-height: 1100px;
   gap: 120px;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 
@@ -29,6 +29,7 @@
   @include size(50%, null);
   @include flexbox(null, center, center);
   position: relative;
+  overflow: visible;
 }
 
 .profile-shadow,
@@ -41,13 +42,13 @@
 .profile-shadow img {
   width: 850px;
   object-fit: cover;
-  @include image-transform(-13%, -50%);
+  @include image-transform(-15%, -60%);
 }
 
 .profile-photo img {
   width: 850px;
   object-fit: cover;
-  @include image-transform(-15%, -90%);
+  @include image-transform(-15%, -80%);
 }
 
 /* Standard Hero Text Container */
@@ -55,8 +56,8 @@
   @include size(50%);
   @include flexbox(column, center, center);
   position: absolute;
-  top: 150px;
-  right: 120px;
+  top: 130px;
+  right: 130px;
   transform: translateX(100px);
 
   &.animate {
@@ -139,7 +140,7 @@
   position: relative;
   display: grid;
   @include hero-text-grid(65px 500px, 65px 55px 120px);
-  @include text-size(50px, 68px, 42px, null, 36px);
+  @include text-size(50px, 68px, 42px, null, 32px);
   justify-items: center;
   align-items: center;
   z-index: 3;
@@ -175,7 +176,7 @@
 /* Swosh Section */
 .swosh {
   position: absolute;
-  top: 170px;
+  top: 110px;
   @include size(100%);
   z-index: -1;
   overflow: hidden;
@@ -188,6 +189,7 @@
 
 /* Reference Icons */
 .reference-icons {
+  max-width: 1440px;
   @include flexbox(row, center, center);
   position: absolute;
   width: 100%;
@@ -199,10 +201,10 @@
   &::before {
     content: "";
     position: absolute;
-    left: -20px;
+    left: -40px;
     height: 4px;
     background-color: $purple;
-    width: 20vw;
+    width: calc(100% - 1120px);
     z-index: -1;
     transform: translateY(-50%);
   }
@@ -266,19 +268,85 @@
 }
 
 /* Media Queries */
+@media (min-height: 1024px) {
+  .profile-shadow img {
+    max-width: 950px !important;
+    @include image-transform(-15%, -65%);
+  }
+
+  .profile-photo img {
+    max-width: 950px !important;
+    @include image-transform(-15%, -85%);
+  }
+  .swosh {
+    top: 70px;
+  }
+}
+
+@media (max-height: 1024px) {
+  .profile-shadow img,
+  .profile-photo img {
+    max-width: 800px;
+  }
+}
+
+@media (max-height: 860px) {
+  .hero-text {
+    @include hero-text-grid(60px 400px, 70px 60px 120px);
+    @include text-size(48px, 55px, 33px, null);
+  }
+  .profile-shadow img {
+    max-width: 700px !important;
+    @include image-transform(-15%, -55%);
+  }
+
+  .profile-photo img {
+    max-width: 700px !important;
+    @include image-transform(-15%, -75%);
+  }
+
+  .swosh {
+    top: 170px !important;
+  }
+}
+
+@media (min-width: 1950px) {
+  .profile-shadow img {
+    width: 1050px;
+    object-fit: cover;
+    @include image-transform(-15%, -50%);
+  }
+
+  .profile-photo img {
+    width: 1050px;
+    object-fit: cover;
+    @include image-transform(-15%, -70%);
+  }
+  .hero-text-container {
+    top: 180px;
+  }
+  .swosh {
+    top: 10px !important;
+  }
+}
+
 @media (min-width: 1450px) {
   .swosh {
-    top: 140px;
+    top: 30px;
   }
-  
-
 }
+@media (min-width: 1250px) {
+  .swosh {
+    top: 60px;
+  }
+}
+
 @media (min-width: 1025px) and (max-width: 1268px) {
   .hero-text-container {
-    top: 110px;
+    top: 90px;
     right: 100px;
   }
-  
+
   .hero-text {
     @include hero-text-grid(60px 400px, 70px 60px 120px);
     @include text-size(48px, 55px, 33px, null);
@@ -290,8 +358,25 @@
     }
   }
   .swosh {
-    top: 180px;
+    top: 125px;
   }
+}
+
+@media (max-height: 910px) and (min-width: 769px) and (max-width: 1024px) {
+}
+
+@media (max-height: 770px) and (min-width: 769px) and (max-width: 1024px) {
+
+  .hero-text-container {
+    top: 450px !important;
+  }
+  .hero-text {
+    top: 35px !important;
+  }
+  .reference-icons {
+    bottom: -160px !important;
+  }
+
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -317,19 +402,19 @@
   .profile-shadow img {
     width: 100%;
     object-fit: cover;
-    @include image-transform(-6%, 2%);
+    @include image-transform(13%, 2%);
   }
 
   .profile-photo img {
     width: 100%;
     object-fit: cover;
-    @include image-transform(0%, 0%);
+    @include image-transform(6%, 2%);
   }
 
   .hero-text-container {
     @include flexbox(column, center, center);
     @include size(100%);
-    top: 650px;
+    top: 600px;
     right: 0;
   }
 
@@ -339,7 +424,7 @@
   }
 
   .reference-icons {
-    bottom: -100px !important;
+    bottom: -150px !important;
 
     &::before {
       width: calc(20% - 120px) !important;
@@ -351,7 +436,7 @@
   }
 
   .swosh {
-    top: 300px;
+    top: 250px;
     overflow: hidden;
   }
 
@@ -368,6 +453,27 @@
     &::before {
       width: calc(40% - 120px) !important;
     }
+  }
+}
+
+@media (max-height: 650px) and (min-width: 577px) and (max-width: 768px) {
+  .hero-text {
+    top: 67px !important;
+  }
+  .reference-icons {
+    bottom: -60px !important;
+    a img {
+      width: 40px;
+    }
+  }
+  .swosh {
+    top: 180px;
+  }
+  .scroll-down {
+    display: none;
+  }
+  .reference-icons {
+    bottom: -100px !important;
   }
 }
 
@@ -412,7 +518,7 @@
   .hero-text {
     @include hero-text-grid(50px 500px, 75px 60px 140px);
     @include text-size(55px, 67px, 42px, null);
-    top: -200px;
+    top: -145px;
   }
   .reference-icons {
     bottom: 30px !important;
@@ -497,7 +603,7 @@
 
   .profile-photo,
   .profile-shadow {
-    @include size(80%);
+    @include size(100%);
     height: 100%;
   }
 
@@ -508,15 +614,15 @@
   }
 
   .profile-shadow img {
-    transform: translateX(-8%) translateY(2%);
+    transform: translateX(-5%) translateY(2%);
   }
 
   .profile-photo img {
-    transform: translateX(-15%) translateY(0%);
+    transform: translateX(-5%) translateY(0%);
   }
 
   .swosh {
-    top: 130px;
+    top: 196px;
   }
 
   .scroll-down,
@@ -625,4 +731,3 @@
     margin-left: -30px;
   }
 }
-

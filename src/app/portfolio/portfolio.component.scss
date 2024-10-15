@@ -71,9 +71,10 @@
 
 /*Heading Styles*/
 .h1 {
+  max-width: 1440px;
+  margin: 0 auto;
   text-align: center;
-  position: relative;
-  margin: 0;
+  position: relative; 
 
   &::before,
   &::after {
@@ -92,7 +93,7 @@
 
   &::after {
     left: 105%;
-    width: calc(100vw - 50%);
+    width: 75%;
   }
 }
 
