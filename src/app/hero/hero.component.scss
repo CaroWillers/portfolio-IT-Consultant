@@ -193,7 +193,7 @@
   @include flexbox(row, center, center);
   position: absolute;
   width: 100%;
-  bottom: 150px;
+  bottom: 30px;
   gap: 40px;
   z-index: 2;
   overflow: hidden;
@@ -306,7 +306,7 @@
   }
 
   .swosh {
-    top: 170px !important;
+    top: 135px !important;
   }
 }
 
@@ -358,15 +358,11 @@
     }
   }
   .swosh {
-    top: 125px;
+    top: 160px;
   }
 }
 
-@media (max-height: 910px) and (min-width: 769px) and (max-width: 1024px) {
-}
-
 @media (max-height: 770px) and (min-width: 769px) and (max-width: 1024px) {
-
   .hero-text-container {
     top: 450px !important;
   }
@@ -376,8 +372,8 @@
   .reference-icons {
     bottom: -160px !important;
   }
-
 }
+ 
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero-container {
@@ -408,7 +404,7 @@
   .profile-photo img {
     width: 100%;
     object-fit: cover;
-    @include image-transform(6%, 2%);
+    @include image-transform(0%, 2%);
   }
 
   .hero-text-container {
@@ -512,16 +508,15 @@
     @include flexbox(column, center, center);
     @include size(100%);
     position: static !important;
-    margin-top: -240px;
   }
 
   .hero-text {
     @include hero-text-grid(50px 500px, 75px 60px 140px);
     @include text-size(55px, 67px, 42px, null);
-    top: -145px;
+    top: -215px;
   }
   .reference-icons {
-    bottom: 30px !important;
+    bottom: -40px !important;
     a img {
       width: 40px;
     }
@@ -542,8 +537,8 @@
     top: 400px;
   }
   .hero-text {
-    @include hero-text-grid(40px 300px, 40px 40px 115px);
-    @include text-size(32px, 40px, 24px, null, 20px);
+    @include hero-text-grid(30px 400px, 40px 40px 115px);
+    @include text-size(34px, 50px, 30px, null, 20px);
   }
 
   .profile-picture {
@@ -556,6 +551,7 @@
     position: absolute;
     @include size(100%, 100%);
     z-index: -1;
+    overflow: hidden;
   }
 
   .profile-shadow img {
@@ -605,12 +601,16 @@
   .profile-shadow {
     @include size(100%);
     height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
   }
 
   .profile-shadow img,
   .profile-photo img {
     @include size(120%, auto);
     object-fit: cover;
+    overflow: hidden;
+    box-sizing: border-box;
   }
 
   .profile-shadow img {
@@ -644,21 +644,58 @@
 
 /*iphone 14Pro */
 @media (width: 430px) and (height: 932px) {
+  .profile-photo,
+  .profile-shadow {
+    @include size(100%);
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .profile-shadow img,
+  .profile-photo img {
+    @include size(120%, auto);
+    object-fit: cover;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+
+  .profile-shadow img {
+    transform: translateX(-9%) translateY(2%);
+  }
+
+  .profile-photo img {
+    transform: translateX(-9%) translateY(5%);
+  }
+
+  .hero-text {
+    @include hero-text-grid(40px 300px, 40px 40px 115px);
+    @include text-size(32px, 40px, 24px, null, 20px);
+  }
   .swosh {
-    top: 130px;
+    top: 230px;
   }
   .reference-icons {
     bottom: 80px !important ;
+    &::before {
+      width: calc(30% - 10px) !important;
+    }
   }
   .item-5 {
     margin-left: -30px;
   }
 }
 
-/*iphoe XR */
+/*iphone 12 Pro */
+@media (width: 390px) and (height: 844px) {
+  .swosh {
+    top: 215px !important;
+  }
+}
+/*iphone XR */
 @media (width: 414px) and (height: 896px) {
   .swosh {
-    top: 150px;
+    top: 225px;
   }
   .reference-icons {
     bottom: 80px !important;
@@ -668,7 +705,7 @@
 /*iphone 6/7/8 */
 @media (width: 375px) and (height: 667px) {
   .hero-text-container {
-    top: 300px;
+    top: 350px;
   }
   .hero-text {
     @include hero-text-grid(40px 250px, 40px 40px 115px);
@@ -677,12 +714,17 @@
 
   .profile-picture {
     margin-top: 10px;
+    overflow: hidden;
   }
+  .profile-shadow {
+    overflow: hidden;
+  }
+
   .item-5 {
     margin-left: -30px;
   }
   .swosh {
-    top: 150px;
+    top: 200px !important;
   }
   .reference-icons {
     bottom: 10px !important;
@@ -713,6 +755,9 @@
 @media (width: 412px) and (height: 915px) {
   .reference-icons {
     bottom: 80px !important;
+    &::before {
+      width: calc(30% - 10px) !important;
+    }
   }
 }
 
@@ -729,5 +774,14 @@
   }
   .item-5 {
     margin-left: -30px;
+  }
+  .reference-icons {
+    bottom: 80px !important;
+    &::before {
+      width: calc(30% - 10px) !important;
+    }
+  }
+  .swosh {
+    top: 200px !important;
   }
 }
