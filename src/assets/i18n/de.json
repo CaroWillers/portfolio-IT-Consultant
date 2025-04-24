@@ -8,37 +8,37 @@
   "hero": {
     "intro": "Ich bin",
     "name": "CARO WILLERS",
-    "position": "FRONTEND DEVELOPER",
+    "position": "IT-CONSULTANT",
     "button": "Kontakt hier!",
     "scroll_down": "weiter scrollen",
     "contact_email": "contact@caro-willers.com"
   },
   "about_me": {
     "title": "Mein Profil",
-    "intro": "Ich bin eine engagierte Entwicklerin und möchte die Zukunft der Digitalisierung mitgestalten. Mein Ziel ist es, qualitativ hochwertige und funktionale Anwendungen zu entwickeln, die die Nutzer durch ihre Benutzerfreundlichkeit überzeugen.",
+    "intro": "Das dürfen Sie von mir erwarten: Ein respektvolles Miteinander, Teamgeist und klare, realistische Ziele. Diese Werte prägen meine Arbeitsweise – fokussiert, motiviert und mit vollem Einsatz.",
     "paragraphs": [
       {
         "icon": "assets/icons/lamp.png",
-        "text": "Bevor ich in die Webentwicklung eingestiegen bin, war ich viele Jahre als kaufmännische Leitung unserer Werbeagentur tätig. Durch diese Erfahrung habe ich umfangreiche Kenntnisse darin erworben, erfolgreiche Webseiten und Apps zu konzipieren und zu vermarkten. Heute kann ich diese Konzepte nicht nur entwickeln, sondern auch technisch umsetzen."
+        "text": "IT, Projektmanagement und Kommunikation sind meine Kernkompetenzen. Ich verbinde technisches Know-how mit einem geschulten Blick für Prozesse und betriebliche Ziele. Als zertifizierte Frontend-Entwicklerin und langjährige Leiterin einer Werbeagentur habe ich Projekte nicht nur umgesetzt, sondern auch geführt – strategisch, effizient und teamorientiert."
       },
       {
         "icon": "assets/icons/puzzle.png",
-        "text": "Ich bin sehr gut darin, Projekte voranzutreiben und in kollaborativen Scrum-Teams erfolgreich zu arbeiten. Ich bin kommunikativ, ausdauernd und denke vorausschauend – Eigenschaften, die mir während meiner Teilzeitausbildung zum Webentwickler an der Developer Akademie sehr zugutekamen. Harmonie und Effizienz sind mir wichtig, und ich schätze Arbeitsumgebungen, in denen alle bestrebt sind, gemeinsam die besten Ergebnisse zu erzielen. Offen für Neues, lernbereit und anpassungsfähig, gehe ich jede Herausforderung flexibel und mit einer positiven Einstellung an."
+        "text": "Als IT Consultant bringe ich Struktur in digitale Projekte. Meine Stärken liegen in klarer Kommunikation, zielgerichteter Teamführung und der Übersetzung technischer Anforderungen in praxisnahe Lösungen."
       },
       {
         "icon": "assets/icons/location.png",
-        "text": "Auch wenn ich remote arbeite, bin ich bei Bedarf für Geschäftsreisen offen. Besonders reizvoll finde ich internationale Umgebungen, in denen unterschiedliche Perspektiven zusammenkommen, um etwas Außergewöhnliches zu schaffen."
+        "text": "Als zertifizierte SCRUM Masterin nutze ich agile Methoden gezielt, um Projekte flexibel und effektiv zu steuern. Dabei setze ich auf klare Prioritäten und strukturierte Zusammenarbeit. Meine Erfahrung reicht von der Leitung kreativer Agenturprojekte bis zur Umsetzung technischer Lösungen in der IT-Weiterbildung – immer mit Fokus auf Effizienz, Teamdynamik und echten Mehrwert."
       }
     ]
   },
   "skills": {
     "title": "Kompetenz",
-    "description": "Ich habe Erfahrung in der Entwicklung von Projekten mit verschiedenen Frontend-Technologien und -Konzepten gesammelt.",
-    "cta_question": "Welche Skills brauchst du?",
-    "cta_message": "Nimm einfach Kontakt auf. Ich freue mich darauf, von Deinen Projekten zu hören. Lass uns besprechen, wie wir diese gemeinsam voranbringen können.",
-    "cta_button": "hier kontaktieren",
+    "description": "Technologieverständnis hilft mir, digitale Projekte zielgerichtet zu begleiten – fachlich, strukturiert und nah an der Praxis.",
+    "cta_question": "Was bringt Ihr Projekt voran?",
+    "cta_message": "Ich bin gespannt, wo ich Sie unterstützen kann – lassen Sie uns ins Gespräch kommen.",
+    "cta_button": "Los geht's",
     "continual_learning": "Lebenslanges Lernen",
-    "continual_learning_popup": "Ich erweitere aktuell meine Kenntnisse, um Backend-Entwickler zu werden."
+    "continual_learning_popup": "Ich erweitere aktuell meine Kenntnisse im Bereich AI und WordPress."
   },
   "portfolio": {
     "title": "Portfolio",
@@ -61,17 +61,17 @@
   },
   "contact": {
     "title": "Kontakt",
-    "question": "Was ist Dein nächstes Projekt?",
-    "intro": "Kontaktiere mich über dieses Formular. Lass uns zusammenarbeiten und Deine Projekte zum Erfolg bringen. Ich bin motiviert, meine Fähigkeiten einzubringen.",
-    "name_placeholder": "Dein Name",
-    "email_placeholder": "Deine E-Mail",
-    "message_placeholder": "Deine Nachricht",
+    "question": "Bereit für den nächsten Schritt?",    
+    "intro": "Dann schreiben Sie mir – ich freue mich auf den Austausch und darauf, Ihre Vorhaben mitzugestalten.",
+    "name_placeholder": "Ihr Name",
+    "email_placeholder": "Ihre E-Mail",
+    "message_placeholder": "Ihre Nachricht",
     "privacy_policy_text": "Ich habe die ",
     "privacy_policy_link": "Datenschutzerklärung",
     "privacy_policy_text_end": " gelesen und stimme der Verarbeitung meiner Daten zu.",    
-    "privacy-error": "Du musst der Datenschutzerklärung zustimmen, um fortzufahren.",
+    "privacy-error": "Sie müssen der Datenschutzerklärung zustimmen, um fortzufahren.",
     "send_button": "Nachricht senden",
-    "thank_you": "Danke für Deine Nachricht! Ich werde mich bald bei Dir melden."
+    "thank_you": "Danke für Ihre Nachricht! Ich werde mich bald bei Dir melden."
   },
   "footer": {
     "imprint": "Impressum"

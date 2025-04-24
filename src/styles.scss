@@ -65,7 +65,7 @@ grid-template-areas:
   position: relative;
   display: grid;
   @include hero-text-grid(65px 590px, 75px 60px 150px);
-  @include text-size(54px, 80px, 50px, null, 36px);  
+  @include text-size(54px, 80px, 59px, null, 36px);  
   justify-items: center;
   align-items: center;
   z-index: 3;

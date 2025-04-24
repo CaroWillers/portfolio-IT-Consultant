@@ -8,38 +8,38 @@
   "hero": {
     "intro": "I am",
     "name": "CARO WILLERS",
-    "position": "FRONTEND DEVELOPER",
+    "position": "IT-CONSULTANT", 
     "button": "Let's talk!",
     "scroll_down": "Scroll down",
     "contact_email": "contact@caro-willers.com"
   },
   "about_me": {
     "title": "About me",
-    "intro": "I'm a passionate developer driven to shape the future of digitalization. My goal is to create high-quality, functional applications that delight users with their ease of use.",
+    "intro": "What makes successful collaboration possible? A respectful environment, a team mindset, and clear, achievable goals. These values shape the way I work – focused, reliable, and with full commitment.",
     "paragraphs": [
       {
         "icon": "assets/icons/lamp.png",
-        "text": "Before diving into web development, I spent many years as the head of an advertising agency. This experience taught me what it takes to conceptualize and market successful websites and apps. Now, I'm not only able to create these concepts but also bring them to life technically."
+        "text": "IT, project management, and communication are my core strengths. As a certified frontend developer and experienced agency lead, I combine technical skills with a solid understanding of workflows and business needs. The result: solutions that work – and that make sense from a client perspective."
       },
       {
         "icon": "assets/icons/puzzle.png",
-        "text": "I excel at driving projects forward and thriving in collaborative Scrum teams. I'm communicative, persistent, and always think ahead – qualities that served me well during my part-time training as a web developer at Developer Akademie. Valuing harmony and efficiency, I appreciate environments where everyone is committed to achieving the best results. Always open to learning, adapting, and growing, I embrace flexibility and a positive approach as central to how I work."
+        "text": "As an IT Consultant, I bring structure to digital projects. My strengths include clear communication, purposeful team leadership, and turning technical requirements into practical, real-world solutions."
       },
       {
         "icon": "assets/icons/location.png",
-        "text": "Though I work remotely, I'm open to business travel when needed. I'm particularly drawn to international settings where diverse perspectives come together to create something extraordinary."
+        "text": "As a certified SCRUM Master, I work with agile methods like Kanban and iterative planning. This helps teams stay focused and flexible. My experience ranges from managing creative agency projects to hands-on development work – always aiming to deliver measurable value."
       }
     ]
   },
-  "skills": {
-    "title": "My skills",
-    "description": "I have gained experience in building projects with various frontend technologies and concepts.",
-    "cta_question": "Which skills do you need?",
-    "cta_message": "Feel free to contact me. I look forward to hearing about your projects. Let's see if we're a great fit to work together.",
-    "cta_button": "Get in touch",
-    "continual_learning": "Continually Learning",
-    "continual_learning_popup": "I am currently continuing my education to become a backend developer."
-  }, 
+"skills": {
+  "title": "Skills",
+  "description": "A solid understanding of web technologies helps me support digital projects with clarity, structure, and a practical mindset.",
+  "question": "Ready for the next step?",
+  "cta_message": "Let’s talk about where I can contribute – I’d be happy to explore how we might work together.",
+  "cta_button": "Get in touch",
+  "continual_learning": "Lifelong Learning",
+  "continual_learning_popup": "I’m currently expanding my knowledge in AI and WordPress – always with a focus on practical application."
+  },
   "portfolio": {
     "title": "Portfolio",
     "description": "Explore a selection of my work here - Interact with projects to see my skills in action."
@@ -61,7 +61,7 @@
   },
   "contact": {
     "title": "Contact",
-    "question": "What's your next project?",
+    "question": "Ready for the next step?",
     "intro": "Reach out through this form. Let’s collaborate and bring your projects to success. I’m ready to contribute my skills.",
     "name_placeholder": "Your name",
     "email_placeholder": "Your email",

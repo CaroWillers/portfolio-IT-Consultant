@@ -140,7 +140,7 @@
   position: relative;
   display: grid;
   @include hero-text-grid(65px 500px, 65px 55px 120px);
-  @include text-size(50px, 68px, 42px, null, 32px);
+  @include text-size(50px, 68px, 58px, null, 32px);
   justify-items: center;
   align-items: center;
   z-index: 3;
