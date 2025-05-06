@@ -34,7 +34,7 @@
 "skills": {
   "title": "Skills",
   "description": "A solid understanding of web technologies helps me support digital projects with clarity, structure, and a practical mindset.",
-  "question": "Ready for the next step?",
+  "cta_question": "Ready to make progress?",
   "cta_message": "Let’s talk about where I can contribute – I’d be happy to explore how we might work together.",
   "cta_button": "Get in touch",
   "continual_learning": "Lifelong Learning",

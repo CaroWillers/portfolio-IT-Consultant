@@ -46,9 +46,9 @@
 }
 
 .profile-photo img {
-  width: 850px;
+  width: 750px;
   object-fit: cover;
-  @include image-transform(-15%, -80%);
+  @include image-transform(6%, -60%);
 }
 
 /* Standard Hero Text Container */
@@ -176,7 +176,7 @@
 /* Swosh Section */
 .swosh {
   position: absolute;
-  top: 110px;
+  top: 350px;
   @include size(100%);
   z-index: -1;
   overflow: hidden;
@@ -193,7 +193,7 @@
   @include flexbox(row, center, center);
   position: absolute;
   width: 100%;
-  bottom: 30px;
+  bottom: 200px;
   gap: 40px;
   z-index: 2;
   overflow: hidden;
@@ -271,43 +271,61 @@
 @media (min-height: 1024px) {
   .profile-shadow img {
     max-width: 950px !important;
-    @include image-transform(-15%, -65%);
+    @include image-transform(-11%, -64%);
   }
 
   .profile-photo img {
-    max-width: 950px !important;
-    @include image-transform(-15%, -85%);
+    max-width: 550px !important;
+    @include image-transform(12%, -65%);
   }
   .swosh {
-    top: 70px;
+    top: 350px;
   }
 }
 
 @media (max-height: 1024px) {
-  .profile-shadow img,
+  .profile-shadow img{
+    max-width: 850px;
+    @include image-transform(-11%, -44%);
+  }
+
   .profile-photo img {
-    max-width: 800px;
+    max-width: 550px;
+    @include image-transform(6%, -53%);
+  }
+
+  .reference-icons {
+    bottom: -60px !important;
   }
 }
 
-@media (max-height: 860px) {
-  .hero-text {
-    @include hero-text-grid(60px 400px, 70px 60px 120px);
-    @include text-size(48px, 55px, 33px, null);
+@media (max-height: 720px) {
+  .hero-text-container {
+    @include flexbox(column, center, center);
+    @include size(100%);
+    right: 0;
+    top: 550px;
   }
+  .hero-text {
+    @include hero-text-grid(30px 240px, 40px 40px 115px);
+    @include text-size(30px, 32px, 26px, null);
+  }
+
   .profile-shadow img {
-    max-width: 700px !important;
-    @include image-transform(-15%, -55%);
+    max-width: 450px !important;
+    @include image-transform(-5%, -85%);
   }
 
   .profile-photo img {
-    max-width: 700px !important;
-    @include image-transform(-15%, -75%);
+    max-width: 350px !important;
+    @include image-transform(8%, -78%);
   }
-
-  .swosh {
-    top: 135px !important;
-  }
+  .scroll-down {
+    display: none !important;
+  } 
+  .reference-icons {
+    bottom: -68px !important; 
+  } 
 }
 
 @media (min-width: 1950px) {
@@ -320,13 +338,13 @@
   .profile-photo img {
     width: 1050px;
     object-fit: cover;
-    @include image-transform(-15%, -70%);
+    @include image-transform(7%, -70%);
   }
   .hero-text-container {
     top: 180px;
   }
   .swosh {
-    top: 10px !important;
+    top: 100px !important;
   }
 }
 
@@ -335,45 +353,42 @@
     top: 30px;
   }
 }
+
 @media (min-width: 1250px) {
+  .navbar-container {
+    margin-right: 200px;
+  }
   .swosh {
-    top: 60px;
+    top: 263px;
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1268px) {
+@media (min-width: 1024px) and (max-width: 1268px) {
   .hero-text-container {
-    top: 90px;
-    right: 100px;
+    top: 200px;
+    right: 60px;
   }
 
   .hero-text {
     @include hero-text-grid(60px 400px, 70px 60px 120px);
-    @include text-size(48px, 55px, 33px, null);
+    @include text-size(48px, 55px, 46px, null);
   }
 
   .reference-icons {
     &::before {
       width: 15vw;
-    }
+    } 
   }
   .swosh {
-    top: 160px;
+    top: 400px;
   }
 }
 
-@media (max-height: 770px) and (min-width: 769px) and (max-width: 1024px) {
-  .hero-text-container {
-    top: 450px !important;
-  }
-  .hero-text {
-    top: 35px !important;
-  }
-  .reference-icons {
-    bottom: -160px !important;
-  }
+@media screen and (width: 1024px) and (height: 600px) {
+  .reference-icons[_ngcontent-ng-c3380046990] {
+    bottom: -200px !important;
 }
- 
+}
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero-container {
@@ -398,32 +413,32 @@
   .profile-shadow img {
     width: 100%;
     object-fit: cover;
-    @include image-transform(13%, 2%);
+    @include image-transform(-1%, 2%);
   }
 
   .profile-photo img {
-    width: 100%;
+    width: 80%;
     object-fit: cover;
-    @include image-transform(0%, 2%);
+    @include image-transform(25%, -2%);
   }
 
   .hero-text-container {
     @include flexbox(column, center, center);
     @include size(100%);
-    top: 600px;
+    top: 655px;
     right: 0;
   }
 
   .hero-text {
     @include hero-text-grid(50px 600px, 85px 60px 160px);
-    @include text-size(60px, 80px, 50px, null);
+    @include text-size(60px, 80px, 70px, null);
   }
 
   .reference-icons {
     bottom: -150px !important;
 
     &::before {
-      width: calc(20% - 120px) !important;
+      width: calc(25% - 120px) !important;
     }
 
     a img {
@@ -432,7 +447,7 @@
   }
 
   .swosh {
-    top: 250px;
+    top: 330px;
     overflow: hidden;
   }
 
@@ -446,32 +461,13 @@
     display: none !important;
   }
   .reference-icons {
+    bottom: 10px;
     &::before {
-      width: calc(40% - 120px) !important;
+      width: calc(30% - 20px) !important;
     }
   }
 }
-
-@media (max-height: 650px) and (min-width: 577px) and (max-width: 768px) {
-  .hero-text {
-    top: 67px !important;
-  }
-  .reference-icons {
-    bottom: -60px !important;
-    a img {
-      width: 40px;
-    }
-  }
-  .swosh {
-    top: 180px;
-  }
-  .scroll-down {
-    display: none;
-  }
-  .reference-icons {
-    bottom: -100px !important;
-  }
-}
+ 
 
 @media (min-width: 577px) and (max-width: 768px) {
   .hero-container {
@@ -494,7 +490,7 @@
   }
 
   .profile-shadow img {
-    width: 90%;
+    width: 100%;
     object-fit: cover;
     @include image-transform(0%, 0%);
   }
@@ -502,7 +498,7 @@
   .profile-photo img {
     width: 90%;
     object-fit: cover;
-    @include image-transform(0%, 0%);
+    @include image-transform(18%, -3%);
   }
   .hero-text-container {
     @include flexbox(column, center, center);
@@ -512,34 +508,34 @@
 
   .hero-text {
     @include hero-text-grid(50px 500px, 75px 60px 140px);
-    @include text-size(55px, 67px, 42px, null);
-    top: -215px;
+    @include text-size(55px, 67px, 57px, null);
+  } 
+  .scroll-down {
+    display: none;
   }
   .reference-icons {
-    bottom: -40px !important;
+    bottom: -100px !important;
     a img {
       width: 40px;
     }
   }
   .swosh {
-    top: 180px;
-  }
-  .scroll-down {
-    display: none;
-  }
+    top:460px;
+  } 
 }
+
 
 @media (min-width: 420px) and (max-width: 576px) {
   .hero-text-container {
     @include flexbox(column, center, center);
     @include size(100%);
     right: 0;
-    top: 400px;
+    top: 550px;
   }
   .hero-text {
-    @include hero-text-grid(30px 400px, 40px 40px 115px);
-    @include text-size(34px, 50px, 30px, null, 20px);
-  }
+    @include hero-text-grid(30px 370px, 44px 40px 115px);
+    @include text-size(34px, 48px, 41px, null, 20px);
+  } 
 
   .profile-picture {
     @include size(100%, 100%);
@@ -555,85 +551,26 @@
   }
 
   .profile-shadow img {
-    width: 90%;
+    width: 120%;
     object-fit: cover;
-    @include image-transform(0%, 0%);
+    @include image-transform(-8%, 10%);
   }
 
   .profile-photo img {
     width: 90%;
     object-fit: cover;
-    @include image-transform(0%, 0%);
+    @include image-transform(5%, -3%);
   }
-
-  .swosh {
-    top: 135px;
-  }
+ 
   .scroll-down,
   .contact-link {
     display: none !important;
-  }
-}
-
-@media (max-width: 420px) {
-  .hero-container {
-    @include flexbox(column, center, center);
-    gap: 0;
-  }
-  .hero-text-container {
-    @include flexbox(column, center, center);
-    @include size(100%);
-    right: 0;
-    top: 450px;
-  }
-
-  .hero-text {
-    @include hero-text-grid(40px 300px, 40px 40px 115px);
-    @include text-size(32px, 40px, 24px, null, 20px);
-  }
-
-  .profile-picture {
-    @include size(100%, 100%);
-    top: 20px;
-  }
-
-  .profile-photo,
-  .profile-shadow {
-    @include size(100%);
-    height: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-
-  .profile-shadow img,
-  .profile-photo img {
-    @include size(120%, auto);
-    object-fit: cover;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-
-  .profile-shadow img {
-    transform: translateX(-5%) translateY(2%);
-  }
-
-  .profile-photo img {
-    transform: translateX(-5%) translateY(0%);
-  }
-
-  .swosh {
-    top: 196px;
-  }
-
-  .scroll-down,
-  .contact-link {
-    display: none !important;
-  }
+  } 
 
   .reference-icons {
     bottom: 20px;
     &::before {
-      width: calc(20% - 10px) !important;
+      width: calc(30% - 10px) !important;
     }
 
     a img {
@@ -642,54 +579,13 @@
   }
 }
 
-/*iphone 14Pro */
-@media (width: 430px) and (height: 932px) {
-  .profile-photo,
-  .profile-shadow {
-    @include size(100%);
-    height: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
 
-  .profile-shadow img,
-  .profile-photo img {
-    @include size(120%, auto);
-    object-fit: cover;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
 
-  .profile-shadow img {
-    transform: translateX(-9%) translateY(2%);
-  }
-
-  .profile-photo img {
-    transform: translateX(-9%) translateY(5%);
-  }
-
-  .hero-text {
-    @include hero-text-grid(40px 300px, 40px 40px 115px);
-    @include text-size(32px, 40px, 24px, null, 20px);
-  }
-  .swosh {
-    top: 230px;
-  }
-  .reference-icons {
-    bottom: 80px !important ;
-    &::before {
-      width: calc(30% - 10px) !important;
-    }
-  }
-  .item-5 {
-    margin-left: -30px;
-  }
-}
 
 /*iphone 12 Pro */
 @media (width: 390px) and (height: 844px) {
   .swosh {
-    top: 215px !important;
+    top: 263px !important;
   }
 }
 /*iphone XR */
@@ -705,7 +601,8 @@
 /*iphone 6/7/8 */
 @media (width: 375px) and (height: 667px) {
   .hero-text-container {
-    top: 350px;
+    top: 350px !important;
+    right: 0;
   }
   .hero-text {
     @include hero-text-grid(40px 250px, 40px 40px 115px);
@@ -735,6 +632,7 @@
 @media (width: 320px) and (height: 658px) {
   .hero-text-container {
     top: 300px;
+    right: 25% !important;
   }
   .item-5 {
     margin-left: -30px;
@@ -761,10 +659,50 @@
   }
 }
 
-@media (min-width: 280px) and (max-width: 375px) {
+@media (min-width: 280px) and (max-width: 420px) { 
+  .hero-text-container {
+    width: 100%;
+    top: 450px;   
+    right: 0;
+  }
+
   .hero-text {
-    @include hero-text-grid(40px 250px, 40px 40px 115px);
-    @include text-size(30px, 34px, 19px, null);
+    @include hero-text-grid(30px 230px, 40px 40px 115px);
+    @include text-size(29px, 29px, 24px, null);
+  }
+
+  .profile-picture {
+    @include size(100%, 100%);
+    overflow: hidden;
+  }
+
+  .profile-shadow img {
+    width: 120%;
+    object-fit: cover;
+    @include image-transform(-8%, 10%);
+  }
+
+  .profile-photo img {
+    width: 90%;
+    object-fit: cover;
+    @include image-transform(7%, -5%);
+  }
+  .scroll-down,
+  .contact-link {
+    display: none !important;
+  } 
+  .swosh {
+    top: 280px;
+  }
+  .reference-icons {
+    gap: 25px;
+    &::before {
+      width: calc(30% - 10px) !important;
+    }
+
+    a img {
+      width: 30px;
+    }
   }
 }
 
@@ -785,3 +723,5 @@
     top: 200px !important;
   }
 }
+
+ 
