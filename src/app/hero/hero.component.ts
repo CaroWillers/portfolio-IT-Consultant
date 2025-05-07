@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { TranslateService } from '@ngx-translate/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-hero',
@@ -21,14 +22,16 @@ export class HeroComponent implements AfterViewInit {
   currentLang: string;
 
 
-  constructor(private elementRef: ElementRef, private translate: TranslateService) {
+  constructor(private elementRef: ElementRef, private translate: TranslateService,  private meta: Meta, private title: Title   ) {
 
     this.currentLang = this.translate.currentLang || 'en'; // Fallback to 'en' if currentLang is not set
-
+    
+    this.setMetaTags();
 
   this.translate.onLangChange.subscribe((event) => {
   this.currentLang = event.lang; // Update currentLang when the language changes
-  });
+  this.setMetaTags(); // Update meta tags when the language changes
+});
 }
 
   ngAfterViewInit(): void {
@@ -68,4 +71,24 @@ export class HeroComponent implements AfterViewInit {
       element.scrollIntoView({ behavior: "smooth" });
     }
   }  
+
+  private setMetaTags(): void {
+    const title =
+      this.currentLang === 'de'
+        ? 'Caro Willers – IT-Consultant & Project Manager'
+        : 'Caro Willers – IT Consultant & Project Manager';
+
+    const description =
+      this.currentLang === 'de'
+        ? 'Ich unterstütze Unternehmen mit technischer Expertise und Projektleitungskompetenz.'
+        : 'Supporting companies with tech expertise and project leadership.';
+
+    this.title.setTitle(title);
+    this.meta.updateTag({ name: 'description', content: description });
+    this.meta.updateTag({
+      name: 'keywords',
+      content:
+        'IT Consultant, Frontend Entwicklung, Angular, Projektmanagement, SCRUM, Webentwicklung Münster',
+    });
+  }
 }

@@ -1,9 +1,10 @@
-import { Component, AfterViewInit, ElementRef } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectComponent } from './project/project.component';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ScrollService } from '../services/scroll.service';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
+import { Meta, Title } from '@angular/platform-browser';
 
 interface Project {
   title: string;
@@ -67,9 +68,44 @@ export class PortfolioComponent implements AfterViewInit {
     },
   ];
 
-  constructor(private scrollService: ScrollService) {}
+  currentLang: string;
+
+  constructor(
+    private scrollService: ScrollService,
+    private meta: Meta,
+    private title: Title,
+    private translate: TranslateService
+  ) {
+    this.currentLang = this.translate.currentLang || 'en';
+    this.setMetaTags();
+
+    this.translate.onLangChange.subscribe((event) => {
+      this.currentLang = event.lang;
+      this.setMetaTags();
+    });
+  }
 
   ngAfterViewInit() {
     this.scrollService.initScrollAnimation();
+  }
+
+  private setMetaTags(): void {
+    const title =
+      this.currentLang === 'de'
+        ? 'Portfolio – Caro Willers'
+        : 'Portfolio – Caro Willers';
+
+    const description =
+      this.currentLang === 'de'
+        ? 'Eine Auswahl meiner Web-Projekte – von Angular bis Firebase. Interaktive Demos und GitHub-Links inklusive.'
+        : 'A selection of my web projects – from Angular to Firebase. Including live demos and GitHub links.';
+
+    this.title.setTitle(title);
+    this.meta.updateTag({ name: 'description', content: description });
+    this.meta.updateTag({
+      name: 'keywords',
+      content:
+        'Portfolio, Web Projekte, Angular, Firebase, GitHub, TypeScript, Frontend Entwicklung, Caro Willers',
+    });
   }
 }
